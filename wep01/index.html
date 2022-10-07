@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="./css/reset.css">
     <style>
     /* header.css */
-    .hd {width: 100%; position: fixed; top:0; left: 0; z-index: 999; background-color: transparent; height: 200px;}
+    .hd {width: 100%; position: fixed; top:0; left: 0; z-index: 999; background-color: transparent; height: 175px; 
+        background: -moz-linear-gradient(top, #ececec 0%, transparent 50%, #ececec 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #ececec 0%,transparent 50%,#ececec 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #ececec 0%,transparent 50%,#ececec 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
     .hd:hover {background-color: #fff;}
     .hd_wrap {width: 1200px; margin: 0 auto;}
     .logo {display: block; width: 100px; height: auto; margin-top: 20px; margin-bottom: 20px; float: left;}
@@ -41,22 +44,44 @@
     .gnb li .sub li a:hover {color:#588824;font-weight:600;}
     .gnb .item1 .sub li a {text-indent:3.4em;}
     .gnb .item4 .sub li a {text-indent:2.5em; width: 200px;}
+
     .content {clear: both; width: 100%;}
     .vs { clear:both; width: 100%; height:100vh; overflow:hidden; }
-    .img { display:block; width:100%; height:auto; }
+    .img { display:block; width:100%; height:auto; background-color: ; }
     .vs_tit { position:absolute; top:350px; padding-left:350px; font-size: 50px; font-weight: 100; line-height:2em; letter-spacing :10px}
+
     .page { clear:both; width: 100%; margin-top: -200px;}
     .page_wrap { width: 1200px; margin: 0 auto; }
-    #page2, #page3 { background-color:#f9f9f9; }
-    .page_tit { text-align: left; font-size:25px; font-weight: 500; padding-top:0.5em; padding-bottom: 0.8em; }
+    .page_tit { text-align: left; font-size:30px; font-weight: 700; padding-top:0.8em; padding-bottom: 0.8em; }
+    .page_ex {text-align: left; font-size:20px; font-weight: 100; padding-top:0em; padding-bottom: 0.8em;}
     .pic_lst {clear: both; width:100%; padding-bottom: 40px;}
     .pic_lst:after {content: ""; display: block; clear: both;}
     .pic_lst li {float:left; position: relative; margin-bottom: 60px;}
     .pic_lst li a {display: block; width: 200px; margin-right: 40px; overflow: hidden;}
-    .pic_lst li a:hover img { margin-left: 0; }
-    .pic_lst li a .hv_box {color:#333;}
-
-    #page4 .page_wrap {width: 100%;}
+    .pic_lst li a .hv_box {color: #333;}
+    .pic_lst li a .hv_box:hover {color:#588824;font-weight: 700;}
+    .pic_com {font-weight: 600;}
+    #page2, #page3 { background-color:#f9f9f9; }
+    .sub_lst {clear: both; width:100%; padding-bottom: 40px;}
+    .sub_lst:after {content: ""; display: block; clear: both;}
+    .sub_lst li {float:left; position: relative; margin-bottom: 60px; height: 500px;}
+    .sub_lst li a {display: block; width: 350px; margin-right: 40px; overflow: hidden; height: 500px;}
+    .sub_lst li a img { display:block; width:500px; margin-left: -120px; transition-duration:0.8s; }
+    .sub_lst li a:hover img { margin-left: 0; }
+    .sub_lst li a .hv_box { width: 350px; height: 500px; color:#fff; opacity:0; position:absolute; top:0; left: 0; z-index:10; transition-duration:0.8s; background-color:transparent; }
+    .sub_lst li a:hover .hv_box { opacity:1; background-color: rgba(51, 51, 51, 0.407); height: 500px; width: 350px;}
+    .sub_tit { position:absolute; top:30px; left: 20px; font-size: 25px;font-weight: 600; line-height:1.5em; letter-spacing :2px;text-shadow:0px 0px 3px #333; }
+    .price_text { position:absolute; right:20px; bottom:50px; font-size: 20px;font-weight: 100; line-height:1.5em; letter-spacing :2px;text-shadow:0px 0px 3px #333; }
+    .square_lst {clear: both; width:100%; padding-bottom: 40px;}
+    .square_lst:after {content: ""; display: block; clear: both;}
+    .square_lst li {float:left; position: relative; margin-bottom: 60px;}
+    .square_lst li a {display: block; width: 350px; margin-right: 40px; overflow: hidden; height: 300px;}
+    .square_tit {position:absolute; margin-top: 10px; font-size: 18px;font-weight: 700;}
+    .square_com {position:absolute; margin-top: 30px;}
+    #page4 { background-repeat: no-repeat; background-size: cover; 
+    background-position:center center; height: 100vh; background-image:url("img/museum.jpg"); overflow:hidden; height: 500px;}
+    .page4_tit { position:absolute; padding-left: 100px;padding-top: 150px; color: #fff; font-size: 50px; font-weight: 100; line-height:2em; letter-spacing :10px}
+    
 
     </style>
      <script>
@@ -188,16 +213,17 @@
         <section class="page" id="page2">
             <div class="page_wrap">
                 <h2 class="page_tit">다다일상 구독</h2>
-                <p>하루 한번 나를 만나는 시간을 가져보세요</p>
-                <ul class="circle_lst">
+                <p class="page_ex">하루 한번 나를 만나는 시간을 가져보세요</p>
+                <ul class="sub_lst">
                     <li>
                         <a href="subscription.html#page1">
                             <img src="./img/sub1.jpg" alt="구독1">
                             <div class="hv_box">
-                                <h3 class="pic_tit">새롭게 만나는 차, 다다일상 베이직</h3>
+                                <h3 class="sub_tit">새롭게 만나는 차,<br>다다일상 베이직</h3>
                                 <div class="price_text">
                                     <span class="smT">매월</span>
                                     <span class="price">16,000원</span>
+                                </div>
                             </div>
                         </a>
                     </li>
@@ -205,10 +231,11 @@
                         <a href="subscription.html#page1">
                             <img src="./img/sub2.jpg" alt="구독2">
                             <div class="hv_box">
-                                <h3 class="pic_tit">다르게 만나는 차, 다다일상 홈카페</h3>
+                                <h3 class="sub_tit">다르게 만나는 차,<br>다다일상 홈카페</h3>
                                 <div class="price_text">
                                     <span class="smT">매월</span>
                                     <span class="price">25,000원</span>
+                                </div>
                             </div>
                         </a>
                     </li>
@@ -216,10 +243,11 @@
                         <a href="subscription.html#page1">
                             <img src="./img/sub3.jpg" alt="구독3">
                             <div class="hv_box">
-                                <h3 class="pic_tit">매일 만나는 차, 다다일상 정기배송</h3>
+                                <h3 class="sub_tit">매일 만나는 차,<br>다다일상 정기배송</h3>
                                 <div class="price_text">
-                                    <span class="smT">3종류 이상</span>
+                                    <span class="smT">3종류 이상<br></span>
                                     <span class="price">35,000원 이상 다양한 구성</span>
+                                </div>
                             </div>
                         </a>
                     </li>
@@ -229,33 +257,29 @@
         <section class="page" id="page3">
             <div class="page_wrap">
                 <h2 class="page_tit">다다일상 기록</h2>
-                <p>차를 통해 달라지는 일상을 만나보세요</p>
-                <ul class="circle_lst">
+                <p class="page_ex">차를 통해 달라지는 일상을 만나보세요</p>
+                <ul class="square_lst">
                     <li><a href="subscription.html#page2"><img src="./img/daily1.jpg" alt="기록1"></a>
-                    <h3>차와 함께 독서하는 일상</h3>
-                    <p>차와 함께 독서하는 일상을 만나보세요</p>
+                    <h3 class="square_tit">차와 함께 독서하는 일상</h3>
+                    <p class="square_com">차와 함께 독서하는 일상을 만나보세요</p>
                     </li>
                     <li><a href="subscription.html#page2"><img src="./img/daily2.jpg" alt="기록2"></a>
-                    <h3>차와 함께 아침을 시작</h3>
-                    <p>차와 함께 아침을 깨우는 일상을 만나보세요</p>
+                    <h3 class="square_tit">차와 함께 아침을 시작</h3>
+                    <p class="square_com">차와 함께 아침을 깨우는 일상을 만나보세요</p>
                     </li>
                     <li><a href="subscription.html#page2"><img src="./img/daliy3.jpg" alt="기록3"></a>
-                    <h3>자연속에서 만나보는 차</h3>
-                    <p>자연속에서 직접 차를 만나보세요</p>
+                    <h3 class="square_tit">자연속에서 만나보는 차</h3>
+                    <p class="square_com">자연속에서 직접 차를 만나보세요</p>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="page" id="page4">
             <div class="page_wrap">
-                <ul class="pic_lst">
+                <h2 class="page4_tit">다다일상 제주 티뮤지엄</h2>
                     <li>
                         <a href="brand.html#page2">
-                            <img src="./img/museum.jpg" alt="티뮤지엄" class="pic">
-                            <div class="hv_box">
-                                <p class="text">제주 티뮤지엄 티스톤</p>
-						        <button class="resv_btn" type="button" title="예약하기" onclick="">예약하기</button>
-                            </div>
+                            <button class="resv_btn" type="button" title="예약하기" onclick="">예약하기</button>
                         </a>
                     </li>
                 </ul>
