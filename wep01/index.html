@@ -12,16 +12,16 @@
     <!-- 파비콘 - 스마트폰에서 이 아이콘으로 설치가 됨-->
     <link rel="shortcut icon" type="image/x-icon" href="./img/dadafavicon.ico">
     <!-- 각 종 플러그인과 설정 파일 -->
-
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!-- jquery 플러그인 연결 -->
     <script src="./js/jquery-1.11.1.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <style>
     /* header.css */
     .hd {width: 100%; position: fixed; top:0; left: 0; z-index: 999; background-color: transparent; height: 175px; 
-        background: -moz-linear-gradient(top, #ececec 0%, transparent 50%, #ececec 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #ececec 0%,transparent 50%,#ececec 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #ececec 0%,transparent 50%,#ececec 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+        background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.3) 90%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0.3) 90%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0.3) 90%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */}
     .hd:hover {background-color: #fff;}
     .hd_wrap {width: 1200px; margin: 0 auto;}
     .logo {display: block; width: 100px; height: auto; margin-top: 20px; margin-bottom: 20px; float: left;}
@@ -47,7 +47,7 @@ background: linear-gradient(to bottom, #ececec 0%,transparent 50%,#ececec 100%);
 
     .content {clear: both; width: 100%;}
     .vs { clear:both; width: 100%; height:100vh; overflow:hidden; }
-    .img { display:block; width:100%; height:auto; background-color: ; }
+    .img { display:block; width:100%; height:auto; }
     .vs_tit { position:absolute; top:350px; padding-left:350px; font-size: 50px; font-weight: 100; line-height:2em; letter-spacing :10px}
 
     .page { clear:both; width: 100%; margin-top: -200px;}
@@ -72,17 +72,30 @@ background: linear-gradient(to bottom, #ececec 0%,transparent 50%,#ececec 100%);
     .sub_lst li a:hover .hv_box { opacity:1; background-color: rgba(51, 51, 51, 0.407); height: 500px; width: 350px;}
     .sub_tit { position:absolute; top:30px; left: 20px; font-size: 25px;font-weight: 600; line-height:1.5em; letter-spacing :2px;text-shadow:0px 0px 3px #333; }
     .price_text { position:absolute; right:20px; bottom:50px; font-size: 20px;font-weight: 100; line-height:1.5em; letter-spacing :2px;text-shadow:0px 0px 3px #333; }
-    .square_lst {clear: both; width:100%; padding-bottom: 40px;}
-    .square_lst:after {content: ""; display: block; clear: both;}
-    .square_lst li {float:left; position: relative; margin-bottom: 60px;}
-    .square_lst li a {display: block; width: 350px; margin-right: 40px; overflow: hidden; height: 300px;}
-    .square_tit {position:absolute; margin-top: 10px; font-size: 18px;font-weight: 700;}
-    .square_com {position:absolute; margin-top: 30px;}
-    #page4 { background-repeat: no-repeat; background-size: cover; 
-    background-position:center center; height: 100vh; background-image:url("img/museum.jpg"); overflow:hidden; height: 500px;}
-    .page4_tit { position:absolute; padding-left: 100px;padding-top: 150px; color: #fff; font-size: 50px; font-weight: 100; line-height:2em; letter-spacing :10px}
-    
-
+    #page3 { background-repeat: no-repeat; background-size: cover; background-position:center center; height: 100vh; background-image:url("./img/teagarden.png"); overflow:hidden; height: 650px; }
+    #page3 .page_wrap { width: 100%; }
+    #page3 .page_tit {text-align: center; font-size:30px; font-weight: 700; padding-top:2em; padding-bottom: 0.8em;}
+    #page3 .page_ex {text-align: center; font-size:20px; font-weight: 100; padding-top:0em; padding-bottom: 2em;}
+    .square_lst { clear:both; width: 4455px; }
+    .square_lst li { width: 300px; height: 300px; position:relative;  overflow:hidden; background-color: #fff;
+    float:left; margin:28px;  }
+    .square_lst li a { display:block; width: 100%; height: 100%; }
+  
+    .ft { clear:both; width: 100%; height: 200px; background-color: #232; padding-bottom: 50px; }
+    .ft_wrap { clear:both; width: 1200px; margin: 0 auto; padding-top: 50px;  }
+    .ft_wrap:after { content:""; display:block; clear:both; }
+    .ft_logo { float:left; width: 150px; }
+    .ft_logo img {display: block; width: 100%; height: auto;}
+    .mid_box { float:left; width: 760px; padding-left: 80px; }
+    .fnb { clear:both; }
+    .fnb a { color:#fff; font-size:15px; font-weight: 700; padding-left: 24px; padding-right: 10px; }
+    .fnb a .dgc { color:#b4e085;}
+    .addr { padding-left: 24px; color:#ececec; padding-top: 20px; font-size:12px; line-height: 2; }
+    .copyright { padding-left: 24px; color:#fff; padding-top: 10px; }
+    .sel_box { float:right; border-bottom:1px solid #fff;
+    height: 44px; line-height: 44px; text-align:center; width: 140px; }
+    #sel { border:none; outline: none; background-color: transparent; color:#fff; }
+    #sel option { color:#333; }
     </style>
      <script>
         $(document).ready(function(){
@@ -164,7 +177,7 @@ background: linear-gradient(to bottom, #ececec 0%,transparent 50%,#ececec 100%);
                 <ul class="pic_lst">
                     <li>
                         <a href="product.html#page1">
-                            <img src="./img/choice1.jpg" alt="차1" class="pic">
+                            <img src="./img/teacollect01.jpg" alt="차1" class="pic">
                             <div class="hv_box">
                                 <h3 class="pic_tit">차1</h3>
                                 <p class="pic_com">20,000원</p>
@@ -173,7 +186,7 @@ background: linear-gradient(to bottom, #ececec 0%,transparent 50%,#ececec 100%);
                     </li>
                     <li>
                         <a href="product.html#page1">
-                            <img src="./img/choice1.jpg" alt="차2" class="pic">
+                            <img src="./img/teacollect05.jpg" alt="차2" class="pic">
                             <div class="hv_box">
                                 <h3 class="pic_tit">차2</h3>
                                 <p class="pic_com">35,000원</p>
@@ -182,7 +195,7 @@ background: linear-gradient(to bottom, #ececec 0%,transparent 50%,#ececec 100%);
                     </li>
                     <li>
                         <a href="product.html#page1">
-                            <img src="./img/choice1.jpg" alt="차3" class="pic">
+                            <img src="./img/teacollect03.jpg" alt="차3" class="pic">
                             <div class="hv_box">
                                 <h3 class="pic_tit">차3</h3>
                                 <p class="pic_com">15,000원</p>
@@ -191,7 +204,7 @@ background: linear-gradient(to bottom, #ececec 0%,transparent 50%,#ececec 100%);
                     </li>
                     <li>
                         <a href="product.html#page1">
-                            <img src="./img/choice1.jpg" alt="차4" class="pic">
+                            <img src="./img/teacollect04.jpg" alt="차4" class="pic">
                             <div class="hv_box">
                                 <h3 class="pic_tit">차4</h3>
                                 <p class="pic_com">40,000원</p>
@@ -200,7 +213,7 @@ background: linear-gradient(to bottom, #ececec 0%,transparent 50%,#ececec 100%);
                     </li>
                     <li>
                         <a href="product.html#page1">
-                            <img src="./img/choice1.jpg" alt="차5" class="pic">
+                            <img src="./img/teacollect02.jpg" alt="차5" class="pic">
                             <div class="hv_box">
                                 <h3 class="pic_tit">차5</h3>
                                 <p class="pic_com">50,000원</p>
@@ -257,31 +270,16 @@ background: linear-gradient(to bottom, #ececec 0%,transparent 50%,#ececec 100%);
         <section class="page" id="page3">
             <div class="page_wrap">
                 <h2 class="page_tit">다다일상 기록</h2>
-                <p class="page_ex">차를 통해 달라지는 일상을 만나보세요</p>
+                <p class="page_ex">차를 통해 달라지는 당신의 일상을 만나보세요</p>
                 <ul class="square_lst">
-                    <li><a href="subscription.html#page2"><img src="./img/daily1.jpg" alt="기록1"></a>
-                    <h3 class="square_tit">차와 함께 독서하는 일상</h3>
-                    <p class="square_com">차와 함께 독서하는 일상을 만나보세요</p>
-                    </li>
-                    <li><a href="subscription.html#page2"><img src="./img/daily2.jpg" alt="기록2"></a>
-                    <h3 class="square_tit">차와 함께 아침을 시작</h3>
-                    <p class="square_com">차와 함께 아침을 깨우는 일상을 만나보세요</p>
-                    </li>
-                    <li><a href="subscription.html#page2"><img src="./img/daliy3.jpg" alt="기록3"></a>
-                    <h3 class="square_tit">자연속에서 만나보는 차</h3>
-                    <p class="square_com">자연속에서 직접 차를 만나보세요</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="page" id="page4">
-            <div class="page_wrap">
-                <h2 class="page4_tit">다다일상 제주 티뮤지엄</h2>
-                    <li>
-                        <a href="brand.html#page2">
-                            <button class="resv_btn" type="button" title="예약하기" onclick="">예약하기</button>
-                        </a>
-                    </li>
+                    <li><a href=""><img src="./img/daily1.jpg" alt="일상01" class="thumb"></a></li>
+                    <li><a href=""><img src="./img/daily2.jpg" alt="일상02" class="thumb"></a></li>
+                    <li><a href=""><img src="./img/daily3.jpg" alt="일상03" class="thumb"></a></li>
+                    <li><a href=""><img src="./img/daily4.jpg" alt="일상04" class="thumb"></a></li>
+                    <li><a href=""><img src="./img/daily5.jpg" alt="일상05" class="thumb"></a></li>
+                    <li><a href=""><img src="./img/daily6.jpg" alt="일상06" class="thumb"></a></li>
+                    <li><a href=""><img src="./img/daily7.jpg" alt="일상07" class="thumb"></a></li>
+                    <li><a href=""><img src="./img/daily8.jpg" alt="일상08" class="thumb"></a></li>
                 </ul>
             </div>
         </section>
@@ -291,19 +289,31 @@ background: linear-gradient(to bottom, #ececec 0%,transparent 50%,#ececec 100%);
             <div class="ft_logo"><img src="./img/logo.png" alt="하단로고"></div>
             <div class="mid_box">
                 <nav class="fnb">
-                    <a href="sitemap.html">사이트맵</a>
-                    <a href="">개인정보 처리 방침</a>
-                    <a href="">이용약관</a>
-                    <a href="">이메일무단수집거부</a>
+                    <a href="sitemap.html" class="dgc">사이트 맵</a>
+                    <a href="member01.html">개인정보 처리 방침</a>
+                    <a href="member02.html">이용약관</a>
+                    <a href="member03.html">이메일무단수집거부</a>
                 </nav>
                 <p class="addr">
                     DADA DAILY | 대표이사 | 박평화 사업자등록번호:123-45-67890<br>
-                    서울시 영등포구 여의대로 128 LG 트윈타워 |admin@wedisplay.solutions<br>
-                    통신판매업신고번호: 제2022-서울영등포-1247호<br>
+                    서울특별시 용산구 한강대로 100, 100층(한강로2가) | ppeace1216@naver.com<br>
+                    통신판매업신고번호: 2022-고양일산-1216호<br>
                     당 사는 통신판매중개자이며, 통신 판매의 당사자가 아닙니다. 상품 및 거래에 관한 의무와 책임은 판매자에게 있습니다.  
                 </p>
                 <p class="copyright">COPYRIGHT ⓒ DADADAILY CO., LTD. ALL RIGHTS RESERVED.</p>
             </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">패밀리 사이트</option>
+                    <option value="https://www.osulloc.com/kr/ko">OSULLOC</option>
+                    <option value="https://wedisplay.solutions/">WEDISPLAY</option>
+                </select>
+            </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
         </div>
     </footer>
 </div>
