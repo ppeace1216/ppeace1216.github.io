@@ -15,9 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <!-- jquery 플러그인 연결 -->
     <script src="./js/jquery-1.11.1.js"></script>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="header" href="header.css">
-    <link rel="header" href="footer.css">
+    <link rel="stylesheet" href="./css/reset2.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
     <style>
     /*header.css*/
     .hd {position:fixed;}
@@ -34,7 +34,7 @@
     .content:target {display: block;}
     </style>
     <script>
-
+    &(document).ready
     </script>
 </head>
 <body>
@@ -92,9 +92,9 @@
             </nav>
         </div>
     </header>
-    <div class="content">
+    <div class="content" id="page1">
         <figure class="vs">
-            <img src="" alt="비주얼">
+            <img src="./img/tea_garden.jpg" alt="비주얼">
         </figure>
         <div class="bread">
             <div class="bread_fr">
@@ -107,7 +107,7 @@
                     <option value="customer.html#page1">고객센터</option>
                 </select> &gt;
                 <select name="sel2" id="sel2" class="sel">
-                    <option>티제품</option>
+                    <option selected>티제품</option>
                     <option value="product.html#page2">티푸드</option>
                     <option value="product.html#page3">티웨어</option>
                 </select> &gt;
@@ -118,6 +118,10 @@
                 <h2 class="page_title">티제품</h2>
             </div>
         </section>
+    <div class="content" id="page2">
+        <figure class="vs">
+            <img src="./img/tea_garden.jpg" alt="비주얼">
+        </figure>
         <div class="bread">
             <div class="bread_fr">
                 <a href="" class="home"></a> &gt;
@@ -129,7 +133,7 @@
                     <option value="customer.html#page1">고객센터</option>
                 </select> &gt;
                 <select name="sel4" id="sel4" class="sel">
-                    <option>티푸드</option>
+                    <option selected>티푸드</option>
                     <option value="product.html#page1">티제품</option>
                     <option value="product.html#page3">티웨어</option>
                 </select> &gt;
@@ -140,6 +144,10 @@
                 <h2 class="page_title">티푸드</h2>
             </div>
         </section>
+    <div class="content" id="page3">
+        <figure class="vs">
+            <img src="./img/tea_garden.jpg" alt="비주얼">
+        </figure>
         <div class="bread">
             <div class="bread_fr">
                 <a href="" class="home"></a> &gt;
@@ -151,7 +159,7 @@
                     <option value="customer.html#page1">고객센터</option>
                 </select> &gt;
                 <select name="sel6" id="sel6" class="sel">
-                    <option>티웨어</option>
+                    <option selected>티웨어</option>
                     <option value="product.html#page1">티제품</option>
                     <option value="product.html#page2">티푸드</option>
                 </select> &gt;
@@ -163,7 +171,15 @@
             </div>
         </section>
     </div>
-    
+    <script>
+    var sel = document.getElementsByClassName("sel");
+    for(var i=0;i<sel.length;i++){
+        sel[i].addEventListener("change", function(){
+            location.href = this.value;
+        });
+    }
+    </script>
+    <footer class="ft">
         <div class="ft_wrap">
             <div class="ft_logo"><img src="./img/logo.png" alt="하단로고"></div>
             <div class="mid_box">
