@@ -6,8 +6,8 @@
 .ft_logo img {display: block; width: 100%; height: auto;}
 .mid_box { float:left; width: 760px; padding-left: 80px; }
 .fnb { clear:both; }
-.fnb a { color:#fff; font-size:15px; font-weight: 700; padding-left: 24px; padding-right: 10px; }
-.fnb a .dgc { color:#b4e085;}
+.fnb a { color:#fff; font-size:16px; font-weight: 700; padding-left: 24px; padding-right: 10px; }
+.fnb a.dgc { color:#b4e085;}
 .addr { padding-left: 24px; color:#ececec; padding-top: 20px; font-size:12px; line-height: 2em; }
 .copyright { padding-left: 24px; color:#fff; padding-top: 10px; }
 .sel_box { float:right; border-bottom:1px solid #fff; height: 44px; line-height: 44px; text-align:center; width: 140px; }

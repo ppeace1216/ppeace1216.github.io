@@ -35,33 +35,24 @@
     .page { clear:both; width: 100%; min-height:100vh;}
     .page:after { content:""; display:block; clear:both; }
     .page_wrap { width: 1200px; margin: 0 auto; }
-    .content { display:none; }
-    .content:target { display:block; }
 
     .page_title { padding-top: 1em; }
     .home { color:#333; }
-    .to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
-    background-color:rgba(11,11,11,0.75); color:#fff; display:block; width: 60px;
-    height: 60px; line-height: 60px; text-align: center; font-size:20px; border-radius:32px; visibility:hidden; transition-duration:0.8s; }
-    .to_top:hover { background-color: rgb(131, 183, 129); }
-    .to_top.on { visibility: visible; }
+
+    .frm { border:3px solid #cbdace; padding: 30px; width: 500px; margin:50px auto; }
+    .frm_tb { display:table; margin:50px auto; width:100px }
+    .frm_tb tr { display:table-row; }
+    .frm_tb td, .frm_tb th { display:table-cell; }
+    .frm_tb th { width:100px; height: 50px; }
+    .frm_tb td { width:200px; height: 50px; }
+
+    .in_dt { border:3px solid #cbdace; background-color:#fff; height:32px; line-height: 32px; width: 280px; 
+    color:#333; font-size:18px; text-indent:0.7em; }
+    .in_btn { display:block; background-color:rgb(255, 255, 255); border:2px solid #cbdace;; min-width:300px; margin: 10px auto; height: 40px; 
+    color: #333; font-size:18px; line-height: 32px; border-radius:10px; float:left; margin-left:80px; margin-right:20px; cursor:pointer; }
+    .in_btn:hover { }
+
     </style>
-    <script>
-    $(document).ready(function(){
-        $(".to_top").attr("href", location.href);
-        $(window).scroll(function(){
-            var ht = $(window).height();
-            var tp = $(this).scrollTop();
-            if(tp>=300){
-                $(".to_top").addClass("on");
-                $(".to_top").attr("href", location.href);
-            } else {
-                $(".to_top").removeClass("on");
-                $(".to_top").attr("href", location.href);
-            }
-        });
-    });    
-    </script>
 </head>
 <body>
 <div class="wrap">
@@ -75,7 +66,7 @@
             <nav class="gnb">
                 <ul>
                     <li class="item1">
-                        <a href="" class="dp1">제품</a>
+                        <a href="product.html#page1" class="dp1">제품</a>
                         <ul class="sub">
                             <li><a href="product.html#page1">티제품</a></li>
                             <li><a href="product.html#page2">티푸드</a></li>
@@ -83,7 +74,7 @@
                         </ul>
                     </li>
                     <li class="item2">
-                        <a href="" class="dp1">선물세트</a>
+                        <a href="gift.html#page1" class="dp1">선물세트</a>
                         <ul class="sub">
                             <li><a href="gift.html#page1">다다일상의 추천</a></li>
                             <li><a href="gift.html#page2">베스트</a></li>
@@ -91,7 +82,7 @@
                         </ul>
                     </li>
                     <li class="item3">
-                        <a href="" class="dp1">다다일상</a>
+                        <a href="subscription.html#page1" class="dp1">다다일상</a>
                         <ul class="sub">
                             <li><a href="subscription.html#page1">다다일상 구독</a></li>
                             <li><a href="subscription.html#page2">다다일상 기록</a></li>
@@ -99,7 +90,7 @@
                         </ul>
                     </li>
                     <li class="item4">
-                        <a href="" class="dp1">브랜드</a>
+                        <a href="brand.html#page1" class="dp1">브랜드</a>
                         <ul class="sub">
                             <li><a href="brand.html#page1">다다일상 스토리</a></li>
                             <li><a href="brand.html#page2">티뮤지엄 제주</a></li>
@@ -107,7 +98,7 @@
                         </ul>
                     </li>
                     <li class="item5">
-                        <a href="" class="dp1">고객센터</a>
+                        <a href="customer.html#page1" class="dp1">고객센터</a>
                         <ul class="sub">
                             <li><a href="customer.html#page1">문의하기</a></li>
                             <li><a href="customer.html#page2">매장찾기</a></li>
@@ -125,90 +116,46 @@
         <div class="bread">
             <div class="bread_fr">
                 <a href="index.html" class="home">HOME</a> &gt;
-                <select name="sel1" id="sel1" class="sel">
-                    <option>제품</option>
-                    <option value="gift.html#page1">선물세트</option>
-                    <option value="subscription.html#page1">다다일상</option>
-                    <option value="brand.html#page1">브랜드</option>
-                    <option value="customer.html#page1">고객센터</option>
-                </select> &gt;
-                <select name="sel2" id="sel2" class="sel">
-                    <option selected>티제품</option>
-                    <option value="product.html#page2">티푸드</option>
-                    <option value="product.html#page3">티웨어</option>
-                </select>
+                <span class="sel">로그인</span>
             </div>
         </div>
         <section class="page">
             <div class="page_wrap">
-                <h2 class="page_title">티제품</h2>
-            
-            </div>
-        </section>
-    </div>
-    <div class="content" id="page2">
-        <figure class="vs">
-            <img src="./img/tea_garden.jpg" alt="비주얼">
-        </figure>
-        <div class="bread">
-            <div class="bread_fr">
-                <a href="index.html" class="home">HOME</a> &gt;
-                <select name="sel3" id="sel3" class="sel">
-                    <option>제품</option>
-                    <option value="gift.html#page1">선물세트</option>
-                    <option value="subscription.html#page1">다다일상</option>
-                    <option value="brand.html#page1">브랜드</option>
-                    <option value="customer.html#page1">고객센터</option>
-                </select> &gt;
-                <select name="sel4" id="sel4" class="sel">
-                    <option selected>티푸드</option>
-                    <option value="product.html#page1">티제품</option>
-                    <option value="product.html#page3">티웨어</option>
-                </select>
-            </div>
-        </div>
-        <section class="page">
-            <div class="page_wrap">
-                <h2 class="page_title">티푸드</h2>
-
-            </div>
-        </section>
-    </div>
-    <div class="content" id="page3">
-        <figure class="vs">
-            <img src="./img/tea_garden.jpg" alt="비주얼">
-        </figure>
-        <div class="bread">
-            <div class="bread_fr">
-                <a href="index.html" class="home">HOME</a> &gt;
-                <select name="sel5" id="sel5" class="sel">
-                    <option>제품</option>
-                    <option value="gift.html#page1">선물세트</option>
-                    <option value="subscription.html#page1">다다일상</option>
-                    <option value="brand.html#page1">브랜드</option>
-                    <option value="customer.html#page1">고객센터</option>
-                </select> &gt;
-                <select name="sel6" id="sel6" class="sel">
-                    <option selected>티웨어</option>
-                    <option value="product.html#page1">티제품</option>
-                    <option value="product.html#page2">티푸드</option>
-                </select>
-            </div>
-        </div>
-        <section class="page">
-            <div class="page_wrap">
-                <h2 class="page_title">티웨어</h2>
-
+                <h2 class="page_title">로그인</h2>
+                <div class="form_fr">
+                    <form name="frm1" action="" method="post" id="loginForm" class="frm">
+                        <table class="frm_tb">
+                            <tbody>
+                                <tr>
+                                    <th><label for="id">아이디</label></th>
+                                    <td>
+                                        <input type="text" id="id" name="id" class="in_dt" required autofocus>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="pw">비밀번호</label></th>
+                                    <td>
+                                        <input type="password" id="pw" name="pw" class="in_dt" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="submit" class="in_btn">로그인</button>
+                                        <button type="button" id="join" class="in_btn">회원가입</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
             </div>
         </section>
     </div>
     <script>
-    var sel = document.getElementsByClassName("sel");
-    for(var i=0;i<sel.length;i++){
-        sel[i].addEventListener("change", function(){
-            location.href = this.value;
-        });
-    }
+        var join_btn1 = document.getElementById("join");
+        join_btn1.addEventListener("click", function(){
+            location.href = "join.html";
+        });    
     </script>
     <footer class="ft">
         <div class="ft_wrap">
@@ -243,6 +190,5 @@
         </div>
     </footer>
 </div>
-<a href="" class="to_top">↑</a><!-- .to_top.on -->
 </body>
 </html>
