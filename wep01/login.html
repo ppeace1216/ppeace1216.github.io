@@ -42,9 +42,9 @@
     .frm { border:3px solid #cbdace; padding: 30px; width: 500px; margin:50px auto; }
     .frm_tb { display:table; margin:50px auto; width:100px }
     .frm_tb tr { display:table-row; }
-    .frm_tb td, .frm_tb th { display:table-cell; }
-    .frm_tb th { width:100px; height: 50px; }
-    .frm_tb td { width:200px; height: 50px; }
+    .frm_tb td, .frm_tb th { display:table-cell;}
+    .frm_tb th { width:180px; height: 48px;  }
+    .frm_tb td { width:350px; height: 48px; padding-left: 30px;}
 
     .in_dt { border:3px solid #cbdace; background-color:#fff; height:32px; line-height: 32px; width: 280px; 
     color:#333; font-size:18px; text-indent:0.7em; }
@@ -133,13 +133,13 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th><label for="pw">비밀번호</label></th>
+                                    <th><label for="id">비밀번호</label></th>
                                     <td>
                                         <input type="password" id="pw" name="pw" class="in_dt" required>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td colspan="2">
                                         <button type="submit" class="in_btn">로그인</button>
                                         <button type="button" id="join" class="in_btn">회원가입</button>
                                     </td>
