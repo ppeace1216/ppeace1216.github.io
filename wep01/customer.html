@@ -38,13 +38,17 @@
     .content { display:none; }
     .content:target { display:block; }
 
-    .page_title { padding-top: 1em; }
+    .page_title { padding: 1em 0; }
     .home { color:#333; }
     .to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
     background-color:rgba(255, 255, 255, 0.75); color:#fff; display:block; width: 60px;
     height: 60px; line-height: 60px; text-align: center; font-size:20px; border-radius:32px; visibility:hidden; transition-duration:0.8s; }
     .to_top:hover { background-color: rgb(131, 183, 129); }
     .to_top.on { visibility: visible; }
+
+    #map_canvas { margin-bottom:40px; }
+    #contact p { text-align:left;	padding-left:30px; line-height:30px; margin-top:25px; padding-right:25px; }
+	.map_tab a { display:inline-block; margin:18px; width:150px; text-align: center; line-height: 36px; background-color: #b8de90; color:rgb(72, 72, 72); border-radius:5px; }
     </style>
     <script>
     $(document).ready(function(){
@@ -142,7 +146,64 @@
         <section class="page">
             <div class="page_wrap">
                 <h2 class="page_title">문의하기</h2>
-                
+                문의사항을 남겨주시면 빠른 시간내에 답변을 드리도록 하겠습니다.
+
+이메일, 핸드폰번호를 변경하려면 회원정보수정 페이지에서 변경해주세요.
+문의하시기 전 FAQ를 참고해주세요.
+한번 등록한 상담내용은 수정이 불가능합니다.
+수정을 원하시는 경우 삭제 후 재등록하셔야 합니다.
+알림 받기를 설정하시면 1:1 상담 답변완료시 고객님의 메일과 카카오톡 알림톡으로도 확인하실 수 있습니다.
+고객상담센터 답변가능시간 오전 9시~오후 6시(토/일/공휴일 제외)
+                <div class="form_fr">
+                    <form name="frm1" action="" method="post" id="joinForm" class="frm">
+                        <table class="frm_tb">
+                            <tbody>
+                                <tr>
+                                    <th><label for="name">성  함</label></th>
+                                    <td>
+                                        <input type="text" id="name" name="name" class="in_dt" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>문의 유형</th>
+                                    <td>
+                                        <select name="sel" id="sel">
+                                            <option value=""selected>아래 유형 중 선택해주세요</option>
+                                            <option value="1"></option>
+                                            <option value="2"></option>
+                                            <option value="3"></option>
+                                            <option value="4"></option>
+                                            <option value="5"></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="title">제  목</label></th>
+                                    <td><input type="text" id="title" name="title" class="in_dt" required></td>
+                                </tr>
+                                <tr>
+                                    <th>문의 내용</th>
+                                    <td>
+                                        <textarea name="memo" id="memo" cols="70" rows="10"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이미지 등록</th>
+                                    <td>
+                                        <input type="file" name="file" id="file">
+                                        <input type="hidden" name="idck" id="idck" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button type="reset" class="in_btn">취소</button>
+                                        <button type="submit" class="in_btn">등록</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
             </div>
         </section>
     </div>
@@ -170,7 +231,12 @@
         <section class="page">
             <div class="page_wrap">
                 <h2 class="page_title">매장찾기</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8933.221432481061!2d126.76757885685998!3d37.66399578491193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c85ed25c4399f%3A0x480ac483ea83a85c!2z64W4656Y7ZWY64qUIOu2hOyImOuMgA!5e0!3m2!1sko!2skr!4v1666139044571!5m2!1sko!2skr" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8933.221432481061!2d126.76757885685998!3d37.66399578491193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c85ed25c4399f%3A0x480ac483ea83a85c!2z64W4656Y7ZWY64qUIOu2hOyImOuMgA!5e0!3m2!1sko!2skr!4v1666139044571!5m2!1sko!2skr" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" name="g_map" id="g_map"></iframe>
+                <div class="map_tab">
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8933.221432481061!2d126.76757885685998!3d37.66399578491193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c85ed25c4399f%3A0x480ac483ea83a85c!2z64W4656Y7ZWY64qUIOu2hOyImOuMgA!5e0!3m2!1sko!2skr!4v1666139044571!5m2!1sko!2skr" target="g_map">일산 본사</a>&nbsp;
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26229.91007964785!2d127.06578496724492!3d34.73697876426351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357213270f8d16c9%3A0x9dd70fd3ef463f14!2z67O07ISx64W57LCo67CtIOuMgO2VnOuLpOybkA!5e0!3m2!1sko!2skr!4v1666164962366!5m2!1sko!2skr" target="g_map">보성점</a> &nbsp; 
+                    <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2383195.76054126!2d125.5993172720727!3d34.417728896277175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350c5df4514091f7%3A0x1b20bad0d95f73b8!2z64W57LCo67Ct!5e0!3m2!1sko!2skr!4v1666165058814!5m2!1sko!2skr" target="g_map">제주점</a> &nbsp; 
+                </div>
             </div>
         </section>
     </div>
@@ -198,7 +264,104 @@
         <section class="page">
             <div class="page_wrap">
                 <h2 class="page_title">공지사항</h2>
-
+                <ul class="noti_lst">
+                    <li>
+                        <span class="noti_num item_hd">번호</span>
+                        <span class="not_tit item_hd">제목</span>
+                        <span class="noti_auth item_hd">작성자</span>
+                        <span class="noti_date item_hd">작성일</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">1</span>
+                        <span class="not_tit"><a href="">[제휴 안내] 다다일상 x KT '10월 나의 초이스' 서비스 이용</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-19</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">2</span>
+                        <span class="not_tit"><a href="">[제휴 안내] PAYCO 10월 페이백 프로모션 안내</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-19</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">3</span>
+                        <span class="not_tit"><a href="">	[제휴 안내] SKT 10월 VIP Pick 프로모션 이용 안내</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-19</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">4</span>
+                        <span class="not_tit"><a href="">다다일상카드 이용약관 변경 안내</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-19</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">5</span>
+                        <span class="not_tit"><a href="">제 17기 주식회사 다다데일리 결산공고</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-18</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">6</span>
+                        <span class="not_tit"><a href="">개인정보처리방침 변경 안내</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-18</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">7</span>
+                        <span class="not_tit"><a href="">멤버십 이용약관 변경 안내</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-18</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">8</span>
+                        <span class="not_tit"><a href="">개인정보처리방침 변경 안내</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-18</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">9</span>
+                        <span class="not_tit"><a href="">멤버십 이용약관 및 다다일상 카드 이용약관 변경 안내</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">10</span>
+                        <span class="not_tit"><a href="">본인인증 정보 없는 휴면회원 정보 삭제 안내</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">11</span>
+                        <span class="not_tit"><a href="">2021 플래너 - 4종 쿠폰 사용 불가 매장 안내</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-17</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">12</span>
+                        <span class="not_tit"><a href="">홀케이크 예약 픽업 구매혜택 (쿠폰팩 3종) 사용 가능 매장 리스트</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-16</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">13</span>
+                        <span class="not_tit"><a href="">	홀케이크 사전예약 유의사항 안내(위시 케이크 2종)</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-16</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">14</span>
+                        <span class="not_tit"><a href="">이벤트 기프트카드 유의사항 안내</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-16</span>
+                    </li>
+                    <li>
+                        <span class="noti_num">15</span>
+                        <span class="not_tit"><a href="">PC 크롬 브라우저 결제시스템 사용 안내</a></span>
+                        <span class="noti_auth">관리자</span>
+                        <span class="noti_date">2022-10-16</span>
+                    </li>
+                </ul>
             </div>
         </section>
     </div>
