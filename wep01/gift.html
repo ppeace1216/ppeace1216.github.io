@@ -39,12 +39,23 @@
     .content:target { display:block; }
 
     .page_title { padding-top: 1em; }
+    .page_p{ padding: 1em 0px; font-size: 18px; }
     .home { color:#333; }
     .to_top { position:fixed; bottom:80px; right:80px; z-index:999; 
     background-color:rgba(11,11,11,0.75); color:#fff; display:block; width: 60px;
     height: 60px; line-height: 60px; text-align: center; font-size:20px; border-radius:32px; visibility:hidden; transition-duration:0.8s; }
     .to_top:hover { background-color: rgb(131, 183, 129); }
     .to_top.on { visibility: visible; }
+
+    .thumb_lst { width:100%; float:left; margin-bottom: 50px; margin: 20px 0px;}
+    .thumb_lst li { clear:both;  height: 500px;  }
+    .thumb_lst li a { display:block; }
+    .thumb_lst li .img_fr { width: 100%; height: 400px; overflow:hidden; float:left;}
+    .thumb_lst li .img_fr img { display:block; width: 100%; height:auto; margin-top:-200px; }
+    .thumb_lst li .com_fr { padding-left: 30px; float:left; color:#333; margin: 20px 0px; }
+    .thumb_tit { line-height: 2.4; text-overflow: ellipsis; overflow: hidden; white-space:nowrap; }
+    .thumb_com { line-height:2; text-overflow: ellipsis; overflow: hidden; white-space:nowrap; }
+    .thumb_price { line-height: 1.8; text-overflow: ellipsis; overflow: hidden; white-space:nowrap; }
     </style>
     <script>
     $(document).ready(function(){
@@ -111,7 +122,7 @@
                         <ul class="sub">
                             <li><a href="customer.html#page1">문의하기</a></li>
                             <li><a href="customer.html#page2">매장찾기</a></li>
-                            <li><a href="customer.html#page3">주문배송조회</a></li>
+                            <li><a href="customer.html#page3">공지사항</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -142,7 +153,39 @@
         <section class="page">
             <div class="page_wrap">
                 <h2 class="page_title">다다일상의 추천</h2>
-            
+                <p class="page_p">다다일상에서 자신있게 추천드리는 선물세트입니다.</p>
+                <ul class="thumb_lst">
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/daily5.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명1</h3>
+                                <p class="thumb_com">제품설명1</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/daily6.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명2</h3>
+                                <p class="thumb_com">제품설명2</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/daily7.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명3</h3>
+                                <p class="thumb_com">제품설명3</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
     </div>
@@ -170,7 +213,39 @@
         <section class="page">
             <div class="page_wrap">
                 <h2 class="page_title">베스트</h2>
-
+                <p class="page_p">다다일상에서 이걸 사지 않으면 손해! 꼭 확인하세요!</p>
+                <ul class="thumb_lst">
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/daily4.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명1</h3>
+                                <p class="thumb_com">제품설명1</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/daily8.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명2</h3>
+                                <p class="thumb_com">제품설명2</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/daily1.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명3</h3>
+                                <p class="thumb_com">제품설명3</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
     </div>
@@ -198,7 +273,39 @@
         <section class="page">
             <div class="page_wrap">
                 <h2 class="page_title">티웨어 세트</h2>
-
+                <p class="page_p">집에서도 제대로된 차를 즐기고 싶다면</p>
+                <ul class="thumb_lst">
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/daily7.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명1</h3>
+                                <p class="thumb_com">제품설명1</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/daily8.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명2</h3>
+                                <p class="thumb_com">제품설명2</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="img_fr"><img src="./img/daily4.jpg" alt=""></div>
+                            <div class="com_fr">
+                                <h3 class="thumb_tit">제품명3</h3>
+                                <p class="thumb_com">제품설명3</p>
+                                <p class="thumb_price">가격 : 30000</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
     </div>
