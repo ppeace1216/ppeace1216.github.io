@@ -260,14 +260,14 @@
                 <div class="bread_fr">
                     <a href="index.html" class="home">HOME</a> &gt;
                     <select name="sel1" id="sel1" class="sel">
-                        <option>선물세트</option>
+                        <option value="">선물세트</option>
                         <option value="product.html#page1">제품</option>
                         <option value="subscription.html#page1">다다일상</option>
                         <option value="brand.html#page1">브랜드</option>
                         <option value="customer.html#page1">고객센터</option>
                     </select> &gt;
                     <select name="sel2" id="sel2" class="sel">
-                        <option selected>다다일상의 추천</option>
+                        <option value="" selected>다다일상의 추천</option>
                         <option value="gift.html#page2">베스트</option>
                         <option value="gift.html#page3">티웨어 세트</option>
                     </select>
@@ -320,14 +320,14 @@
                 <div class="bread_fr">
                     <a href="index.html" class="home">HOME</a> &gt;
                     <select name="sel3" id="sel3" class="sel">
-                        <option>선물세트</option>
+                        <option value="">선물세트</option>
                         <option value="product.html#page1">제품</option>
                         <option value="subscription.html#page1">다다일상</option>
                         <option value="brand.html#page1">브랜드</option>
                         <option value="customer.html#page1">고객센터</option>
                     </select> &gt;
                     <select name="sel4" id="sel4" class="sel">
-                        <option selected>베스트</option>
+                        <option value="" selected>베스트</option>
                         <option value="gift.html#page1">다다일상의 추천</option>
                         <option value="gift.html#page3">티웨어 세트</option>
                     </select>
@@ -380,14 +380,14 @@
                 <div class="bread_fr">
                     <a href="index.html" class="home">HOME</a> &gt;
                     <select name="sel5" id="sel5" class="sel">
-                        <option>선물세트</option>
+                        <option value="">선물세트</option>
                         <option value="product.html#page1">제품</option>
                         <option value="subscription.html#page1">다다일상</option>
                         <option value="brand.html#page1">브랜드</option>
                         <option value="customer.html#page1">고객센터</option>
                     </select> &gt;
                     <select name="sel6" id="sel6" class="sel">
-                        <option selected>티웨어 세트</option>
+                        <option value="" selected>티웨어 세트</option>
                         <option value="gift.html#page1">다다일상의 추천</option>
                         <option value="gift.html#page2">베스트</option>
                     </select>
@@ -432,48 +432,48 @@
                 </div>
             </section>
         </div>
-        <script>
-            var sel = document.getElementsByClassName("sel");
-            for (var i = 0; i < sel.length; i++) {
-                sel[i].addEventListener("change", function () {
-                    location.href = this.value;
-                });
-            }
-        </script>
-        <footer class="ft">
-            <div class="ft_wrap">
-                <div class="ft_logo"><img src="./img/logo.png" alt="하단로고"></div>
-                <div class="mid_box">
-                    <nav class="fnb">
-                        <a href="sitemap.html" class="dgc">사이트 맵</a>
-                        <a href="member01.html">개인정보 처리 방침</a>
-                        <a href="member02.html">이용약관</a>
-                        <a href="member03.html">이메일무단수집거부</a>
-                    </nav>
-                    <p class="addr">
-                        DADA DAILY | 대표이사 | 박평화 사업자등록번호:123-45-67890<br>
-                        서울특별시 용산구 한강대로 100, 100층(한강로2가) | ppeace1216@naver.com<br>
-                        통신판매업신고번호: 2022-고양일산-1216호<br>
-                        당 사는 통신판매중개자이며, 통신 판매의 당사자가 아닙니다. 상품 및 거래에 관한 의무와 책임은 판매자에게 있습니다.
-                    </p>
-                    <p class="copyright">COPYRIGHT ⓒ DADADAILY CO., LTD. ALL RIGHTS RESERVED.</p>
-                </div>
-                <div class="sel_box">
-                    <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
-                        <option value="">패밀리 사이트</option>
-                        <option value="https://www.osulloc.com/kr/ko">OSULLOC</option>
-                        <option value="https://wedisplay.solutions/">WEDISPLAY</option>
-                    </select>
-                </div>
-                <script>
-                    function sel_link(sel) {
-                        location.href = sel.value;
-                    }
-                </script>
-            </div>
-        </footer>
     </div>
-    <a href="" class="to_top">↑</a><!-- .to_top.on -->
+    <script>
+    var sel = document.getElementsByClassName("sel");
+    for(var i=0;i<sel.length;i++){
+        sel[i].addEventListener("change", function(){
+            location.href = this.value;
+        });
+    }
+    </script>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="ft_logo"><img src="./img/logo.png" alt="하단로고"></div>
+            <div class="mid_box">
+                <nav class="fnb">
+                    <a href="sitemap.html" class="dgc">사이트 맵</a>
+                    <a href="member01.html">개인정보 처리 방침</a>
+                    <a href="member02.html">이용약관</a>
+                    <a href="member03.html">이메일무단수집거부</a>
+                </nav>
+                <p class="addr">
+                    DADA DAILY | 대표이사 | 박평화 사업자등록번호:123-45-67890<br>
+                    서울특별시 용산구 한강대로 100, 100층(한강로2가) | ppeace1216@naver.com<br>
+                    통신판매업신고번호: 2022-고양일산-1216호<br>
+                    당 사는 통신판매중개자이며, 통신 판매의 당사자가 아닙니다. 상품 및 거래에 관한 의무와 책임은 판매자에게 있습니다.  
+                </p>
+                <p class="copyright">COPYRIGHT ⓒ DADADAILY CO., LTD. ALL RIGHTS RESERVED.</p>
+            </div>
+            <div class="sel_box">
+                <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+                    <option value="">패밀리 사이트</option>
+                    <option value="https://www.osulloc.com/kr/ko">OSULLOC</option>
+                    <option value="https://wedisplay.solutions/">WEDISPLAY</option>
+                </select>
+            </div>
+            <script>
+            function sel_link(sel){
+                location.href = sel.value;
+            }
+            </script>
+        </div>
+    </footer>
+</div>
+<a href="" class="to_top">↑</a><!-- .to_top.on -->
 </body>
-
 </html>

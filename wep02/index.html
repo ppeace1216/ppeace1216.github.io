@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WE DISPLAY</title>
+    <!-- 메타포 -->
+    <meta name="description" content="위 디스플레이에서 다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요.">
+    <meta name="keywords" content="WE DISPALY, 위디스플레이, 디스플레이, DISPLAY, 디스플레이그라운드, 디스플레이 플랫폼, 설치 사례, 견적 문의, 키오스크, 전자칠판, 전광판, DID모니터, 사이니지, 미디어파사드, 파사드, LED스크린, 비디오월, OLED, LED, LCD, 투명OLED, 투명디스플레이, 터치모니터, 광고판">
+    <!-- 오픈그래프 -->
+    <meta property="og:site_name" content="WE DISPLAY">
+    <meta property="og:title" content="WE DISPLAY">
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="다양한 디스플레이 설치사례와 전문업체를 살펴보고 견적을 문의해보세요.">
+    <meta property="og:image" content="./img/icon/share.png">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="400">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/icon/favi.png">
+    <!-- 각 종 플러그인과 설정 파일 -->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- 구형 브라우저 html5태그 인식 -->
+    <script src="./js/html5shiv.js"></script>
+    <!-- 구형 브라우저에서 css animation 인식 -->
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- 구형 브라우저에서 미디어쿼리 인식 -->
+    <script src="./js/respond.min.js"></script>
+    <!-- jquery 플러그인 연결 -->
+    <script src="./js/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="./css/reset2.css">
+    <link rel="stylesheet" href="header.css">
+    <style>
+    /* header.css */
+
+
+    /* content */
+    .page { clear:both; width: 100%; }
+    .page_wrap { width: 1200px; margin: 0 auto; }
+    #page1, #page3 { background-color:#ececec; }
+    .page_tit { text-align: center; font-size:32px; padding-top:1.2em; padding-bottom: 0.8em; }
+    .lst { clear:both; width: 1200px; }
+    .lst:after { content:""; display:block; clear: both;}
+    .lst li { margin-bottom: 40px; }
+    .lst li.left { float:left; width: 816px; height: 459px; }
+    .lst li.right { float:right; width:350px; height: 459px; }
+    .ico_lst { clear:both; width: 100%; overflow:hidden; }
+    .ico_lst li a { display:block; background-repeat: no-repeat; 
+    background-position:0px center; background-size:auto 80%; 
+padding-left: 55px; }
+    .ico_lst li a.icon1 { background-image: url("./img/icon/ico_service_01.svg"); }
+    .ico_lst li a.icon2 { background-image: url("./img/icon/ico_service_02.svg");}
+    .ico_lst li a.icon3 { background-image: url("./img/icon/ico_service_03.svg"); }
+    .cate_tit { color:#222; font-size:20px; padding-bottom: 0.5em; }
+    .cate_com { color:#222; font-size:14px; overflow:hidden;
+    white-space:nowrap; text-overflow:ellipsis; }
+
+    #page2 { background-color: rgba(230, 248, 255, 0.5); }
+    .pic_lst { clear:both; width: 100%; padding-bottom: 80px; }
+    .pic_lst:after { content:""; display:block; clear:both; }
+    .pic_lst li { float:left; position:relative; margin-bottom: 40px; }
+    .pic_lst li a { display:block; width: 360px; margin-right: 40px;
+    overflow: hidden; height: 300px; }
+    .pic_lst li a img { display:block; width:600px; margin-left: -120px; transition-duration:0.8s; }
+    .pic_lst li a:hover img { margin-left: 0; }
+    .pic_lst li a .hv_box { width: 360px; height: 300px; color:#fff; opacity:0; position:absolute; top:0; left: 0; z-index:10; transition-duration:0.8s; background-color:transparent; }
+    .pic_lst li a:hover .hv_box { opacity:1; }
+    .pic_tit { position:absolute; top:30px; left: 30px; 
+    text-shadow:0px 0px 3px red; }
+    .pic_com { position:absolute; right:30px; bottom:30px; 
+        text-shadow:0px 0px 3px blue; }
+
+    #page3 { background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position:center center; height: 100vh; background-image:url("./img/bg_partners.jpg"); overflow:hidden; }
+    #page3 .page_wrap { width: 100%; }
+    .circle_lst { clear:both; width: 4455px; }
+    .circle_lst li { width: 200px; height: 200px; position:relative; border-radius:120px; overflow:hidden; background-color: #fff;
+    float:left; margin:28px;  }
+    .circle_lst.lst2 li { float:right; }
+    .circle_lst li a { display:block; width: 100%; height: 100%; }
+    .circle_lst li a img { display:block; width:160px; height:auto; 
+    position:absolute; top:50%; left: 20px; z-index:11; margin-top: -28px; }
+
+    /* footer.css */
+    </style>
+    <link rel="stylesheet" href="footer.css">
+    <script>
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            var ht = $(window).height();
+            var tp = $(this).scrollTop();
+            if(tp>=600){
+                $(".hd").css("position","fixed");
+            } else {
+                $(".hd").css("position","absolute");
+            }
+        });
+        $
+        $("<ul class='circle_lst lst2'></ul>").insertAfter($(".circle_lst"));
+        $lst1_obj = $(".circle_lst li").clone();
+        $(".circle_lst.lst2").append($lst1_obj);
+    });    
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="" class="logo"><img src="./img/logo_black.svg" alt="로고"></a>
+            <nav class="tnb">
+                <a href="login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+                <a href="sitemap.html">사이트맵</a>
+            </nav>
+            <nav class="gnb">
+                <ul>
+                    <li class="item1">
+                        <a href="" class="dp1">회사소개</a>
+                        <ul class="sub">
+                            <li><a href="company.html#page1">인사말</a></li>
+                            <li><a href="company.html#page2">회사연혁</a></li>
+                            <li><a href="company.html#page3">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li class="item2">
+                        <a href="" class="dp1">제품소개</a>
+                        <ul class="sub">
+                            <li><a href="product.html#page1">LCD 디스플레이</a></li>
+                            <li><a href="product.html#page2">건물 경관 연출</a></li>
+                            <li><a href="product.html#page3">LED 광고</a></li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dp1">서비스</a>
+                        <ul class="sub">
+                            <li><a href="service.html#page1">온라인 가이드</a></li>
+                            <li><a href="service.html#page2">최초 설치 서비스</a></li>
+                            <li><a href="service.html#page3">추가 부품 택배 서비스</a></li>
+                            <li><a href="service.html#page4">이동 설치 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="" class="dp1">고객센터</a>
+                        <ul class="sub">
+                            <li><a href="custom.html#page1">자주하는 질문</a></li>
+                            <li><a href="custom.html#page2">질문 및 답변</a></li>
+                            <li><a href="custom.html#page3">공지사항</a></li>
+                            <li><a href="custom.html#page4">온라인 상담</a></li>
+                        </ul>
+                    </li>
+                    <li class="item5">
+                        <a href="" class="dp1">설치 사례</a>
+                        <ul class="sub">
+                            <li><a href="install.html#page1">기업별</a></li>
+                            <li><a href="install.html#page2">시설별</a></li>
+                            <li><a href="install.html#page3">기기별</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <figure class="vs">
+            <video src="./video/video1.mp4" autoplay muted class="vdo"></video>
+        </figure>
+        <section class="page" id="page1">
+            <div class="page_wrap">
+                <h2 class="page_tit">당신의 비즈니스에<br>Display가 필요한 순간,<br>WE DISPLAY</h2>
+                <ul class="lst">
+                    <li class="left">
+                        <iframe name="vdo2" id="vdo2" width="816" height="459" src="https://www.youtube.com/embed/FnEIQMUwALM" title="다양한 디스플레이 설치 사례" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </li>
+                    <li class="right">
+                        <ul class="ico_lst">
+                            <li>
+                                <a href="https://www.youtube.com/embed/FnEIQMUwALM" target="vdo2" class="icon1">
+                                    <h3 class="cate_tit">다양한 디스플레이 설치 사례</h3>
+                                    <p class="cate_com">나에게 맞는 디스플레이를
+                                        찾아보세요. 나에게 맞는 디스플레이를
+                                        찾아보세요. 나에게 맞는 디스플레이를
+                                        찾아보세요.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/embed/AQ8l96vxONo" target="vdo2" class="icon2">
+                                    <h3 class="cate_tit">믿을만한 전문 파트너스</h3>
+                                    <p class="cate_com">WE DISPLAY 공식
+                                        파트너사들을 소개 합니다.</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/embed/K-X7GNM0Vss" target="vdo2" class="icon3">
+                                    <h3 class="cate_tit">쉽고 빠른 견적 문의</h3>
+                                    <p class="cate_com">온라인으로 쉽고 빠르게
+                                        견적을 받아보세요.</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <div class="mid_box">
+                <ul class="ft_ico_lst">
+                    <li><a href=""><img src="./img/sns01.png" alt="인스타그램"></a></li>
+                    <li><a href=""><img src="./img/sns02.png" alt="블로그"></a></li>
+                    <li><a href=""><img src="./img/sns03.png" alt="트위터"></a></li>
+                </ul>
+                <p class="addr">
+                    © SWINGSET / OWNER.DOYEONKIM<br>
+                    BUSINESS LICENSE. 465-19-01168
+                    ONLINE BUSINESS LICENSE. 2019-GOYANGDEOGYANG-GU-0987 
+                    CONTACT. INFO@SWINGSET.CO.KR
+                    Mon-Fri 11:00am-5:00pm (WED/SAT/SUN/HOLIDAY OFF)<br>
+                </p>
+                <a href="member02.html" class="dpc">이용약관</a>
+                <a href="member01.html" class="dpc">개인정보처리방침</a>
+                <p class="copyright">Copyright ⓒ 2022 Swingset All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
