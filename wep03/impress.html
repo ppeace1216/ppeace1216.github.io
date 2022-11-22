@@ -32,6 +32,12 @@
 	    $('#tb1').DataTable();
 	} );
 	</script>
+	<style>
+	.top {clear:both; width:auto; margin:auto; text-align : center;}
+	.section { clear:both; width:1200px; margin:0 auto; }
+	.section:after { content:""; display:block; clear:both; }
+	.breadcrumb { clear:both; margin:100 auto; }
+	</style>
   </head>
   <body>
   
@@ -149,9 +155,22 @@
 			</script>
 	</div>
 </div>
+<div class="top">
+	<br><br>
+	<h1 class="title">전주 여행 후기</h1>
+	<br><hr>
+</div>
+<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+	<ul>
+	  <li><a href="#">HOME</a></li>
+	  <li><a href="#">관광가이드</a></li>
+	  <li class="is-active"><a href="#" aria-current="page">전주 여행 후기</a></li>
+	</ul>
+  </nav>
+  <hr>
   <section class="section">
     <div class="container">
-      <h1 class="title">이용후기</h1>
+      <h1 class="title">전주 여행 후기</h1>
 		<table class="table" id="tb1">
 			<thead>
 				<tr>
@@ -162,7 +181,7 @@
 		   
 			
 		    <tr>
-		    	<td colspan="4">이용 후기 목록이 없습니다.</td>
+		    	<td colspan="4">여행 후기가 없습니다.</td>
 		    </tr>
 		    
 		  </tbody>
@@ -191,36 +210,6 @@
 								<option value="">선택</option>
 								
 							</select>
-						</div>
-					</td>
-					<td style="width:100px">
-						<input type="radio" name="star" id="star10" class="hidden_item" value="5" checked>
-						<input type="radio" name="star" id="star9" class="hidden_item" value="4.5">
-						<input type="radio" name="star" id="star8" class="hidden_item" value="4">
-						<input type="radio" name="star" id="star7" class="hidden_item" value="3.5">
-						<input type="radio" name="star" id="star6" class="hidden_item" value="3">
-						<input type="radio" name="star" id="star5" class="hidden_item" value="2.5">
-						<input type="radio" name="star" id="star4" class="hidden_item" value="2">
-						<input type="radio" name="star" id="star3" class="hidden_item" value="1.5">
-						<input type="radio" name="star" id="star2" class="hidden_item" value="1">
-						<input type="radio" name="star" id="star1" class="hidden_item" value="0.5">
-						<input type="hidden" name="starpoint" id="starpoint" value="">
-						<div id="star_group">
-							<div id="stardate">
-								<div id="starrate"></div>
-							</div>
-							<div class="star_btn" id="star_btn">
-								<label for="star1"></label>
-								<label for="star2"></label>
-								<label for="star3"></label>
-								<label for="star4"></label>
-								<label for="star5"></label>
-								<label for="star6"></label>
-								<label for="star7"></label>
-								<label for="star8"></label>
-								<label for="star9"></label>
-								<label for="star10"></label>
-							</div>
 						</div>
 					</td>
 					<td style="min-width:400px">
