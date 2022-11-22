@@ -1,0 +1,185 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>공지사항 상세</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
+  
+
+
+  
+<div id="nav-group">
+	<div class="container"> 
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+		  <div class="navbar-brand">
+		    <a class="navbar-item" href="/pro03/">
+		      <span>VISIT JEONJU</span>
+		    </a>
+		
+		    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+		      <span aria-hidden="true"></span>
+		      <span aria-hidden="true"></span>
+		      <span aria-hidden="true"></span>
+		    </a>
+		  </div>
+		
+		  <div id="navbarBasicExample" class="navbar-menu">
+		    <div class="navbar-start" id="gnb">
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">전주 나들이</a>
+		
+		        <div class="navbar-dropdown">
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=A" class="navbar-item" id="A">이달의 추천여행</a>
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=B"  class="navbar-item" id="B">역사 전통 명소</a>
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=C"  class="navbar-item" id="C">자연 생태 명소</a>
+		        </div>
+		      </div>
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">축제 / 문화</a>
+		
+		        <div class="navbar-dropdown">
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=D"  class="navbar-item" id="D">축제</a>
+		          <a class="navbar-item">체험/놀이</a>
+		          <a class="navbar-item">문화시설</a>
+		        </div>
+		      </div>
+		      <div href="/pro03/GetTourCateListCtrl.do?cate=E" class="navbar-item has-dropdown is-hoverable">
+		    	<a class="navbar-link cate">
+			      	전주의 맛
+			    </a>
+		   		<div class="navbar-dropdown cate" id="cate05">
+			    
+			    </div>
+			  </div>
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">숙박 / 쇼핑</a>
+		
+		        <div class="navbar-dropdown">
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=F"  class="navbar-item" id="F">숙박</a>
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=G"  class="navbar-item" id="G">쇼핑</a>
+		        </div>
+		      </div>
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">관광가이드</a>
+		
+				<div class="navbar-dropdown">
+				  <a class="navbar-item">관광안내소</a>
+		          <a class="navbar-item">관광지도신청</a>
+		          <a class="navbar-item" href="/pro03/GetImpressListCtrl.do">관광 후기</a>
+		          <a class="navbar-item" href="/pro03/GetNoticeListCtrl.do">공지사항</a>
+		        </div>
+		      </div>
+		    </div>
+		
+			<div class="navbar-end">
+			  <div class="navbar-item">
+			  	
+			
+			 <div class="buttons">
+			   <a href="/pro03/UserInfoCtrl.do" class="button is-primary">
+			     <strong>회원 정보</strong>
+			   </a>
+			   <a href="/pro03/UserLogoutCtrl.do" class="button is-light">
+			     	로그아웃
+			   </a>
+				
+				   <a href="/pro03/AdminPageCtrl.do" class="button is-info">
+				     <strong>관리자 페이지로</strong>
+				   </a>
+				
+			 </div>
+			
+		  </div>
+		</div>
+		  </div>
+		</nav>
+			<script>
+			$(document).ready(function(){
+				$.ajax({
+					url:"/pro03/MemuLoadCtrl.do",
+					type:"POST",
+					enctype:"UTF-8",
+					datatype:"json",
+					processData:false,
+					contentType:false, 
+					cache:false,
+					success:function(data){
+						$(".navbar-dropdown.cate").empty();
+						var trans = $.parseJSON(data);
+						console.log(trans);
+						$.each(trans, function(key, value){
+							if(key=="data"){
+								for(var i=0;i<value.length;i++){
+									if(value[i].cate=="E"){
+										$("#cate05").append("<a href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].title+"</a>");
+									}
+								}
+							}
+						});
+						
+					}
+				});
+			});
+			</script>
+	</div>
+</div>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">공지사항</h1>
+		<table class="table">
+		   <tbody>
+		    <tr>
+		      <th>번호</th>
+		      <td>3</td>
+		    </tr>
+		    <tr>
+		      <th>제목</th>
+		      <td>안녕하세요 관리자입니다</td>
+		    </tr>
+		    <tr>
+		      <th>내용</th>
+		      <td><p>글 등록중입니다. 잠시만 기다려주세요</p></td>
+		    </tr>
+		    <tr> 
+		      <th>작성일</th>
+		      <td>
+		      	
+		      	2022-11-22
+		    </tr>
+		    <tr>
+		      <th>읽은 횟수</th>
+		      <td><p>1</p></td>
+		    </tr>
+		  </tbody>
+		</table>
+		<div class="buttons">
+		  <a href="/pro03/GetNoticeListCtrl.do" class="button is-info">목록</a>
+		  
+			  <a href="/pro03/DeleteNoticeCtrl.do?no=3" class="button is-danger">글 삭제</a>
+			  <a href="/pro03/ModifyNoticeCtrl.do?no=3" class="button is-warning">글 수정</a>
+		  
+		</div>
+    </div>
+  </section>
+  
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+		(54994) 전라북도 전주시 완산구 노송광장로 10 / 대표전화: 063)222-1000
+    </p>
+    <small lang="en">Copyright © JEONJU CITY. ALL RIGHTS RESERVED.</small>
+  </div>
+</footer>
+  </body>
+</html>

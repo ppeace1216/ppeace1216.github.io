@@ -1,0 +1,333 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>이용후기 목록</title>
+    
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<style>
+.table { min-width:960px; }
+#logo { display:block; width:92px; height:45px; }
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="/pro03/resource/datatables.min.css">
+	<script src="/pro03/resource/datatables.min.js"></script>
+	<script>
+	$(document).ready( function () {
+	    $('#tb1').DataTable();
+	} );
+	</script>
+  </head>
+  <body>
+  
+
+
+  
+<div id="nav-group">
+	<div class="container"> 
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+		  <div class="navbar-brand">
+		    <a class="navbar-item" href="/pro03/">
+		      <span>VISIT JEONJU</span>
+		    </a>
+		
+		    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+		      <span aria-hidden="true"></span>
+		      <span aria-hidden="true"></span>
+		      <span aria-hidden="true"></span>
+		    </a>
+		  </div>
+		
+		  <div id="navbarBasicExample" class="navbar-menu">
+		    <div class="navbar-start" id="gnb">
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">전주 나들이</a>
+		
+		        <div class="navbar-dropdown">
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=A" class="navbar-item" id="A">이달의 추천여행</a>
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=B"  class="navbar-item" id="B">역사 전통 명소</a>
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=C"  class="navbar-item" id="C">자연 생태 명소</a>
+		        </div>
+		      </div>
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">축제 / 문화</a>
+		
+		        <div class="navbar-dropdown">
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=D"  class="navbar-item" id="D">축제</a>
+		          <a class="navbar-item">체험/놀이</a>
+		          <a class="navbar-item">문화시설</a>
+		        </div>
+		      </div>
+		      <div href="/pro03/GetTourCateListCtrl.do?cate=E" class="navbar-item has-dropdown is-hoverable">
+		    	<a class="navbar-link cate">
+			      	전주의 맛
+			    </a>
+		   		<div class="navbar-dropdown cate" id="cate05">
+			    
+			    </div>
+			  </div>
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">숙박 / 쇼핑</a>
+		
+		        <div class="navbar-dropdown">
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=F"  class="navbar-item" id="F">숙박</a>
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=G"  class="navbar-item" id="G">쇼핑</a>
+		        </div>
+		      </div>
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">관광가이드</a>
+		
+				<div class="navbar-dropdown">
+				  <a class="navbar-item">관광안내소</a>
+		          <a class="navbar-item">관광지도신청</a>
+		          <a class="navbar-item" href="/pro03/GetImpressListCtrl.do">관광 후기</a>
+		          <a class="navbar-item" href="/pro03/GetNoticeListCtrl.do">공지사항</a>
+		        </div>
+		      </div>
+		    </div>
+		
+			<div class="navbar-end">
+			  <div class="navbar-item">
+			  	
+			
+			 <div class="buttons">
+			   <a href="/pro03/UserInfoCtrl.do" class="button is-primary">
+			     <strong>회원 정보</strong>
+			   </a>
+			   <a href="/pro03/UserLogoutCtrl.do" class="button is-light">
+			     	로그아웃
+			   </a>
+				
+			 </div>
+			
+		  </div>
+		</div>
+		  </div>
+		</nav>
+			<script>
+			$(document).ready(function(){
+				$.ajax({
+					url:"/pro03/MemuLoadCtrl.do",
+					type:"POST",
+					enctype:"UTF-8",
+					datatype:"json",
+					processData:false,
+					contentType:false, 
+					cache:false,
+					success:function(data){
+						$(".navbar-dropdown.cate").empty();
+						var trans = $.parseJSON(data);
+						console.log(trans);
+						$.each(trans, function(key, value){
+							if(key=="data"){
+								for(var i=0;i<value.length;i++){
+									if(value[i].cate=="E"){
+										$("#cate05").append("<a href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].title+"</a>");
+									}
+								}
+							}
+						});
+						
+					}
+				});
+			});
+			</script>
+	</div>
+</div>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">이용후기</h1>
+		<table class="table" id="tb1">
+			<thead>
+				<tr>
+					<th>장소</th><th>내용</th><th>작성자</th><th>작성일</th><th></th>
+				</tr>
+			</thead>
+			<tbody>
+		   
+			
+		    <tr>
+		    	<td colspan="4">이용 후기 목록이 없습니다.</td>
+		    </tr>
+		    
+		  </tbody>
+		</table>
+		<hr style="height:4px; background-color:#ccc;">
+				
+		<table class="table">
+			<tbody>
+				<tr>
+					<td style="width:160px">
+						<div class="select" style="width:150">
+						  <select name="cate" id="cate" class="select" onchange="changeTourNo()" style="width:150" required>
+						  	<option value="">선택</option>
+						    <option value="A">이달의 추천여행</option>
+						    <option value="B">역사 전통 명소</option>
+						    <option value="C">자연 생태 명소</option>
+						    <option value="D">축제</option>
+						    <option value="E">전통음식</option>
+						    <option value="F">숙박</option>
+						    <option value="G">쇼핑</option>
+						  </select>
+						</div>
+						<br>
+						<div class="select" style="width:150">
+							<select name="tourno" id="tourno" style="width:150" required>
+								<option value="">선택</option>
+								
+							</select>
+						</div>
+					</td>
+					<td style="width:100px">
+						<input type="radio" name="star" id="star10" class="hidden_item" value="5" checked>
+						<input type="radio" name="star" id="star9" class="hidden_item" value="4.5">
+						<input type="radio" name="star" id="star8" class="hidden_item" value="4">
+						<input type="radio" name="star" id="star7" class="hidden_item" value="3.5">
+						<input type="radio" name="star" id="star6" class="hidden_item" value="3">
+						<input type="radio" name="star" id="star5" class="hidden_item" value="2.5">
+						<input type="radio" name="star" id="star4" class="hidden_item" value="2">
+						<input type="radio" name="star" id="star3" class="hidden_item" value="1.5">
+						<input type="radio" name="star" id="star2" class="hidden_item" value="1">
+						<input type="radio" name="star" id="star1" class="hidden_item" value="0.5">
+						<input type="hidden" name="starpoint" id="starpoint" value="">
+						<div id="star_group">
+							<div id="stardate">
+								<div id="starrate"></div>
+							</div>
+							<div class="star_btn" id="star_btn">
+								<label for="star1"></label>
+								<label for="star2"></label>
+								<label for="star3"></label>
+								<label for="star4"></label>
+								<label for="star5"></label>
+								<label for="star6"></label>
+								<label for="star7"></label>
+								<label for="star8"></label>
+								<label for="star9"></label>
+								<label for="star10"></label>
+							</div>
+						</div>
+					</td>
+					<td style="min-width:400px">
+						<input type="text" name="content" id="content" class="input" placeholder="남기고 싶은 말을 작성해주세요." required>
+					</td>
+					<td>
+						<div class="buttons">
+						  <button type="button" class="button is-danger" onclick="addImpress()">글 등록</button>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+    </div>
+    <script>
+    $(document).ready(function(){
+    	
+    	$("#content").on("click", function(){
+    		if($("#tourno").val()==""){
+    			alert("방문 장소를 먼저 고르시기 바랍니다.");
+    		}
+    	});
+    	
+    	$("#star_btn label").click(function(){
+    		if($("#tourno").val()==""){
+    			alert("방문 장소를 먼저 고르시기 바랍니다.");
+    			$("#tourno").focus();
+    		} else {
+    			$("#starpoint").val(($(this).index()+1)/2);
+    		}
+    	});
+    });
+    
+    function changeTourNo(){
+    	var ct = $("#cate").val(); 
+    	if(ct==""){
+    		alert("카테고리를 먼저 선택하시기 바랍니다.");
+    		return;
+    	}
+    	var params = {	cate : ct	}
+		$.ajax({
+			url:"/pro03/CateLoadCtrl.do",
+			type:"POST",
+			enctype:"application/json",
+			data:params,
+			datatype:"json",
+			success:function(result){
+				$("#tourno").empty();
+				$("#tourno").append("<option value=''>선택</option>");
+				var trans = result;
+				console.log(trans);
+				$.each(trans, function(key, value){
+					if(key=="result"){
+						for(var i=0;i<value.length;i++){
+							$("#tourno").append("<option value='"+value[i].tourno+"'>"+value[i].title+"</option>");
+						}
+					}
+				});				
+			}
+		});
+    }
+    function addImpress(){
+    	var ct = $("#cate").val();
+    	var tour = $("#tourno").val();
+    	var con = $("#content").val();
+    	var starpoint = $("#starpoint").val();
+    	if(ct==""){
+    		alert("카테고리를 먼저 선택하시기 바랍니다.");
+    		return;
+    	}
+    	if(tour==""){
+    		alert("방문 장소를 먼저 선택하시기 바랍니다.");
+    		return;
+    	}
+    	if(con==""){
+    		alert("내용을 입력하시기 바랍니다.");
+    		return;
+    	}
+    	if(starpoint==""){
+    		alert("별점을 먼저 선택하여 주시기 바랍니다.");
+    		return;
+    	}
+    	var params = {	cate : ct, tourno : tour, content : con, star :	starpoint }
+		$.ajax({
+			url:"/pro03/AddImpressCtrl.do",
+			type:"POST",
+			enctype:"application/json",
+			data:params,
+			datatype:"json",
+			success:function(result){
+				var trans = result;
+				location.href = "/pro03/GetImpressListCtrl.do";				
+			}
+		});
+    }
+    //href="/pro03/notice/AddImpressCtrl.do" 
+    </script>
+  </section>
+  
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+		(54994) 전라북도 전주시 완산구 노송광장로 10 / 대표전화: 063)222-1000
+    </p>
+    <small lang="en">Copyright © JEONJU CITY. ALL RIGHTS RESERVED.</small>
+  </div>
+</footer>
+  </body>
+</html>

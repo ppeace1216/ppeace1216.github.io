@@ -1,0 +1,293 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>회원 가입</title>
+  
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<style>
+.table { min-width:960px; }
+#logo { display:block; width:92px; height:45px; }
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<style>
+.title { padding-top:36px; padding-bottom:20px; }
+#id { width:780px; float:left; margin-right:30px; margin-left:6px; }
+</style>
+</head>
+<body>
+  	
+
+
+  
+<div id="nav-group">
+	<div class="container"> 
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+		  <div class="navbar-brand">
+		    <a class="navbar-item" href="/pro03/">
+		      <span>VISIT JEONJU</span>
+		    </a>
+		
+		    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+		      <span aria-hidden="true"></span>
+		      <span aria-hidden="true"></span>
+		      <span aria-hidden="true"></span>
+		    </a>
+		  </div>
+		
+		  <div id="navbarBasicExample" class="navbar-menu">
+		    <div class="navbar-start" id="gnb">
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">전주 나들이</a>
+		
+		        <div class="navbar-dropdown">
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=A" class="navbar-item" id="A">이달의 추천여행</a>
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=B"  class="navbar-item" id="B">역사 전통 명소</a>
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=C"  class="navbar-item" id="C">자연 생태 명소</a>
+		        </div>
+		      </div>
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">축제 / 문화</a>
+		
+		        <div class="navbar-dropdown">
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=D"  class="navbar-item" id="D">축제</a>
+		          <a class="navbar-item">체험/놀이</a>
+		          <a class="navbar-item">문화시설</a>
+		        </div>
+		      </div>
+		      <div href="/pro03/GetTourCateListCtrl.do?cate=E" class="navbar-item has-dropdown is-hoverable">
+		    	<a class="navbar-link cate">
+			      	전주의 맛
+			    </a>
+		   		<div class="navbar-dropdown cate" id="cate05">
+			    
+			    </div>
+			  </div>
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">숙박 / 쇼핑</a>
+		
+		        <div class="navbar-dropdown">
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=F"  class="navbar-item" id="F">숙박</a>
+		          <a href="/pro03/GetTourCateListCtrl.do?cate=G"  class="navbar-item" id="G">쇼핑</a>
+		        </div>
+		      </div>
+		      <div class="navbar-item has-dropdown is-hoverable">
+		        <a class="navbar-link">관광가이드</a>
+		
+				<div class="navbar-dropdown">
+				  <a class="navbar-item">관광안내소</a>
+		          <a class="navbar-item">관광지도신청</a>
+		          <a class="navbar-item" href="/pro03/GetImpressListCtrl.do">관광 후기</a>
+		          <a class="navbar-item" href="/pro03/GetNoticeListCtrl.do">공지사항</a>
+		        </div>
+		      </div>
+		    </div>
+		
+			<div class="navbar-end">
+			  <div class="navbar-item">
+			  	
+			 <div class="buttons">
+			   <a href="/pro03/user/joinForm.jsp" class="button is-primary">
+			     <strong>회원가입</strong>
+			   </a>
+			   <a href="/pro03/user/login.jsp" class="button is-light">
+			     	로그인
+			   </a>
+			 </div>
+			
+			
+		  </div>
+		</div>
+		  </div>
+		</nav>
+			<script>
+			$(document).ready(function(){
+				$.ajax({
+					url:"/pro03/MemuLoadCtrl.do",
+					type:"POST",
+					enctype:"UTF-8",
+					datatype:"json",
+					processData:false,
+					contentType:false, 
+					cache:false,
+					success:function(data){
+						$(".navbar-dropdown.cate").empty();
+						var trans = $.parseJSON(data);
+						console.log(trans);
+						$.each(trans, function(key, value){
+							if(key=="data"){
+								for(var i=0;i<value.length;i++){
+									if(value[i].cate=="E"){
+										$("#cate05").append("<a href='/pro03/GetTourDetailCtrl.do?no="+value[i].no+"'>"+value[i].title+"</a>");
+									}
+								}
+							}
+						});
+						
+					}
+				});
+			});
+			</script>
+	</div>
+</div>
+<div class="container" id="content">
+	<h2 class="title">회원 가입</h2>
+	<form name="frm1" id="frm1" action="/pro03/AddUserCtrl.do" method="post" onsubmit="return joinCheck(this)">
+		<table class="table">
+			<tbody>
+				<tr>
+					<th>아이디</th>
+					<td>
+						<div class="form-row">
+							<input type="text" name="id" id="id" placeholder="아이디 입력" class="input" autofocus required />
+							<input type="button" class="button is-info" value="아이디 중복 확인" onclick="idCheck()">
+							<input type="hidden" name="idck" id="idck" value="no">
+						</div>
+						<div>
+							
+							<p id="msg" style="padding-left:0.5rem">아이디 중복 체크를 하지 않으셨습니다.</p>
+							
+							
+						</div>
+					</td>
+				</tr>
+				<tr>
+				    <th>비밀번호</th>
+				    <td>
+				        <input type="password" id="pw" name="pw" class="input" placeholder="비밀번호 입력" maxlength="20" required>
+				    </td>
+				</tr>
+				<tr>
+				    <th>비밀번호 확인</th>
+				    <td><input type="password" id="pw2" name="pw2" class="input" placeholder="비밀번호 확인" required></td>
+				</tr>
+				<tr>
+					<th>이름</th>
+					<td><input type="text" id="name" name="name" class="input" placeholder="이름을(를) 입력" required></td>
+				</tr>
+				<tr>
+					<th>이메일</th>
+					<td><input type="email" name="email" id="email" placeholder="이메일 입력" class="input" required></td>
+				</tr>
+				<tr>
+					<th>생년월일</th>
+					<td><input type="date" name="birth" id="birth" placeholder="생년월일 입력" class="input" required></td>
+				</tr>
+				<tr>
+					<th>연락처</th>
+					<td><input type="tel" name="tel" id="tel" maxlength="11" placeholder="전화번호 숫자만 입력 00000000000" class="input" required></td>
+				</tr>
+				<tr>
+					<th>주소</th>
+					<td>
+					<input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" class="input" />
+					<button id="post_btn" onclick="findAddr()" class="button is-info">우편번호 검색</button>
+					<input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="input" required /><br>
+					<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="input" required /><br>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="btn-group">
+			<input type="submit" name="submit-btn" class="button is-info" value="회원가입">
+			<input type="reset" name="reset-btn" class="button is-danger" value="취소">
+		</div>
+	</form>	
+	<script>
+	$(document).ready(function(){
+		$("#id").keyup(function(){
+			$("#idck").val("no");
+			if($(this).val()!=""){
+				$("#msg").html("<strong>아이디 입력중입니다.</strong>");
+			} else {
+				$("#msg").html("아직 아이디 중복 체크를 하지 않으셨습니다.");
+			}
+		});
+	});
+	</script>
+	<script>
+	function idCheck(){
+		if($("#id").val()==""){
+			alert("아이디를 입력하지 않으셨습니다.");
+			$("#id").focus();
+			return;
+		}
+		var params = { id : $("#id").val() } //전송되어질 데이터를 객체로 묶음
+		$.ajax({
+			url:"/pro03/IdCheckCtrl.do", //아이디가 전송되어질 곳
+			type:"post",		//전송방식
+			dataType:"json",	//데이터반환방식
+			data:params,		//전송방식이 포스트인 경우 객체로 묶어서 전송
+			success:function(result){
+				console.log(result.result);
+				var idChk = result.result;	//true 또는 false를 받음
+				if(idChk==false){
+					$("#idck").val("no");
+					$("#msg").html("<strong style='color:red'>중복되는 아이디입니다. 다시 시도해주세요.</strong>");
+					$("#id").focus();
+				}else if(idChk==true) {
+					$("#idck").val("yes");
+					$("#msg").html("<strong style='color:blue'>사용 가능한 아이디입니다. </strong>");
+				}else if(idChk=="") {
+					$("#msg").html("<strong>오류가 발생했습니다. 다시 시도해주세요.</strong>");
+				}
+			}
+		})
+	}
+	function joinCheck(f){
+		if(f.pw.value!=f.pw2.value){
+			alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+			f.pw.focus();
+			return false;
+		}
+		if(f.idck.value!="yes"){
+			alert("아이디 중복 체크를 하지 않으셨습니다.");
+			return false;
+		}
+	}
+	</script>
+	<script>
+	function findAddr() {
+		new daum.Postcode({
+			oncomplete: function(data) {
+				console.log(data);
+				var roadAddr = data.roadAddress;
+				var jibunAddr = data.jibunAddress;
+				document.getElementById("postcode").value = data.zonecode;
+				if(roadAddr !== '') {
+					document.getElementById("address1").value = roadAddr;				
+				} else if(jibunAddr !== ''){
+					document.getElementById("address1").value = jibunAddr;
+				}
+				document.getElementById("address2").focus();
+			}
+		}).open();
+	}
+	</script>
+	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</div>
+  
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+		(54994) 전라북도 전주시 완산구 노송광장로 10 / 대표전화: 063)222-1000
+    </p>
+    <small lang="en">Copyright © JEONJU CITY. ALL RIGHTS RESERVED.</small>
+  </div>
+</footer>
+</body>
+</html>
