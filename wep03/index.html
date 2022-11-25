@@ -27,8 +27,8 @@
     .ico_lst li a { display:block; background-repeat: no-repeat; 
     background-position:0px center; background-size:auto 75%; padding-left: 120px; padding-bottom: 30px;}
     .ico_lst li a.icon1 { background-image: url("./data/icon/icon_guide.svg");background-size:auto 60%; }
-    .ico_lst li a.icon2 { background-image: url("./img/icon/icon_map.svg");}
-    .ico_lst li a.icon3 { background-image: url("./img/icon/icon_comment.svg"); }
+    .ico_lst li a.icon2 { background-image: url("./data/icon/icon_map.svg");}
+    .ico_lst li a.icon3 { background-image: url("./data/icon/icon_comment.svg"); }
 	.card { clear:both; width:auto; margin:0 auto; }
 	.card { content:""; display:block; clear:both; }
     .cate_tit { color:#222; font-size:25px; padding-bottom: 1em; }
@@ -64,47 +64,51 @@
 		  <div id="navbarBasicExample" class="navbar-menu">
 		    <div class="navbar-start" id="gnb">
 		      <div class="navbar-item has-dropdown is-hoverable">
-		        <a class="navbar-link">전주 나들이</a>
+		        <a href="month.html" class="navbar-link">전주 나들이</a>
 		
 		        <div class="navbar-dropdown">
-		          <a href="/pro03/GetTourCateListCtrl.do?cate=A" class="navbar-item" id="A">이달의 추천여행</a>
-		          <a href="/pro03/GetTourCateListCtrl.do?cate=B"  class="navbar-item" id="B">역사 전통 명소</a>
-		          <a href="/pro03/GetTourCateListCtrl.do?cate=C"  class="navbar-item" id="C">자연 생태 명소</a>
+		          <a href="month.html" class="navbar-item" id="A">이달의 추천여행</a>
+		          <a href="history.html"  class="navbar-item" id="B">역사 전통 명소</a>
+		          <a href="nature.html"  class="navbar-item" id="C">자연 생태 명소</a>
 		        </div>
 		      </div>
 		      <div class="navbar-item has-dropdown is-hoverable">
 		        <a class="navbar-link">축제 / 문화</a>
 		
 		        <div class="navbar-dropdown">
-		          <a href="/pro03/GetTourCateListCtrl.do?cate=D"  class="navbar-item" id="D">축제</a>
-		          <a class="navbar-item">체험/놀이</a>
-		          <a class="navbar-item">문화시설</a>
+		          <a href="festival.html"  class="navbar-item" id="D">축제</a>
+		          <a href="play.html" class="navbar-item">체험/놀이</a>
+		          <a href="culture.html" class="navbar-item">문화시설</a>
 		        </div>
 		      </div>
-		      <div href="/pro03/GetTourCateListCtrl.do?cate=E" class="navbar-item has-dropdown is-hoverable">
+		      <div href="flavor.html" class="navbar-item has-dropdown is-hoverable">
 		    	<a class="navbar-link cate">
 			      	전주의 맛
 			    </a>
 		   		<div class="navbar-dropdown cate" id="cate05">
-			    
+					<a href="flavor/bibim.html"  class="navbar-item">비빔밥</a>
+					<a href="flavor/han.html" class="navbar-item">한정식</a>
+					<a href="flavor/cong.html" class="navbar-item">콩나물국밥</a>
+					<a href="flavor/mag.html" class="navbar-item">막걸리</a>
+					<a href="flavor/omo.html" class="navbar-item">오모가리탕</a>
 			    </div>
 			  </div>
 		      <div class="navbar-item has-dropdown is-hoverable">
 		        <a class="navbar-link">숙박 / 쇼핑</a>
 		
 		        <div class="navbar-dropdown">
-		          <a href="/pro03/GetTourCateListCtrl.do?cate=F"  class="navbar-item" id="F">숙박</a>
-		          <a href="/pro03/GetTourCateListCtrl.do?cate=G"  class="navbar-item" id="G">쇼핑</a>
+		          <a href="stay.html"  class="navbar-item" id="F">숙박</a>
+		          <a href="shop.html"  class="navbar-item" id="G">쇼핑</a>
 		        </div>
 		      </div>
 		      <div class="navbar-item has-dropdown is-hoverable">
 		        <a class="navbar-link">관광가이드</a>
 		
 				<div class="navbar-dropdown">
-				  <a class="navbar-item">관광안내소</a>
-		          <a class="navbar-item">관광지도신청</a>
-		          <a class="navbar-item" href="/pro03/GetImpressListCtrl.do">관광 후기</a>
-		          <a class="navbar-item" href="/pro03/GetNoticeListCtrl.do">공지사항</a>
+				  <a href="info.html" class="navbar-item">관광안내소</a>
+		          <a href="map.html" class="navbar-item">관광지도신청</a>
+		          <a href="impress.html" class="navbar-item">관광 후기</a>
+		          <a href="notice.html" class="navbar-item">공지사항</a>
 		        </div>
 		      </div>
 		    </div>
