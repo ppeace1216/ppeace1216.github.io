@@ -184,68 +184,14 @@
 	  			</tr>
 	  			<tr>
 	  				<td><p>
-                        뿌리 깊은 전주 음식의 발달 과정을 짚어보면 전국 어느 도시를 가나 맛집으로 소문난 음식점의 상호에 ‘전주’라는 지명이 붙은 사례가 유난히 많은 것이 결코 우연이 아니란 것을 짐작게 한다. 음식 앞에도 전주비빔밥, 전주콩나물국밥, 전주한정식, 전주막걸리 등 ‘전주’라는 상징적 단어가 붙어야 더욱 맛깔스럽다. 여기에 전라도의 손맛과 훈훈한 인심까지 더해져 전주 음식은 한층 게미(전라도 방언·음식 속에 녹아 있는 독특한 맛)를 더한다.이 같은 전통은 오늘날까지 이어져 2012년 전주시가 국내 최초 ‘유네스코 음식창의도시’로 선정되는 배경이 됐다. 세계적으로도 콜롬비아 포파얀(2005년), 중국 칭다오(2010년), 스웨덴 외스테르순드(2010년)에 이어 네 번째다.
-                        당시 유네스코 심사위원들은 전주시가 음식을 포함한 지역의 다양한 전통문화를 창의산업으로 발전시키기 위해 지속적으로 노력해 온 점에 높은 점수를 주었다. 또 수천년 전부터 이어져 내려오는 정성 어린 가정 음식, 한식전문 인력 양성 과정, 한 스타일 전문코디네이터 양성 등 창의적 인재 양성 노력 등을 높이 평가했다. 또 영국의 3대 일간지인 가디언은 2018년 평창동계올림픽 개최를 기념한 ‘대한민국음식기행’이란 기획에서 전주를 ‘한국에서 음식으로 대적할 곳이 없는 도시’로 소개하기도 했다.
-                    </p></td>
-	  			</tr>
-	  			<tr>
-	  				<th>
-	  				<span class="icon has-text-info">
-					  <i class="fas fa-info-circle"></i>
-					</span>
-					  위치
-					</th>
-	  				<td>
-	  					전북 전주시 완산구 어진길 119한국집
-		    			<input type="hidden" name="addr" id="addr" value="전북 전주시 완산구 어진길 119한국집" />
-		    			<input type="hidden" name="title" id="title" value="비빔밥" />
-		    		</td>
+                뿌리 깊은 전주 음식의 발달 과정을 짚어보면 전국 어느 도시를 가나 맛집으로 소문난 음식점의 상호에 ‘전주’라는 지명이 붙은 사례가 유난히 많은 것이 결코 우연이 아니란 것을 짐작게 한다. 음식 앞에도 전주비빔밥, 전주콩나물국밥, 전주한정식, 전주막걸리 등 ‘전주’라는 상징적 단어가 붙어야 더욱 맛깔스럽다. 여기에 전라도의 손맛과 훈훈한 인심까지 더해져 전주 음식은 한층 게미(전라도 방언·음식 속에 녹아 있는 독특한 맛)를 더한다.이 같은 전통은 오늘날까지 이어져 2012년 전주시가 국내 최초 ‘유네스코 음식창의도시’로 선정되는 배경이 됐다. 세계적으로도 콜롬비아 포파얀(2005년), 중국 칭다오(2010년), 스웨덴 외스테르순드(2010년)에 이어 네 번째다.
+                당시 유네스코 심사위원들은 전주시가 음식을 포함한 지역의 다양한 전통문화를 창의산업으로 발전시키기 위해 지속적으로 노력해 온 점에 높은 점수를 주었다. 또 수천년 전부터 이어져 내려오는 정성 어린 가정 음식, 한식전문 인력 양성 과정, 한 스타일 전문코디네이터 양성 등 창의적 인재 양성 노력 등을 높이 평가했다. 또 영국의 3대 일간지인 가디언은 2018년 평창동계올림픽 개최를 기념한 ‘대한민국음식기행’이란 기획에서 전주를 ‘한국에서 음식으로 대적할 곳이 없는 도시’로 소개하기도 했다.
+            </p></td>
 	  			</tr>
 	  		</tbody>
 	  	</table>
-	  	<div style="clear:both; margin-bottom:20px; padding-bottom:20px; ">
-			<div id="map" style="margin-left:120px;	margin-top:50px; width:800px;height:600px; background:white; "></div>
-			<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-			<!-- https://developers.kakao.com/ 회원가입 후 -> 내 애플리케이션 -> 애플리케이션 추가 -> 추가된 해당 앱을 클릭하면 발급받은  API키를 확인할 수 있음  -->			
-			<script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=e28d5d3e18d7c2e7143fdcdf4547cec7&​libraries=services"></script>
-			<script>
-			var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-			    mapOption = { //128.433182, 34.8544227
-			        center: new kakao.maps.LatLng(34.8544227, 128.433182), // 지도의 중심좌표
-			        level: 7 // 지도의 확대 레벨
-			    };  
-			
-			// 지도를 생성합니다    
-			var map = new kakao.maps.Map(mapContainer, mapOption); 
-			
-			// 주소-좌표 변환 객체를 생성합니다
-			var geocoder = new kakao.maps.services.Geocoder();
-			
-			// 주소로 좌표를 검색합니다
-			geocoder.addressSearch($("#addr").val(), function(result, status) {
-			
-			    // 정상적으로 검색이 완료됐으면 
-			     if (status === kakao.maps.services.Status.OK) {
-			
-			        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-			        // 결과값으로 받은 위치를 마커로 표시합니다
-			        var marker = new kakao.maps.Marker({
-			            map: map,
-			            position: coords
-			        });
-					
-			        // 인포윈도우로 장소에 대한 설명을 표시합니다
-			        var infowindow = new kakao.maps.InfoWindow({
-			            content: '<div style="width:150px;text-align:center;padding:6px 0;">'+$('#place').val()+'</div>'
-			        });
-			        infowindow.open(map, marker);
-			
-			        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-			        map.setCenter(coords);
-			    } 
-			});    
-			</script>
 		</div>
+    <hr><br>
 		<div class="buttons">
 		  <a href="../admin/placeListAll.html" class="button is-info">전체 목록</a>
 		  <a href="../flavor.html" class="button is-info">카테고리 목록</a>
