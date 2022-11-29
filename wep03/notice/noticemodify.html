@@ -11,7 +11,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>공지사항 상세</title>
+    <title>공지사항 글 수정</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
   <body>
@@ -136,40 +136,30 @@
 </div>
   <section class="section">
     <div class="container">
-      <h1 class="title">공지사항</h1>
-		<table class="table">
-		   <tbody>
-		    <tr>
-		      <th>번호</th>
-		      <td>3</td>
-		    </tr>
-		    <tr>
-		      <th>제목</th>
-		      <td>안녕하세요 관리자입니다</td>
-		    </tr>
-		    <tr>
-		      <th>내용</th>
-		      <td><p>글 등록중입니다. 잠시만 기다려주세요</p></td>
-		    </tr>
-		    <tr> 
-		      <th>작성일</th>
-		      <td>
-		      	
-		      	2022-11-22
-		    </tr>
-		    <tr>
-		      <th>읽은 횟수</th>
-		      <td><p>1</p></td>
-		    </tr>
-		  </tbody>
-		</table>
-		<div class="buttons">
-		  <a href="/pro03/GetNoticeListCtrl.do" class="button is-info">목록</a>
-		  
-			  <a href="/pro03/DeleteNoticeCtrl.do?no=3" class="button is-danger">글 삭제</a>
-			  <a href="/pro03/ModifyNoticeCtrl.do?no=3" class="button is-warning">글 수정</a>
-		  
-		</div>
+      <h1 class="title">글 수정하기</h1>
+      	<form action="../notice.html" method="post">
+			<table class="table">
+			   <tbody>
+			   	<tr>
+			      <th><label for="no">공지 번호</label></th>
+			      <td><input type="text" name="no" id="no" value="3" readonly /></td>
+			    </tr>
+			    <tr>
+			      <th><label for="title">제목</label></th>
+			      <td><input type="text" class="input" maxlength="120" name="title" id="title" placeholder="제목 입력" value="안녕하세요 관리자입니다" required /></td>
+			    </tr>
+			    <tr>
+			      <th><label for="content">내용</label></th>
+			      <td><textarea rows="8" cols="100" name="content" id="content" class="textarea" required>글 등록중입니다. 잠시만 기다려주세요</textarea></td>
+			    </tr>
+			  </tbody>
+			</table>
+			<div class="buttons">
+			  <button type="submit" class="button is-success">수정</button>
+			  <button type="reset" class="button is-warning">취소</button>
+			  <a href="../notice.html" class="button is-info">목록</a>
+			</div>
+		</form>
     </div>
   </section>
   

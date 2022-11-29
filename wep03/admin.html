@@ -1,0 +1,204 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>관리자 메인 페이지</title>
+    
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<style>
+.table { min-width:960px; }
+#logo { display:block; width:92px; height:45px; }
+.top {clear:both; width:auto; margin:auto; text-align : center;}
+.section { clear:both; width:1200px; margin:0 auto; }
+.section:after { content:""; display:block; clear:both; }
+.breadcrumb { clear:both; margin:100 auto; }
+.ttitle {clear:both; width:auto; margin:auto; text-align : center;}
+
+
+#frm1.search_form { border-top:2px solid #ddd; border-bottom:2px solid #ddd; height:60px; padding-top:10px; padding-bottom:10px;  }
+#frm1 .inline { width:70%; float:left; margin-right:2%; }
+#frm1.search_form .inline { display:inline-block; width:auto; } 
+
+
+
+p.title { font-size:1.4rem; }
+p.subtitle { font-size:1.1rem; }
+.item_com {   overflow: hidden;  text-overflow: ellipsis;  display: -webkit-box;
+  -webkit-line-clamp: 3;  -webkit-box-orient: vertical; font-size:0.9rem; }
+p.comment2 { max-width:400px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; 
+max-height:40px; }
+.hidden_item { display:none; }
+.star_data { height:36px; position:relative; background-image:url("/pro03/data/star.png"); 
+background-repeat:no-repeat; background-position:left center; background-size:100px auto; }
+#star_group { width:100px; height:36px; position:relative; }
+#star_group #stardate { width:100px; height:36px; background-image:url("/pro03/data/star1.png"); 
+background-repeat:no-repeat; background-position:left center; background-size:100px auto; }
+#star_group #starrate { width:100px; height:36px; background-image:url("/pro03/data/star.png"); 
+background-repeat:no-repeat; background-position:left center; background-size:100px auto; }
+#star10:checked ~ #star_group #starrate { width:100px; }
+#star9:checked ~ #star_group #starrate { width:90px; }
+#star8:checked ~ #star_group #starrate { width:80px; }
+#star7:checked ~ #star_group #starrate { width:70px; }
+#star6:checked ~ #star_group #starrate { width:60px; }
+#star5:checked ~ #star_group #starrate { width:50px; }
+#star4:checked ~ #star_group #starrate { width:40px; }
+#star3:checked ~ #star_group #starrate { width:30px; }
+#star2:checked ~ #star_group #starrate { width:20px; }
+#star1:checked ~ #star_group #starrate { width:10px; }
+#star_btn { width:100px; height:36px; position:absolute; z-index:20; top:0; left:0;  }
+#star_btn label { display:block; width:10px; height:36px; position:relative; float:left; }
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+  	
+
+
+  
+<div id="nav-group">
+    <div class="container"> 
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+            <a class="navbar-item" href="index2.html">
+                <span>VISIT JEONJU</span>
+            </a>
+        
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+            </div>
+        
+            <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start" id="gnb">
+                <div class="navbar-item has-dropdown is-hoverable">
+                <a href="month.html" class="navbar-link">전주 나들이</a>
+        
+                <div class="navbar-dropdown">
+                    <a href="month.html" class="navbar-item" id="A">이달의 추천여행</a>
+                    <a href="history.html"  class="navbar-item" id="B">역사 전통 명소</a>
+                    <a href="nature.html"  class="navbar-item" id="C">자연 생태 명소</a>
+                </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">축제 / 문화</a>
+        
+                <div class="navbar-dropdown">
+                    <a href="festival.html"  class="navbar-item" id="D">축제</a>
+                    <a href="play.html" class="navbar-item" id="H">체험/놀이</a>
+                    <a href="culture.html" class="navbar-item" id="I">문화시설</a>
+                </div>
+                </div>
+                <div href="flavor.html" class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link cate">
+                        전주의 맛
+                </a>
+                    <div class="navbar-dropdown cate" id="cate05">
+                    <a href="/flavor/bibim.html"  class="navbar-item">비빔밥</a>
+                    <a href="/flavor/han.html" class="navbar-item">한정식</a>
+                    <a href="/flavor/cong.html" class="navbar-item">콩나물국밥</a>
+                    <a href="/flavor/mag.html" class="navbar-item">막걸리</a>
+                    <a href="/flavor/omo.html" class="navbar-item">오모가리탕</a>
+                </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">숙박 / 쇼핑</a>
+        
+                <div class="navbar-dropdown">
+                    <a href="stay.html"  class="navbar-item" id="F">숙박</a>
+                    <a href="shop.html"  class="navbar-item" id="G">쇼핑</a>
+                </div>
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">관광가이드</a>
+        
+                <div class="navbar-dropdown">
+                    <a href="info.html" class="navbar-item" id="J">관광안내소</a>
+                    <a href="map.html" class="navbar-item">관광지도신청</a>
+                    <a href="impress.html" class="navbar-item">관광 후기</a>
+                    <a href="notice.html" class="navbar-item">공지사항</a>
+                </div>
+                </div>
+            </div>
+        
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    
+            
+                <div class="buttons">
+                <a href="userinfo.html" class="button is-primary">
+                    <strong>회원 정보</strong>
+                </a>
+                <a href="index.html" class="button is-light">
+                        로그아웃
+                </a>
+                <a href="admin.html" class="button is-info">
+                    <strong>관리자 페이지로</strong>
+                </a>
+                </div>
+            
+            </div>
+        </div>
+            </div>
+        </nav>
+    </div>
+</div>
+	<section class="section">
+	    <div class="columns is-full">
+			    
+
+
+
+
+
+<div class="column is-2 has-background-grey-lighter has-text-white" style="min-height:90vh">
+	<div class="navbar-menu">
+		<a href="/admin/user.html" class="navbar-item">회원 관리</a><br>
+	</div>
+	<div class="navbar-menu">
+		<a href="/notice.html" class="navbar-item">공지 관리</a>
+	</div>
+	<div class="navbar-menu">
+		<a href="/admin/addtour.html" class="navbar-item">여행안내 등록</a>
+	</div>
+	<div class="navbar-menu">
+		<a href="/admin/tourListAll.html" class="navbar-item">여행안내 전체목록</a>
+	</div>
+	<div class="navbar-menu">
+		<a href="/admin/addplace.html" class="navbar-item">장소안내 등록</a>
+	</div>
+	<div class="navbar-menu">
+		<a href="/admin/placeListAll.html" class="navbar-item">장소안내 전체목록</a>
+	</div>
+</div>
+			<div class="column is-10">
+				<h2>admin 입니다.</h2>
+				<h3>여기는 관리자 메인 페이지!</h3>
+			</div>
+		</div>
+	</section>
+	
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+		(54994) 전라북도 전주시 완산구 노송광장로 10 / 대표전화: 063)222-1000
+    </p>
+    <small lang="en">Copyright © JEONJU CITY. ALL RIGHTS RESERVED.</small>
+  </div>
+</footer>
+</body>
+</html>
