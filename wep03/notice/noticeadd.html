@@ -1,35 +1,30 @@
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>공지사항 목록</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <style>
-  	.top {clear:both; width:auto; margin:auto; text-align : center;}
-  	.section { clear:both; width:1200px; margin:0 auto; }
-	.section:after { content:""; display:block; clear:both; }
-	.breadcrumb { clear:both; margin:100 auto; }
-  </style>
-  </head>
-  <body>
-  
+    <title>공지사항 추가</title>
 
-
-  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<style>
+.table { min-width:960px; }
+#logo { display:block; width:92px; height:45px; }
+.top {clear:both; width:auto; margin:auto; text-align : center;}
+.section { clear:both; width:1200px; margin:0 auto; }
+.section:after { content:""; display:block; clear:both; }
+.breadcrumb { clear:both; margin:100 auto; }
+.ttitle {clear:both; width:auto; margin:auto; text-align : center;}
+.con {clear:both; width:1200px; margin:0 auto;}
+.con:after {content:""; display:block; clear:both;}
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+ <body>
 <div id="nav-group">
 	<div class="container"> 
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
-			<a class="navbar-item" href="index.html">
+			<a class="navbar-item" href="index2.html">
 				<span>VISIT JEONJU</span>
 			</a>
 		
@@ -60,8 +55,8 @@
 					<a href="culture.html" class="navbar-item" id="I">문화시설</a>
 				</div>
 				</div>
-				<div href="flavor.html" class="navbar-item has-dropdown is-hoverable">
-				<a class="navbar-link cate">
+				<div class="navbar-item has-dropdown is-hoverable">
+				<a href="flavor.html" class="navbar-link cate">
 						전주의 맛
 				</a>
 					<div class="navbar-dropdown cate" id="cate05">
@@ -115,57 +110,28 @@
 		</nav>
 	</div>
 </div>
-  <div class="top">
-  	<br><br>
-  	<h1 class="title">공지사항</h1>
-  	<br><hr>
-  </div>
-  <nav class="breadcrumb is-centered" aria-label="breadcrumbs">
-	  <ul>
-	    <li><a href="index2.html">Home</a></li>
-	    <li class="is-active"><a href="info.html" aria-current="page">
-			<span>관광가이드</span>
-	    </a></li>
-	    <li class="is-active"><a href="#" aria-current="page">공지사항</a></li>
-	  </ul>
-	</nav>
-	<hr>
   <section class="section">
     <div class="container">
-		<table class="table">
-		  <thead>
-		    <tr>
-		      <th><abbr title="No">No</abbr></th>
-		      <th><abbr title="Title">제목</abbr></th>
-		      <th><abbr title="Result">작성일</abbr></th>
-		    </tr>
-		  </thead>
-		   <tbody>
-            <tr>
-                <td>1</td>
-                <td><a href="/notice/noticedetail.html">안녕하세요 관리자입니다</a></td>
-                <td>
-                    
-                    2022-11-22
-                </td>
-            </tr>
-            
-		    <tr>
-		      <td>1</td>
-		      <td><span>안녕하세요</span></td>
-		      <td>
-		      	
-		      	2022-11-15
-		      </td>
-		    </tr>
-		    
-	
-		  </tbody>
-		</table>
-		<div class="buttons">
-		  
-			<a href="./notice/noticeadd.html" class="button is-success">글 등록</a>
-		</div>
+      <h1 class="title">글 등록하기</h1>
+      	<form action="" method="post">
+			<table class="table">
+			   <tbody>
+			    <tr>
+			      <th><label for="title">제목</label></th>
+			      <td><input type="text" class="input" maxlength="120" name="title" id="title" placeholder="제목 입력" required /></td>
+			    </tr>
+			    <tr>
+			      <th><label for="content">내용</label></th>
+			      <td><textarea rows="8" cols="100" name="content" id="content" class="textarea" required></textarea></td>
+			    </tr>
+			  </tbody>
+			</table>
+			<div class="buttons">
+			  <button type="submit" class="button is-success">등록</button>
+			  <button type="reset" class="button is-warning">취소</button>
+			  <a href="../notice.html" class="button is-info">목록</a>
+			</div>
+		</form>
     </div>
   </section>
   

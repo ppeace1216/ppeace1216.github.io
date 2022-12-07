@@ -1,32 +1,23 @@
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
-  <head>
+ <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>상세보기</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <style>
-  	.top {clear:both; width:auto; margin:auto; text-align : center;}
-  	.section { clear:both; width:1200px; margin:0 auto; }
+    <link rel="stylesheet" type="text/css" href="http://s1.daumcdn.net/svc/attach/U03/cssjs/mapapidoc/1421136453605/service.min.css">
+	<style>
+	.top {clear:both; width:auto; margin:auto; text-align : center;}
+	.section { clear:both; width:1200px; margin:0 auto; }
 	.section:after { content:""; display:block; clear:both; }
 	.breadcrumb { clear:both; margin:100 auto; }
 	.ttitle {clear:both; width:auto; margin:auto; text-align : center;}
-  </style>
-  </head>
-  <body>
-  
-
-
-  
+	</style>
+	<script type="text/javascript" src="http://dmaps.daum.net/map_js_init/v3.js"></script>
+	<script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.11.0.js"></script>	
+	<script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U0301/cssjs/JSON-js/fc535e9cc8/json2.min.js"></script>
+</head>
+<body class="web guide" data-page_section="web" data-page_type="guide" data-title="Daum 지도 Web API 가이드">  
 <div id="nav-group">
 	<div class="container"> 
 		<nav class="navbar" role="navigation" aria-label="main navigation">
@@ -187,18 +178,69 @@
  비빔밥의 유래에는 궁중음식설, 음복설, 묵은 음식처리설, 동학혁명설, 농번기 음식설, 임금몽진 음식설등 여러 가지가 있으나, 전주비빔밥은 궁중음식설에서 유래를 찾을 수 있고, 궁중음식에서 서민음식으로전래되었다. 기록에 의하면 전주에서는 200여년전부터 이미 비빔밥을 즐겨먹었다.
 '전주비빔밥'이 한국음식을 대표하는 음식으로 사랑받게 된 것은 지역에서 나는 풍부한 좋은 식재료(전주10미)와 부녀자들의 좋은 음식 솜씨로 인해 오늘날의 '전주비빔밥'이 탄생하였다.좋은 식재료(전주10미)와 부녀자들의 좋은 음식 솜씨로 인해 오늘날의 '전주비빔밥'이 탄생하였다.</p></td>
 	  			</tr>
-	  		</tbody>
-	  	</table>
-		</div>
-		<hr><br>
-		<div class="buttons">
-		  <a href="../admin/tourListAll.html" class="button is-info">전체 목록</a>
-		  <a href="../flavor.html" class="button is-info">카테고리 목록</a>
-		  <a href="" class="button is-danger">장소 삭제</a>
-		  <a href="" class="button is-warning">장소 수정</a>
-		</div>
-    </div>
-  </section>
+	  			<tr>
+					<td><p><strong>주소    </strong>전북 전주시 완산구 어진길 119한국집</p></td>
+				</tr>
+			  <tr>
+				  <td>
+					  <input type="hidden" name="addr" id="addr" value="전북 전주시 완산구 어진길 119한국집" />
+					  <input type="hidden" name="title" id="title" value="비빔밥" />
+				  </td>
+			  </tr>
+			</tbody>
+		  </table>
+		  <div style="clear:both; margin-bottom:20px; padding-bottom:20px; ">
+			  <div id="map" style="margin-left:120px;	margin-top:50px; width:800px;height:600px; background:white; "></div>
+			  <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+			  <!-- https://developers.kakao.com/ 회원가입 후 -> 내 애플리케이션 -> 애플리케이션 추가 -> 추가된 해당 앱을 클릭하면 발급받은  API키를 확인할 수 있음  -->			
+			  <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은API키&​libraries=services"></script>
+			  <script>
+			  var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+				  mapOption = { //128.433182, 34.8544227
+					  center: new kakao.maps.LatLng(35.8134533633, 127.1476062333), // 지도의 중심좌표
+					  level: 3 // 지도의 확대 레벨
+				  };  
+			  
+			  // 지도를 생성합니다    
+			  var map = new kakao.maps.Map(mapContainer, mapOption); 
+			  
+			  // 주소-좌표 변환 객체를 생성합니다
+			  var geocoder = new kakao.maps.services.Geocoder();
+			  
+			  // 주소로 좌표를 검색합니다
+			  geocoder.addressSearch($("#addr").val(), function(result, status) {
+			  
+				  // 정상적으로 검색이 완료됐으면 
+				   if (status === kakao.maps.services.Status.OK) {
+			  
+					  var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+					  // 결과값으로 받은 위치를 마커로 표시합니다
+					  var marker = new kakao.maps.Marker({
+						  map: map,
+						  position: coords
+					  });
+					  
+					  // 인포윈도우로 장소에 대한 설명을 표시합니다
+					  var infowindow = new kakao.maps.InfoWindow({
+						  content: '<div style="width:150px;text-align:center;padding:6px 0;">'+$('#place').val()+'</div>'
+					  });
+					  infowindow.open(map, marker);
+			  
+					  // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+					  map.setCenter(coords);
+				  } 
+			  });    
+			  </script>
+			</div>
+			<hr>
+	  <div class="buttons">
+        <a href="../admin/placeListAll.html" class="button is-info">전체 목록</a>
+        <a href="../flavor.html" class="button is-info">카테고리 목록</a>
+        <a href="" class="button is-danger">장소 삭제</a>
+        <a href="" class="button is-warning">장소 수정</a>
+      </div>
+  </div>
+</section>
   
 <footer class="footer">
   <div class="content has-text-centered">

@@ -9,20 +9,24 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
+ <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>상세보기</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <style>
-  	.top {clear:both; width:auto; margin:auto; text-align : center;}
-  	.section { clear:both; width:1200px; margin:0 auto; }
+    <link rel="stylesheet" type="text/css" href="http://s1.daumcdn.net/svc/attach/U03/cssjs/mapapidoc/1421136453605/service.min.css">
+	<style>
+	.top {clear:both; width:auto; margin:auto; text-align : center;}
+	.section { clear:both; width:1200px; margin:0 auto; }
 	.section:after { content:""; display:block; clear:both; }
 	.breadcrumb { clear:both; margin:100 auto; }
 	.ttitle {clear:both; width:auto; margin:auto; text-align : center;}
-  </style>
-  </head>
-  <body>
+	</style>
+	<script type="text/javascript" src="http://dmaps.daum.net/map_js_init/v3.js"></script>
+	<script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.11.0.js"></script>	
+	<script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U0301/cssjs/JSON-js/fc535e9cc8/json2.min.js"></script>
+</head>
+<body class="web guide" data-page_section="web" data-page_type="guide" data-title="Daum 지도 Web API 가이드">
   
 
 
@@ -160,42 +164,93 @@
     <span>작성일
     	<strong>
     		
-			2022-11-22
-		</strong>
-	</span>&nbsp&nbsp&nbsp
-    <span>조회수 <strong>10</strong></span><br><hr>
+        2022-11-22
+      </strong>
+    </span>&nbsp&nbsp&nbsp
+      <span>조회수 <strong>10</strong></span><br><hr>
       <div id="con">
-		<table class="table">
-		   <tbody>
-		    
-		    	
-		    	<tr>
-		    		<td><img src="/data/img/cong1.jpg" alt="콩나물국밥"></td>
-		    	</tr>
-		    
-		  </tbody>
-		</table>
-	  </div>
-	  	<table class="table">
-	  		<tbody>
-	  			<tr>
-	  				<td><h4 class="subtitle is-4">담백하고 시원한 국물 맛, 맑은 콩나물국과 고춧가루로 다스리는 감기</h4></td>
-	  			</tr>
-	  			<tr>
-	  				<td><p>
-              녹두를 싹 틔운 숙주는 일본이나 동남아시아 등 세계 여러 나라에서 먹지만 콩을 싹 틔운 콩나물은 유일하게 우리나라에서만 먹는다. 콩 자체에는 들어 있지 않은 비타민 C가 콩나물에는 듬뿍 들어 있다는 것은 잘 알려진 사실이다. 콩나물 한 접시에는 하루 필요량의 반이나 되는 비타민 C가 들어 있다. 콩나물에는 이외에도 아미노산의 일종인 아스파라긴산이 풍부해 알코올 분해를 돕는다. 콩나물해장국은 전주가 유명한데 이는 전주의 물이 좋기 때문이라고 한다. 콩나물국밥에 달걀을 풀어 넣는 집도 많지만 먹다 보면 노른자가 터져서 국물이 지저분해진다. 원래 전주에서는 흰자만 가만히 흘려 넣거나 아예 수란을 따로 만들어 곁들인다.애주가들이 입을 모아 말하는 콩나물국밥의 진미는 바로 모주다. 막걸리에 생강, 대추, 계피 등을 넣고 푹 끓인 술인데, 뜨거운 콩나물국밥을 먹는 사이사이 이 모주를 마셔야 땀이 나며 술이 깬다는 것이다. 하지만 이는 기분일 뿐, 실제로는 체내 알코올 농도가 더 높아져 해장에 방해만 된다.콩나물국의 진가가 발휘되는 순간은 감기나 몸살에 걸렸을 때다. 예로부터 사람들은 몸이 으슬으슬 춥다 싶을 때는 맑은 콩나물국에 고춧가루를 듬뿍 풀어먹는 것으로 감기를 다스렸다.
-                    </p></td>
-	  			</tr>
-	  		</tbody>
-	  	</table>
-		</div>
-    <hr><br>
-		<div class="buttons">
-		  <a href="../admin/placeListAll.html" class="button is-info">전체 목록</a>
-		  <a href="../flavor.html" class="button is-info">카테고리 목록</a>
-		  <a href="" class="button is-danger">장소 삭제</a>
-		  <a href="" class="button is-warning">장소 수정</a>
-		</div>
+        <table class="table">
+          <tbody>
+            
+              
+              <tr>
+                <td><img src="/data/img/cong1.jpg" alt="콩나물국밥"></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+        <table class="table">
+          <tbody>
+            <tr>
+              <td><h4 class="subtitle is-4">담백하고 시원한 국물 맛, 맑은 콩나물국과 고춧가루로 다스리는 감기</h4></td>
+            </tr>
+            <tr>
+              <td><p>
+                녹두를 싹 틔운 숙주는 일본이나 동남아시아 등 세계 여러 나라에서 먹지만 콩을 싹 틔운 콩나물은 유일하게 우리나라에서만 먹는다. 콩 자체에는 들어 있지 않은 비타민 C가 콩나물에는 듬뿍 들어 있다는 것은 잘 알려진 사실이다. 콩나물 한 접시에는 하루 필요량의 반이나 되는 비타민 C가 들어 있다. 콩나물에는 이외에도 아미노산의 일종인 아스파라긴산이 풍부해 알코올 분해를 돕는다. 콩나물해장국은 전주가 유명한데 이는 전주의 물이 좋기 때문이라고 한다. 콩나물국밥에 달걀을 풀어 넣는 집도 많지만 먹다 보면 노른자가 터져서 국물이 지저분해진다. 원래 전주에서는 흰자만 가만히 흘려 넣거나 아예 수란을 따로 만들어 곁들인다.애주가들이 입을 모아 말하는 콩나물국밥의 진미는 바로 모주다. 막걸리에 생강, 대추, 계피 등을 넣고 푹 끓인 술인데, 뜨거운 콩나물국밥을 먹는 사이사이 이 모주를 마셔야 땀이 나며 술이 깬다는 것이다. 하지만 이는 기분일 뿐, 실제로는 체내 알코올 농도가 더 높아져 해장에 방해만 된다.콩나물국의 진가가 발휘되는 순간은 감기나 몸살에 걸렸을 때다. 예로부터 사람들은 몸이 으슬으슬 춥다 싶을 때는 맑은 콩나물국에 고춧가루를 듬뿍 풀어먹는 것으로 감기를 다스렸다.
+                      </p></td>
+            </tr>
+            <tr>
+              <td><p><strong>주소    </strong>전북 전주시 완산구 어진길 119한국집</p></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="hidden" name="addr" id="addr" value="전북 전주시 완산구 어진길 119한국집" />
+                <input type="hidden" name="title" id="title" value="비빔밥" />
+              </td>
+            </tr>
+          </tbody>
+          </table>
+          <div style="clear:both; margin-bottom:20px; padding-bottom:20px; ">
+            <div id="map" style="margin-left:120px;	margin-top:50px; width:800px;height:600px; background:white; "></div>
+            <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+            <!-- https://developers.kakao.com/ 회원가입 후 -> 내 애플리케이션 -> 애플리케이션 추가 -> 추가된 해당 앱을 클릭하면 발급받은  API키를 확인할 수 있음  -->			
+            <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은API키&​libraries=services"></script>
+            <script>
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+              mapOption = { //128.433182, 34.8544227
+                center: new kakao.maps.LatLng(35.8134533633, 127.1476062333), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+              };  
+            
+            // 지도를 생성합니다    
+            var map = new kakao.maps.Map(mapContainer, mapOption); 
+            
+            // 주소-좌표 변환 객체를 생성합니다
+            var geocoder = new kakao.maps.services.Geocoder();
+            
+            // 주소로 좌표를 검색합니다
+            geocoder.addressSearch($("#addr").val(), function(result, status) {
+            
+              // 정상적으로 검색이 완료됐으면 
+               if (status === kakao.maps.services.Status.OK) {
+            
+                var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                // 결과값으로 받은 위치를 마커로 표시합니다
+                var marker = new kakao.maps.Marker({
+                  map: map,
+                  position: coords
+                });
+                
+                // 인포윈도우로 장소에 대한 설명을 표시합니다
+                var infowindow = new kakao.maps.InfoWindow({
+                  content: '<div style="width:150px;text-align:center;padding:6px 0;">'+$('#place').val()+'</div>'
+                });
+                infowindow.open(map, marker);
+            
+                // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                map.setCenter(coords);
+              } 
+            });    
+            </script>
+          </div>
+          <hr>
+      <div class="buttons">
+        <a href="../admin/placeListAll.html" class="button is-info">전체 목록</a>
+        <a href="../flavor.html" class="button is-info">카테고리 목록</a>
+        <a href="" class="button is-danger">장소 삭제</a>
+        <a href="" class="button is-warning">장소 수정</a>
+      </div>
     </div>
   </section>
   
