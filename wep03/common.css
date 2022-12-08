@@ -1,12 +1,14 @@
 @charset "UTF-8";
 .page_tit {text-align:left; font-size:30px; font-weight:700; padding-top:1em; padding-bottom:0.8em; line-height:2em; margin-left:100px}
-#page1 {background-repeat:no-repeat; background-size:cover; background-position:center center; height:100vh; background-image:url("./data/img/mainsub1.jpg"); overflow:hidden; height:650px; margin:100px;}
+#page1 {background-repeat:no-repeat; background-size:cover; background-position:center center; height:100vh; background-image:url("./data/img/mainsub1.jpg"); 
+        overflow:hidden; height:650px; margin:100px;}
 .lst {clear:both; width:1400px;}
 .lst:after {content:""; display:block; clear:both;}
 .lst li {margin-bottom:10px;}
 .lst li.right {float:right; width:500px; height:500px;}
 .ico_lst {clear:both; width:100%; overflow:hidden;}
-.ico_lst li a {display:block; background-repeat:no-repeat; background-position:0px center; background-size:auto 75%; padding-left:120px; padding-bottom:30px;}
+.ico_lst li a {display:block; background-repeat:no-repeat; background-position:0px center; background-size:auto 75%; padding-left:120px; 
+               padding-bottom:30px;}
 .ico_lst li a.icon1 {background-image:url("./data/icon/icon_guide.svg");background-size:auto 60%;}
 .ico_lst li a.icon2 {background-image:url("./data/icon/icon_map.svg");}
 .ico_lst li a.icon3 {background-image:url("./data/icon/icon_comment.svg");}

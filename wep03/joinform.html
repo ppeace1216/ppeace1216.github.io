@@ -1,41 +1,22 @@
-
-
-
-
-
-
-
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>회원 약관</title>
-    
-
-
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<style>
-.table { min-width:960px; }
-#logo { display:block; width:92px; height:45px; }
-</style>
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-<style>
-.in_container { clear:both; width:1400px; margin:0 auto; }
-.in_container:after { content:""; display:block; clear:both; }
-.title { padding-top:36px; padding-bottom:20px; }
-.agree_fr { width: 1000px; white-space:pre-wrap; margin: 10px auto; 
-padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
-</style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<style>
+	.table { min-width:960px; }
+	#logo { display:block; width:92px; height:45px; }
+	.in_container { clear:both; width:1400px; margin:0 auto; }
+	.in_container:after { content:""; display:block; clear:both; }
+	.title { padding-top:36px; padding-bottom:20px; }
+	.agree_fr { width: 1000px; white-space:pre-wrap; margin: 10px auto; 
+	padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
+	</style>
 </head>
 <body>
-  	
-
-
-  
 <div id="nav-group">
 	<div class="container"> 
 		<nav class="navbar" role="navigation" aria-label="main navigation">
@@ -43,80 +24,67 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 			<a class="navbar-item" href="index.html">
 				<span>VISIT JEONJU</span>
 			</a>
-		
 			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
 			</a>
 			</div>
-		
 			<div id="navbarBasicExample" class="navbar-menu">
 				<div class="navbar-start" id="gnb">
 					<div class="navbar-item has-dropdown is-hoverable">
 					<a href="month.html" class="navbar-link">전주 나들이</a>
-			
-					<div class="navbar-dropdown">
-						<a href="month.html" class="navbar-item" id="A">이달의 추천여행</a>
-						<a href="history.html"  class="navbar-item" id="B">역사 전통 명소</a>
-						<a href="nature.html"  class="navbar-item" id="C">자연 생태 명소</a>
-					</div>
+						<div class="navbar-dropdown">
+							<a href="month.html" class="navbar-item" id="A">이달의 추천여행</a>
+							<a href="history.html"  class="navbar-item" id="B">역사 전통 명소</a>
+							<a href="nature.html"  class="navbar-item" id="C">자연 생태 명소</a>
+						</div>
 					</div>
 					<div class="navbar-item has-dropdown is-hoverable">
 					<a class="navbar-link">축제 / 문화</a>
-			
-					<div class="navbar-dropdown">
-						<a href="festival.html"  class="navbar-item" id="D">축제</a>
-						<a href="play.html" class="navbar-item" id="H">체험/놀이</a>
-						<a href="culture.html" class="navbar-item" id="I">문화시설</a>
-					</div>
+						<div class="navbar-dropdown">
+							<a href="festival.html"  class="navbar-item" id="D">축제</a>
+							<a href="play.html" class="navbar-item" id="H">체험/놀이</a>
+							<a href="culture.html" class="navbar-item" id="I">문화시설</a>
+						</div>
 					</div>
 					<div href="flavor.html" class="navbar-item has-dropdown is-hoverable">
-					<a class="navbar-link cate">
-							전주의 맛
-					</a>
+					<a class="navbar-link cate">전주의 맛</a>
 						<div class="navbar-dropdown cate" id="cate05">
-						<a href="/flavor/bibim.html"  class="navbar-item">비빔밥</a>
-						<a href="/flavor/han.html" class="navbar-item">한정식</a>
-						<a href="/flavor/cong.html" class="navbar-item">콩나물국밥</a>
-						<a href="/flavor/mag.html" class="navbar-item">막걸리</a>
-						<a href="/flavor/omo.html" class="navbar-item">오모가리탕</a>
-					</div>
+							<a href="/flavor/bibim.html"  class="navbar-item">비빔밥</a>
+							<a href="/flavor/han.html" class="navbar-item">한정식</a>
+							<a href="/flavor/cong.html" class="navbar-item">콩나물국밥</a>
+							<a href="/flavor/mag.html" class="navbar-item">막걸리</a>
+							<a href="/flavor/" class="navbar-item">오모가리탕</a>
+						</div>
 					</div>
 					<div class="navbar-item has-dropdown is-hoverable">
 					<a class="navbar-link">숙박 / 쇼핑</a>
-			
-					<div class="navbar-dropdown">
-						<a href="stay.html"  class="navbar-item" id="F">숙박</a>
-						<a href="shop.html"  class="navbar-item" id="G">쇼핑</a>
-					</div>
+						<div class="navbar-dropdown">
+							<a href="stay.html"  class="navbar-item" id="F">숙박</a>
+							<a href="shop.html"  class="navbar-item" id="G">쇼핑</a>
+						</div>
 					</div>
 					<div class="navbar-item has-dropdown is-hoverable">
 					<a class="navbar-link">관광가이드</a>
-			
-					<div class="navbar-dropdown">
-						<a href="info.html" class="navbar-item" id="J">관광안내소</a>
-						<a href="map.html" class="navbar-item">관광지도신청</a>
-						<a href="impress.html" class="navbar-item">관광 후기</a>
-						<a href="notice.html" class="navbar-item">공지사항</a>
-					</div>
+						<div class="navbar-dropdown">
+							<a href="info.html" class="navbar-item" id="J">관광안내소</a>
+							<a href="map.html" class="navbar-item">관광지도신청</a>
+							<a href="impress.html" class="navbar-item">관광 후기</a>
+							<a href="notice.html" class="navbar-item">공지사항</a>
+						</div>
 					</div>
 				</div>
-			
 				<div class="navbar-end">
 					<div class="navbar-item">
-						
-				
-					<div class="buttons">
-					<a href="joinform.html" class="button is-primary">
-						<strong>회원가입</strong>
-					</a>
-					<a href="login.html" class="button is-light">
-							로그인
-					</a>
-					
-					</div>
-				
+						<div class="buttons">
+							<a href="joinform.html" class="button is-primary">
+								<strong>회원가입</strong>
+							</a>
+							<a href="login.html" class="button is-light">
+									로그인
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -128,8 +96,8 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 	<section class="section">
     	<div class="container">
     		<label class="checkbox" for="ck_item3" >
-			  <input type="checkbox" id="ck_item3" name="ck_item3" class="form-check-input" onclick="protocol()">
-			  <strong>전체 약관에 동의</strong>
+			  	<input type="checkbox" id="ck_item3" name="ck_item3" class="form-check-input" onclick="protocol()">
+			  	<strong>전체 약관에 동의</strong>
 			</label>
 			<article class="agree_fr">
 <h2>제1장 총칙</h2>
@@ -427,11 +395,11 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 ④ "회사"는 "이용자" 상호간 또는 "이용자"와 제3자 간에 "콘텐츠"를 매개로 하여 발생한 분쟁 등에 대하여 책임을 지지 않습니다. 
 
 제33조(분쟁의 해결) "회사"는 분쟁이 발생하였을 경우에 "이용자"가 제기하는 정당한 의견이나 불만을 반영하여 적절하고 신속한 조치를 취합니다. 다만, 신속한 처리가 곤란한 경우에 "회사"는 "이용자"에게 그 사유와 처리일정을 통보합니다.
-</article>
+			</article>
 			<div class="form-check">
 				<label class="checkbox" for="ck_item1" >
-				  <input type="checkbox" id="ck_item1" name="ck_item1" class="form-check-input">
-				  약관에 동의
+				  	<input type="checkbox" id="ck_item1" name="ck_item1" class="form-check-input">
+				  	약관에 동의
 				</label>
 			</div>
 		<article class="agree_fr">
@@ -1015,11 +983,11 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 ② 법 시행 전에 법률의 근거 또는 정보주체의 동의 없이 제3자로부터 개인정보를 제공받아 목적 외의 용도로 이용하고 있는 개인정보처리자는 정보주체의 동의를 받아야 한다. 
 
 ③ 법 시행 전에 개인정보를 수집한 개인정보처리자는 기존의 수집목적 범위에도 불구하고 제1항 단서 및 제2항을 준수하기 위하여 새롭게 정보주체의 동의를 받을 목적으로 법 시행 전에 수집한 개인정보를 이용할 수 있다.
-	</article>
+		</article>
 			<div class="form-check">
 				<label class="checkbox" for="ck_item2" >
-				  <input type="checkbox" id="ck_item2" name="ck_item2" class="form-check-input">
-				  개인정보처리 방침에 동의
+				  	<input type="checkbox" id="ck_item2" name="ck_item2" class="form-check-input">
+				  	개인정보처리 방침에 동의
 				</label>
 			</div>
     	</div>
@@ -1045,14 +1013,13 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 	}
 	</script>
 </div>	
-	
 <footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-		(54994) 전라북도 전주시 완산구 노송광장로 10 / 대표전화: 063)222-1000
-    </p>
+  	<div class="content has-text-centered">
+    	<p>
+			(54994) 전라북도 전주시 완산구 노송광장로 10 / 대표전화: 063)222-1000
+    	</p>
     <small lang="en">Copyright © JEONJU CITY. ALL RIGHTS RESERVED.</small>
-  </div>
+  	</div>
 </footer>
 </body>
 </html></html>

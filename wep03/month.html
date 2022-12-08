@@ -1,42 +1,24 @@
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="ko">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>장소 상세보기</title>
-    
-
-
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<style>
-.table { min-width:960px; }
-#logo { display:block; width:92px; height:45px; }
-.top {clear:both; width:auto; margin:auto; text-align : center;}
-.section { clear:both; width:1200px; margin:0 auto; }
-.section:after { content:""; display:block; clear:both; }
-.breadcrumb { clear:both; margin:100 auto; }
-.ttitle {clear:both; width:auto; margin:auto; text-align : center;}
-.con {clear:both; width:1200px; margin:0 auto;}
-.con:after {content:""; display:block; clear:both;}
-</style>
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-  </head>
-  <body>
-  
-
-
-  
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<style>
+	.table { min-width:960px; }
+	#logo { display:block; width:92px; height:45px; }
+	.top {clear:both; width:auto; margin:auto; text-align : center;}
+	.section { clear:both; width:1200px; margin:0 auto; }
+	.section:after { content:""; display:block; clear:both; }
+	.breadcrumb { clear:both; margin:100 auto; }
+	.ttitle {clear:both; width:auto; margin:auto; text-align : center;}
+	.con {clear:both; width:1200px; margin:0 auto;}
+	.con:after {content:""; display:block; clear:both;}
+	</style>
+</head>
+<body>
 <div id="nav-group">
 	<div class="container"> 
 		<nav class="navbar" role="navigation" aria-label="main navigation">
@@ -44,261 +26,180 @@
 			<a class="navbar-item" href="index2.html">
 				<span>VISIT JEONJU</span>
 			</a>
-		
 			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
 			</a>
 			</div>
-		
 			<div id="navbarBasicExample" class="navbar-menu">
-			<div class="navbar-start" id="gnb">
-				<div class="navbar-item has-dropdown is-hoverable">
-				<a href="month.html" class="navbar-link">전주 나들이</a>
-		
-				<div class="navbar-dropdown">
-					<a href="month.html" class="navbar-item" id="A">이달의 추천여행</a>
-					<a href="history.html"  class="navbar-item" id="B">역사 전통 명소</a>
-					<a href="nature.html"  class="navbar-item" id="C">자연 생태 명소</a>
+				<div class="navbar-start" id="gnb">
+					<div class="navbar-item has-dropdown is-hoverable">
+					<a href="month.html" class="navbar-link">전주 나들이</a>
+						<div class="navbar-dropdown">
+							<a href="month.html" class="navbar-item" id="A">이달의 추천여행</a>
+							<a href="history.html"  class="navbar-item" id="B">역사 전통 명소</a>
+							<a href="nature.html"  class="navbar-item" id="C">자연 생태 명소</a>
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link">축제 / 문화</a>
+						<div class="navbar-dropdown">
+							<a href="festival.html"  class="navbar-item" id="D">축제</a>
+							<a href="play.html" class="navbar-item" id="H">체험/놀이</a>
+							<a href="culture.html" class="navbar-item" id="I">문화시설</a>
+						</div>
+					</div>
+					<div href="flavor.html" class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link cate">전주의 맛</a>
+						<div class="navbar-dropdown cate" id="cate05">
+							<a href="/flavor/bibim.html"  class="navbar-item">비빔밥</a>
+							<a href="/flavor/han.html" class="navbar-item">한정식</a>
+							<a href="/flavor/cong.html" class="navbar-item">콩나물국밥</a>
+							<a href="/flavor/mag.html" class="navbar-item">막걸리</a>
+							<a href="/flavor/" class="navbar-item">오모가리탕</a>
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link">숙박 / 쇼핑</a>
+						<div class="navbar-dropdown">
+							<a href="stay.html"  class="navbar-item" id="F">숙박</a>
+							<a href="shop.html"  class="navbar-item" id="G">쇼핑</a>
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link">관광가이드</a>
+						<div class="navbar-dropdown">
+							<a href="info.html" class="navbar-item" id="J">관광안내소</a>
+							<a href="map.html" class="navbar-item">관광지도신청</a>
+							<a href="impress.html" class="navbar-item">관광 후기</a>
+							<a href="notice.html" class="navbar-item">공지사항</a>
+						</div>
+					</div>
 				</div>
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+						<a href="userinfo.html" class="button is-primary">
+							<strong>회원 정보</strong>
+						</a>
+						<a href="index.html" class="button is-light">
+								로그아웃
+						</a>
+						<a href="admin.html" class="button is-info">
+							<strong>관리자 페이지로</strong>
+						</a>
+						</div>
+					</div>
 				</div>
-				<div class="navbar-item has-dropdown is-hoverable">
-				<a href="festival.html" class="navbar-link">축제 / 문화</a>
-		
-				<div class="navbar-dropdown">
-					<a href="festival.html"  class="navbar-item" id="D">축제</a>
-					<a href="play.html" class="navbar-item" id="H">체험/놀이</a>
-					<a href="culture.html" class="navbar-item" id="I">문화시설</a>
-				</div>
-				</div>
-				<div class="navbar-item has-dropdown is-hoverable">
-				<a href="flavor.html" class="navbar-link cate">
-						전주의 맛
-				</a>
-					<div class="navbar-dropdown cate" id="cate05">
-					<a href="/flavor/bibim.html"  class="navbar-item">비빔밥</a>
-					<a href="/flavor/han.html" class="navbar-item">한정식</a>
-					<a href="/flavor/cong.html" class="navbar-item">콩나물국밥</a>
-					<a href="/flavor/mag.html" class="navbar-item">막걸리</a>
-					<a href="/flavor/omo.html" class="navbar-item">오모가리탕</a>
-				</div>
-				</div>
-				<div class="navbar-item has-dropdown is-hoverable">
-				<a href="stay.html" class="navbar-link">숙박 / 쇼핑</a>
-		
-				<div class="navbar-dropdown">
-					<a href="stay.html"  class="navbar-item" id="F">숙박</a>
-					<a href="shop.html"  class="navbar-item" id="G">쇼핑</a>
-				</div>
-				</div>
-				<div class="navbar-item has-dropdown is-hoverable">
-				<a href="info.html" class="navbar-link">관광가이드</a>
-		
-				<div class="navbar-dropdown">
-					<a href="info.html" class="navbar-item" id="J">관광안내소</a>
-					<a href="map.html" class="navbar-item">관광지도신청</a>
-					<a href="impress.html" class="navbar-item">관광 후기</a>
-					<a href="notice.html" class="navbar-item">공지사항</a>
-				</div>
-				</div>
-			</div>
-		
-			<div class="navbar-end">
-				<div class="navbar-item">
-					
-			
-				<div class="buttons">
-				<a href="userinfo.html" class="button is-primary">
-					<strong>회원 정보</strong>
-				</a>
-				<a href="index.html" class="button is-light">
-						로그아웃
-				</a>
-				<a href="admin.html" class="button is-info">
-				<strong>관리자 페이지로</strong>
-				</a>
-				
-				</div>
-			
-			</div>
-		</div>
 			</div>
 		</nav>
 	</div>
 </div>
-	<div class="top">
-  	<br><br><br>
-  	<h1 class="title is-1">
-  		 
-		
-		
-		
-		
-		
+<div class="top">
+<br><br><br>
+<h1 class="title is-1">
 		<span>전주 나들이</span>
-		
-		
-		
-  	</h1>
-  	<br><hr>
-  </div>
-  	<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
-	  <ul>
+</h1>
+<br><hr>
+</div>
+<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+	<ul>
 	    <li><a href="index2.html">Home</a></li>
 	    <li class="is-active"><a href="month.html" aria-current="page">
-	    	 
-			
-			
-			
-			
-			
 			<span>이달의 추천여행</span>
-			
-			
-			
 	    </a></li>
-	  </ul>
-	</nav>
-	<hr>
-  <section class="section">
+	</ul>
+</nav>
+<hr>
+<section class="section">
     <div class="container">
-      <h1 class="title">			
-      		
-			
-			
-			
-			
+      	<h1 class="title">			
 			<span>이달의 추천여행</span>
-			
-			
-			
 			목록</h1>
       	<div id="con">
       		<div class="tile is-ancestor columns" style="padding-bottom:40px; width: 1200px;">
-      			
-				
 			    <div class="tile is-3" style="box-sizing:border-box;">
 			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
-			          <p class="title">1일 여행자를 <br>위한 한옥마을투어</p>
-			          <p class="subtitle">
-			 			 
-						
-						
-						
-						
-						
-						<span>이달의 추천여행</span>
-						
-						
-						
-			          </p>
-			          <figure class="image is-4by3">
-			            <img src="data/img/a1.jpg" alt="한옥마을">
-			          </figure>
-			          <div class="content" style="margin:10px;">
-			          	<p class="item_com">아직도 안 가봤다구? 그렇다면 바로 지금, 전주!
+			          	<p class="title">1일 여행자를 <br>위한 한옥마을투어</p>
+			          	<p class="subtitle">
+							<span>이달의 추천여행</span>
+			          	</p>
+			          	<figure class="image is-4by3">
+			            	<img src="data/img/a1.jpg" alt="한옥마을">
+			          	</figure>
+			          	<div class="content" style="margin:10px;">
+			          		<p class="item_com">아직도 안 가봤다구? 그렇다면 바로 지금, 전주!
 							2022년 F/W 전주 한옥마을
 							1일 여행 필수코스 </p>
-			          </div>
-			          <a href="./month/oneday.html" class="button is-primary">자세히 보기</a>
+			          	</div>
+			          	<a href="./month/oneday.html" class="button is-primary">자세히 보기</a>
 			        </article>
 			    </div>
-				
 				<div class="tile is-3" style="box-sizing:border-box;">
 			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
-			          <p class="title">전통과 문화, 축제의 도시 전주 100% 즐기기</p>
-			          <p class="subtitle">
-			 			 
-						
-						<span>이달의 추천여행</span>
-						
-						
-						
-						
-						
-						
-						
-			          </p>
-			          <figure class="image is-4by3">
-			            <img src="data/img/a4.jpg" alt="축제">
-			          </figure>
-			          <div class="content" style="margin:10px;">
-			          	<p class="item_com">다양한 콘텐츠를 통해 새로운 문화를 만들어가는 전주!
+			          	<p class="title">전통과 문화, 축제의 도시 전주 100% 즐기기</p>
+			          	<p class="subtitle">
+							<span>이달의 추천여행</span>
+			          	</p>
+			          	<figure class="image is-4by3">
+			            	<img src="data/img/a4.jpg" alt="축제">
+			          	</figure>
+			          	<div class="content" style="margin:10px;">
+			          		<p class="item_com">다양한 콘텐츠를 통해 새로운 문화를 만들어가는 전주!
 							문화행사의 열기로 가득한
 							전주에서 즐기는 모두의 축제</p>
-			          </div>
-			          <a href="/month/festival.html" class="button is-primary">자세히 보기</a>
+			          	</div>
+			          	<a href="/month/festival.html" class="button is-primary">자세히 보기</a>
 			        </article>
-			      </div>
-				
-			      <div class="tile is-3" style="box-sizing:border-box;">
+			    </div>
+			    <div class="tile is-3" style="box-sizing:border-box;">
 			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
-			          <p class="title">사부작사부작 느리게 걷기, <br>슬로우투어</p>
-			          <p class="subtitle">
-			 			 
-						
-						<span>이달의 추천여행</span>
-						
-						
-						
-						
-						
-						
-						
-			          </p>
-			          <figure class="image is-4by3">
-			            <img src="/data/img/a5.jpg" alt="슬로우">
-			          </figure>
-			          <div class="content" style="margin:10px;">
-			          	<p class="item_com">전통과 자연의 아름다움을 100% 느끼며 전주의 매력에 빠져보자.
+			          	<p class="title">사부작사부작 느리게 걷기, <br>슬로우투어</p>
+			          	<p class="subtitle">
+							<span>이달의 추천여행</span>
+			          	</p>
+			          	<figure class="image is-4by3">
+			            	<img src="/data/img/a5.jpg" alt="슬로우">
+			          	</figure>
+			          	<div class="content" style="margin:10px;">
+			          		<p class="item_com">전통과 자연의 아름다움을 100% 느끼며 전주의 매력에 빠져보자.
 							여유를 즐기고 사색하며 걷는
 							전주 힐링 여행</p>
-			          </div>
-			          <a href="/month/slow.html" class="button is-primary">자세히 보기</a>
+			          	</div>
+			          	<a href="/month/slow.html" class="button is-primary">자세히 보기</a>
 			        </article>
-			      </div>
-				  <div class="tile is-3" style="box-sizing:border-box;">
+			    </div>
+				<div class="tile is-3" style="box-sizing:border-box;">
 			        <article class="tile is-child is-one-third notification" style="background-color:transparent; border:1px solid #eee; margin-right:10px!important;">
-			          <p class="title">전주 천리길투어</p>
-			          <p class="subtitle">
-			 			 
-						
-						<span>이달의 추천여행</span>
-						
-						
-						
-						
-						
-						
-						
-			          </p>
-			          <figure class="image is-4by3">
-			            <img src="data/img/a2.jpg" alt="천리길">
-			          </figure>
-			          <div class="content" style="margin:10px;">
-			          	<p class="item_com">전주 곳곳의 명소를 잇는 문화, 역사 그리고 자연과 함께!
+			          	<p class="title">전주 천리길투어</p>
+			          	<p class="subtitle">
+							<span>이달의 추천여행</span>
+			          	</p>
+			          	<figure class="image is-4by3">
+			            	<img src="data/img/a2.jpg" alt="천리길">
+			          	</figure>
+			          	<div class="content" style="margin:10px;">
+			          		<p class="item_com">전주 곳곳의 명소를 잇는 문화, 역사 그리고 자연과 함께!
 							전주 천리길투어</p>
-			          </div>
-			          <a href="" class="button is-primary">자세히 보기</a>
+			          	</div>
+			          	<a href="" class="button is-primary">자세히 보기</a>
 			        </article>
-			      </div>
+			    </div>
 			</div>  
       	</div>
 		<div class="buttons">
-		  <a href="/admin/tourListAll.html" class="button is-info">전체 목록</a>
+		  	<a href="/admin/tourListAll.html" class="button is-info">전체 목록</a>
 		</div>
     </div>
-  </section>
-	
-  
+</section>
 <footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-		(54994) 전라북도 전주시 완산구 노송광장로 10 / 대표전화: 063)222-1000
-    </p>
+  	<div class="content has-text-centered">
+    	<p>
+			(54994) 전라북도 전주시 완산구 노송광장로 10 / 대표전화: 063)222-1000
+    	</p>
     <small lang="en">Copyright © JEONJU CITY. ALL RIGHTS RESERVED.</small>
-  </div>
+</div>
 </footer>
-  </body>
+</body>
 </html>

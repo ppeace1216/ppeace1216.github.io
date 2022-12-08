@@ -1,72 +1,53 @@
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="ko">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>이용후기 목록</title>
-    
-
-
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-<style>
-.table {min-width:960px;}
-#logo {display:block; width:92px; height:45px;}
-.top {clear:both; width:auto; margin:auto; text-align:center;}
-.section {clear:both; width:1200px; margin:0 auto;}
-.section:after {content:""; display:block; clear:both;}
-.breadcrumb {clear:both; margin:100 auto;}
-.ttitle {clear:both; width:auto; margin:auto; text-align:center;}
-#frm1.search_form {border-top:2px solid #ddd; border-bottom:2px solid #ddd; height:60px; padding-top:10px; padding-bottom:10px;}
-#frm1 .inline {width:70%; float:left; margin-right:2%;}
-#frm1.search_form .inline {display:inline-block; width:auto;} 
-p.title {font-size:1.4rem;}
-p.subtitle {font-size:1.1rem;}
-.item_com {overflow: hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; font-size:0.9rem;}
-p.comment2 {max-width:400px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; max-height:40px;}
-.hidden_item {display:none;}
-.star_data {height:36px; position:relative; background-image:url("/pro03/data/star.png"); background-repeat:no-repeat; background-position:left center; background-size:100px auto;}
-#star_group {width:100px; height:36px; position:relative;}
-#star_group #stardate {width:100px; height:36px; background-image:url("/pro03/data/star1.png"); background-repeat:no-repeat; background-position:left center; background-size:100px auto;}
-#star_group #starrate { width:100px; height:36px; background-image:url("/pro03/data/star.png"); background-repeat:no-repeat; background-position:left center; background-size:100px auto;}
-#star10:checked ~ #star_group #starrate {width:100px;}
-#star9:checked ~ #star_group #starrate {width:90px;}
-#star8:checked ~ #star_group #starrate {width:80px;}
-#star7:checked ~ #star_group #starrate {width:70px;}
-#star6:checked ~ #star_group #starrate {width:60px;}
-#star5:checked ~ #star_group #starrate {width:50px;}
-#star4:checked ~ #star_group #starrate {width:40px;}
-#star3:checked ~ #star_group #starrate {width:30px;}
-#star2:checked ~ #star_group #starrate {width:20px;}
-#star1:checked ~ #star_group #starrate {width:10px;}
-#star_btn {width:100px; height:36px; position:absolute; z-index:20; top:0; left:0;}
-#star_btn label {display:block; width:10px; height:36px; position:relative; float:left;}
-</style>
-<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 	<link rel="stylesheet" href="/pro03/resource/datatables.min.css">
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
 	<script src="/pro03/resource/datatables.min.js"></script>
+	<style>
+	.table {min-width:960px;}
+	#logo {display:block; width:92px; height:45px;}
+	.top {clear:both; width:auto; margin:auto; text-align:center;}
+	.section {clear:both; width:1200px; margin:0 auto;}
+	.section:after {content:""; display:block; clear:both;}
+	.breadcrumb {clear:both; margin:100 auto;}
+	.ttitle {clear:both; width:auto; margin:auto; text-align:center;}
+	#frm1.search_form {border-top:2px solid #ddd; border-bottom:2px solid #ddd; height:60px; padding-top:10px; padding-bottom:10px;}
+	#frm1 .inline {width:70%; float:left; margin-right:2%;}
+	#frm1.search_form .inline {display:inline-block; width:auto;} 
+	p.title {font-size:1.4rem;}
+	p.subtitle {font-size:1.1rem;}
+	.item_com {overflow: hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; font-size:0.9rem;}
+	p.comment2 {max-width:400px; text-overflow:ellipsis; overflow:hidden; white-space:nowrap; max-height:40px;}
+	.hidden_item {display:none;}
+	.star_data {height:36px; position:relative; background-image:url("/pro03/data/star.png"); background-repeat:no-repeat; background-position:left center; background-size:100px auto;}
+	#star_group {width:100px; height:36px; position:relative;}
+	#star_group #stardate {width:100px; height:36px; background-image:url("/pro03/data/star1.png"); background-repeat:no-repeat; background-position:left center; background-size:100px auto;}
+	#star_group #starrate { width:100px; height:36px; background-image:url("/pro03/data/star.png"); background-repeat:no-repeat; background-position:left center; background-size:100px auto;}
+	#star10:checked ~ #star_group #starrate {width:100px;}
+	#star9:checked ~ #star_group #starrate {width:90px;}
+	#star8:checked ~ #star_group #starrate {width:80px;}
+	#star7:checked ~ #star_group #starrate {width:70px;}
+	#star6:checked ~ #star_group #starrate {width:60px;}
+	#star5:checked ~ #star_group #starrate {width:50px;}
+	#star4:checked ~ #star_group #starrate {width:40px;}
+	#star3:checked ~ #star_group #starrate {width:30px;}
+	#star2:checked ~ #star_group #starrate {width:20px;}
+	#star1:checked ~ #star_group #starrate {width:10px;}
+	#star_btn {width:100px; height:36px; position:absolute; z-index:20; top:0; left:0;}
+	#star_btn label {display:block; width:10px; height:36px; position:relative; float:left;}
+	</style>
 	<script>
 	$(document).ready( function () {
-	    $('#tb1').DataTable();
+		$('#tb1').DataTable();
 	} );
 	</script>
-  </head>
-  <body>
-  
-
-
-  
+</head>
+<body>
 <div id="nav-group">
 	<div class="container"> 
 		<nav class="navbar" role="navigation" aria-label="main navigation">
@@ -74,129 +55,112 @@ p.comment2 {max-width:400px; text-overflow:ellipsis; overflow:hidden; white-spac
 			<a class="navbar-item" href="index2.html">
 				<span>VISIT JEONJU</span>
 			</a>
-		
 			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
 			</a>
 			</div>
-		
 			<div id="navbarBasicExample" class="navbar-menu">
-			<div class="navbar-start" id="gnb">
-				<div class="navbar-item has-dropdown is-hoverable">
-				<a href="month.html" class="navbar-link">전주 나들이</a>
-		
-				<div class="navbar-dropdown">
-					<a href="month.html" class="navbar-item" id="A">이달의 추천여행</a>
-					<a href="history.html"  class="navbar-item" id="B">역사 전통 명소</a>
-					<a href="nature.html"  class="navbar-item" id="C">자연 생태 명소</a>
+				<div class="navbar-start" id="gnb">
+					<div class="navbar-item has-dropdown is-hoverable">
+					<a href="month.html" class="navbar-link">전주 나들이</a>
+						<div class="navbar-dropdown">
+							<a href="month.html" class="navbar-item" id="A">이달의 추천여행</a>
+							<a href="history.html"  class="navbar-item" id="B">역사 전통 명소</a>
+							<a href="nature.html"  class="navbar-item" id="C">자연 생태 명소</a>
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link">축제 / 문화</a>
+						<div class="navbar-dropdown">
+							<a href="festival.html"  class="navbar-item" id="D">축제</a>
+							<a href="play.html" class="navbar-item" id="H">체험/놀이</a>
+							<a href="culture.html" class="navbar-item" id="I">문화시설</a>
+						</div>
+					</div>
+					<div href="flavor.html" class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link cate">전주의 맛</a>
+						<div class="navbar-dropdown cate" id="cate05">
+							<a href="/flavor/bibim.html"  class="navbar-item">비빔밥</a>
+							<a href="/flavor/han.html" class="navbar-item">한정식</a>
+							<a href="/flavor/cong.html" class="navbar-item">콩나물국밥</a>
+							<a href="/flavor/mag.html" class="navbar-item">막걸리</a>
+							<a href="/flavor/" class="navbar-item">오모가리탕</a>
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link">숙박 / 쇼핑</a>
+						<div class="navbar-dropdown">
+							<a href="stay.html"  class="navbar-item" id="F">숙박</a>
+							<a href="shop.html"  class="navbar-item" id="G">쇼핑</a>
+						</div>
+					</div>
+					<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link">관광가이드</a>
+						<div class="navbar-dropdown">
+							<a href="info.html" class="navbar-item" id="J">관광안내소</a>
+							<a href="map.html" class="navbar-item">관광지도신청</a>
+							<a href="impress.html" class="navbar-item">관광 후기</a>
+							<a href="notice.html" class="navbar-item">공지사항</a>
+						</div>
+					</div>
 				</div>
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+						<a href="userinfo.html" class="button is-primary">
+							<strong>회원 정보</strong>
+						</a>
+						<a href="index.html" class="button is-light">
+								로그아웃
+						</a>
+						<a href="admin.html" class="button is-info">
+							<strong>관리자 페이지로</strong>
+						</a>
+						</div>
+					</div>
 				</div>
-				<div class="navbar-item has-dropdown is-hoverable">
-				<a class="navbar-link">축제 / 문화</a>
-		
-				<div class="navbar-dropdown">
-					<a href="festival.html"  class="navbar-item" id="D">축제</a>
-					<a href="play.html" class="navbar-item" id="H">체험/놀이</a>
-					<a href="culture.html" class="navbar-item" id="I">문화시설</a>
-				</div>
-				</div>
-				<div href="flavor.html" class="navbar-item has-dropdown is-hoverable">
-				<a class="navbar-link cate">
-						전주의 맛
-				</a>
-					<div class="navbar-dropdown cate" id="cate05">
-					<a href="/flavor/bibim.html"  class="navbar-item">비빔밥</a>
-					<a href="/flavor/han.html" class="navbar-item">한정식</a>
-					<a href="/flavor/cong.html" class="navbar-item">콩나물국밥</a>
-					<a href="/flavor/mag.html" class="navbar-item">막걸리</a>
-					<a href="/flavor/omo.html" class="navbar-item">오모가리탕</a>
-				</div>
-				</div>
-				<div class="navbar-item has-dropdown is-hoverable">
-				<a class="navbar-link">숙박 / 쇼핑</a>
-		
-				<div class="navbar-dropdown">
-					<a href="stay.html"  class="navbar-item" id="F">숙박</a>
-					<a href="shop.html"  class="navbar-item" id="G">쇼핑</a>
-				</div>
-				</div>
-				<div class="navbar-item has-dropdown is-hoverable">
-				<a class="navbar-link">관광가이드</a>
-		
-				<div class="navbar-dropdown">
-					<a href="info.html" class="navbar-item" id="J">관광안내소</a>
-					<a href="map.html" class="navbar-item">관광지도신청</a>
-					<a href="impress.html" class="navbar-item">관광 후기</a>
-					<a href="notice.html" class="navbar-item">공지사항</a>
-				</div>
-				</div>
-			</div>
-		
-			<div class="navbar-end">
-				<div class="navbar-item">
-					
-			
-				<div class="buttons">
-				<a href="" class="button is-primary">
-					<strong>회원 정보</strong>
-				</a>
-				<a href="index.html" class="button is-light">
-						로그아웃
-				</a>
-				<a href="admin.html" class="button is-info">
-					<strong>관리자 페이지로</strong>
-				</a>
-				</div>
-			
-			</div>
-		</div>
 			</div>
 		</nav>
 	</div>
 </div>
-  <section class="section">
+<section class="section">
     <div class="container">
-      <h1 class="title">이용후기</h1>
-		<table class="table" id="tb1">
-			<thead>
-				<tr>
-					<th>장소</th><th>내용</th><th>작성자</th><th>작성일</th><th></th>
-				</tr>
-			</thead>
+    	<h1 class="title">이용후기</h1>
+			<table class="table" id="tb1">
+				<thead>
+					<tr>
+						<th>장소</th><th>내용</th><th>작성자</th><th>작성일</th><th></th>
+					</tr>
+				</thead>
 			<tbody>
-		   
-			
 		    <tr>
 		    	<td colspan="4">이용 후기 목록이 없습니다.</td>
 		    </tr>
-		    
 		  </tbody>
 		</table>
-		<hr style="height:4px; background-color:#ccc;">
-				
+		<hr style="height:4px; background-color:#ccc;">	
 		<table class="table">
 			<tbody>
 				<tr>
 					<td style="width:160px">
 						<div class="select" style="width:150">
-						  <select name="cate" id="cate" class="select" onchange="changeTourNo()" style="width:150" required>
-						  	<option value="">선택</option>
-						    <option value="A">이달의 추천여행</option>
-						    <option value="B">역사 전통 명소</option>
-						    <option value="C">자연 생태 명소</option>
-						    <option value="D">축제</option>
-						    <option value="E">전통음식</option>
-						    <option value="F">숙박</option>
-						    <option value="G">쇼핑</option>
+						  	<select name="cate" id="cate" class="select" onchange="changeTourNo()" style="width:150" required>
+						  		<option value="">선택</option>
+						    	<option value="A">이달의 추천여행</option>
+						    	<option value="B">역사 전통 명소</option>
+						    	<option value="C">자연 생태 명소</option>
+						    	<option value="D">축제</option>
+						    	<option value="E">전통음식</option>
+						    	<option value="F">숙박</option>
+						    	<option value="G">쇼핑</option>
 						  </select>
 						</div>
 						<br>
 						<div class="select" style="width:150">
 							<select name="tourno" id="tourno" style="width:150" required>
 								<option value="">선택</option>
-								
 							</select>
 						</div>
 					</td>
@@ -241,17 +205,14 @@ p.comment2 {max-width:400px; text-overflow:ellipsis; overflow:hidden; white-spac
 				</tr>
 			</tbody>
 		</table>
-		
     </div>
     <script>
     $(document).ready(function(){
-    	
     	$("#content").on("click", function(){
     		if($("#tourno").val()==""){
     			alert("방문 장소를 먼저 고르시기 바랍니다.");
     		}
     	});
-    	
     	$("#star_btn label").click(function(){
     		if($("#tourno").val()==""){
     			alert("방문 장소를 먼저 고르시기 바랍니다.");
@@ -261,7 +222,6 @@ p.comment2 {max-width:400px; text-overflow:ellipsis; overflow:hidden; white-spac
     		}
     	});
     });
-    
     function changeTourNo(){
     	var ct = $("#cate").val(); 
     	if(ct==""){
@@ -326,15 +286,14 @@ p.comment2 {max-width:400px; text-overflow:ellipsis; overflow:hidden; white-spac
     }
     //href="/pro03/notice/AddImpressCtrl.do" 
     </script>
-  </section>
-  
+</section>
 <footer class="footer">
-  <div class="content has-text-centered">
-    <p>
-		(54994) 전라북도 전주시 완산구 노송광장로 10 / 대표전화: 063)222-1000
-    </p>
+  	<div class="content has-text-centered">
+    	<p>
+			(54994) 전라북도 전주시 완산구 노송광장로 10 / 대표전화: 063)222-1000
+    	</p>
     <small lang="en">Copyright © JEONJU CITY. ALL RIGHTS RESERVED.</small>
-  </div>
+</div>
 </footer>
-  </body>
+</body>
 </html>
