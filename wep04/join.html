@@ -1,0 +1,338 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>회원가입</title>
+	<!-- 헤드 부분 인클루드 -->
+    
+
+
+
+
+<!-- <script src="include/jquery.js"></script>
+<script src="include/foundation.js"></script>
+<link href="inculde/foundation.css" rel="stylesheet" /> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/foundation.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation-float.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation-prototype.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation-rtl.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.accordion.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.accordionMenu.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.dropdown.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.dropdownMenu.min.js"></script>
+<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script> -->
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="resources/css/normalize.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+<link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+<script>
+  $(document).ready(function(){
+	  $(document).foundation();
+  });
+</script>
+<style>
+ul { list-style:none; }
+#gnb > ul > li[role="menuitem"] { height:38px; }
+#gnb > ul > li.menu-text[role="menuitem"] { padding-top:0px; padding-bottom:0px; font-size:30px}
+.h1 { padding-top:0.9rem; padding-bottom:0.3rem; }
+.container { clear:both; width:1280px; margin:0 auto; }
+.container::after { content:""; display:block; width:100%; clear:both; }
+
+
+.breadcrumbs { margin:auto 50px; padding-left:30px; line-height: 60px; border-bottom:3px solid #eee;}
+.breadcrumbs li {font-size:15px}
+.pageTxt{margin-bottom:100px; border-bottom:3px solid #eee;}
+
+.content {margin:50px auto; }
+
+#table1 th { border-bottom:1px solid #fff; }
+.footer-nav {	background-color:#f1f1f1; height:150px; box-sizing:border-box; overflow:hidden; }
+.footer-nav > article { clear:both; width:1400px; margin:0 auto; height:150px; }
+.footer-nav > article > div { padding:30px 0;}
+.footer-nav-left { float:left; color:#555; width:50%; line-height:20px; }
+.footer-nav-right {	width:25%; float:right;}
+#footer .footer-nav-left .footer-copyright {line-height:10px;}
+#footer > article > div > ul > li.footer-nav-item { float:left; width:auto; padding:1.8rem;	min-width:40px;}
+#footer > article > div.footer-nav-right > ul > li.footer-nav-item {width:25%; height:25%;}
+</style>
+</head>
+<body>
+	<header id="header">
+		<!-- 헤더 부분 인클루드 -->
+	 	
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Insert title here</title>
+</head>
+<body>
+<div class="top-bar">
+  <div class="top-bar-left">
+<ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text"><a href="/">D & O</a></li>
+      <li>
+        <a href="">기업소개</a>
+        <ul class="menu">
+          <li>
+          	<a href="/company/comInfo">회사소개</a>
+          	<ul class="menu">
+              <li><a href="/company/comInfo">회사소개</a></li>
+              <li><a href="/company/ceo">CEO</a></li>
+              <li><a href="/company/vision">비전</a></li>
+              <li><a href="/company/history">연혁</a></li>
+            </ul>
+          </li>
+          <li>
+          	<a href="/company/news">PR</a>
+          	<ul class="menu">
+              <li><a href="/company/news">뉴스</a></li>
+              <li><a href="/company/promote">홍보관</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#Item-2">사업분야</a>
+        <ul class="menu">
+          <li><a href="/business/leisure">레저</a></li>
+          <li><a href="/business/am">AM</a></li>
+        </ul>
+      </li>
+      <li>
+      	<a href="#Item-3">인재채용</a>
+      	<ul class="menu">
+          <li><a href="/recruit/people">인재상</a></li>
+          <li><a href="/recruit/welfare">인사제도</a></li>
+          <li><a href="/recruit/process">채용절차</a></li>
+          <li><a href="/board/list.do">채용공고</a></li>
+      	</ul>
+      </li>
+      <li>
+      	<a href="#Item-4">고객지원</a>
+      	<ul class="menu">
+          <li><a href="/free/list.do">고객문의</a></li>
+          <li><a href="/faq/list.do">FAQ</a></li>
+          <li><a href="/recruit/way">찾아오시는 길</a></li>
+      	</ul>
+      </li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
+    </header>
+	
+	<div class="content" id="con">
+	    <div class="row column text-center">
+	      <h2 class="h1">회원가입</h2>
+	      <hr>
+	      <div class="container">
+	      	<form name="frm1" id="frm1" action="/member/insert.do" method="post" onsubmit="return joinCheck(this)">
+			      <table id="table1">
+			      	<tbody>
+			      		<tr>
+			      			<th style="background-color:#dcdcdc">아이디</th>
+			      			<td>
+			      				<input type="text" name="id" id="id" placeholder="아이디 입력" pattern="^[a-z0-9]{5,12}" maxlength="12" required style="width:700px; float:left;">
+			      				<input type="button" id="idCkBtn" class="button" value="아이디 중복 체크" onclick="idCheck()">
+			      				<input type="hidden" name="idck" id="idck" value="no"/>
+							
+								<p id="msg" style="padding-left:0.5rem">아직 아이디 중복 체크를 하지 않으셨습니다.</p>
+							
+							
+			      			</td>
+			      		</tr>
+			      		<tr>
+			      			<th style="background-color:#dcdcdc">비밀번호</th>
+			      			<td>
+			      				<input type="password" name="pw" id="pw" placeholder="비밀번호 입력" maxlength="12" required>
+			      				<!-- pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,12}$"  -->
+			      			</td>
+			      		</tr>
+			      		<tr>
+			      			<th style="background-color:#dcdcdc">비밀번호 확인</th>
+			      			<td>
+			      				<input type="password" name="pw2" id="pw2" placeholder="비밀번호 확인 입력" maxlength="12" required>
+			      				<!-- pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,12}$"  -->
+			      			</td>
+			      		</tr>
+			      		<tr>
+			      			<th style="background-color:#dcdcdc">이름</th>
+			      			<td>
+			      				<input type="text" name="name" id="name" placeholder="이름 입력" maxlength="40" required>
+			      			</td>
+			      		</tr>
+			      		<tr>
+			      			<th style="background-color:#dcdcdc">생년월일</th>
+			      			<td>
+			      				<input type="date" name="birth" id="birth" placeholder="생년월일 입력" required>
+			      			</td>
+			      		</tr>
+			      		<tr>
+			      			<th style="background-color:#dcdcdc">이메일</th>
+			      			<td>
+			      				<input type="email" name="email" id="email" placeholder="이메일 입력" pattern="^\w+((\.\w+)?)+@\w+.?\w+\.\w+$" maxlength="80" required>
+			      			</td>
+			      		</tr>
+			      		<tr>
+			      			<th style="background-color:#dcdcdc">전화번호</th>
+			      			<td>
+			      				<input type="tel" name="tel" id="tel" placeholder="000-0000-0000" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}" maxlength="19" required>
+			      			</td>
+			      		</tr>
+		      			<tr>
+			      			<th style="background-color:#dcdcdc">주소</th>
+			      			<td>
+			      				<input type="text" name="addr1" id="addr1" placeholder="기본주소 입력" maxlength="150" required><br><br>
+			      				<input type="text" name="addr2" id="addr2" placeholder="상세주소 입력" maxlength="90" required><br><br>
+			      				<input type="text" name="postcode" id="postcode" placeholder="우편번호 입력" maxlength="9" required>
+			      				<input type="button" id="isAddrBtn" class="button" value="주소 입력" onclick="findAddr()">
+			      				<input type="hidden" name="addrck" id="addrck" value="no"/>
+			      			</td>
+			      		</tr>
+			      		<tr>
+			      			<td colspan="2">
+			      				<input type="submit" class="submit success button" value="회원 가입" >
+								<input type="reset" class="reset button" value="취소" >
+			      			</td>
+			      		</tr>
+			      	</tbody>
+			      </table>
+			   </form>   
+			   	<script>
+				$(document).ready(function(){
+					$("#id").keyup(function(){
+						$("#idck").val("no");
+						if($(this).val()!=""){
+							$("#msg").html("<strong>아이디 입력중입니다.</strong>");
+						} else {
+							$("#msg").html("아직 아이디 중복 체크를 하지 않으셨습니다.");
+						}
+					});
+				});
+				</script>
+				<script>
+				function idCheck(){
+					if($("#id").val()==""){
+						alert("아이디를 입력하지 않으셨습니다.");
+						$("#id").focus();
+						return;
+					} 
+					var params = {	id : $("#id").val()	} //전송되어질 데이터를 객체로 묶음
+					$.ajax({
+						url:"/member/idCheck.do",	//아이디가 전송되어질 곳
+						type:"post",		//전송방식
+						dataType:"json",	//데이터 반환 방식
+						data:params,		//전송방식이 post인 경우 객체로 묶어서 전송
+						success:function(result){
+							console.log(result.result);
+							var idChk = result.result;	//true 또는 false를 받음
+							if(idChk==false){	//사용할 수 없는 아이디
+								$("#idck").val("no");
+								$("#msg").html("<strong style='color:red'>기존에 사용되고 있는 아이디 입니다. 다시 입력하시기 바랍니다.</strong>");
+								$("#id").focus();
+							} else if(idChk==true){	//사용 가능한 아이디
+								$("#idck").val("yes");
+								$("#msg").html("<strong style='color:blue'>사용가능한 아이디 입니다.</strong>");
+							} else if(idck==""){
+								$("#msg").html("<strong>아이디가 확인되지 않았습니다. 다시 시도해주시기 바랍니다.</strong>");
+							}
+						}
+					});
+				}
+				function joinCheck(f){
+					if(f.pw.value!=f.pw2.value){
+						alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+						f.pw.focus();
+						return false;
+					}
+					if(f.idck.value!="yes"){
+						alert("아이디 중복 체크를 하지 않으셨습니다.");
+						return false;
+					}
+				}
+				</script>
+				<script>
+				function findAddr() {
+					new daum.Postcode({
+						oncomplete: function(data) {
+							console.log(data);
+							var roadAddr = data.roadAddress;
+							var jibunAddr = data.jibunAddress;
+							document.getElementById("postcode").value = data.zonecode;
+							if(roadAddr !== '') {
+								document.getElementById("addr1").value = roadAddr;				
+							} else if(jibunAddr !== ''){
+								document.getElementById("addr1").value = jibunAddr;
+							}
+							document.getElementById("addr2").focus();
+						}
+					}).open();
+				}
+				</script>
+				<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	      </div>
+	    </div>
+	</div>
+    <footer id="footer" class="footer-nav row expanded collapse">
+    	<!-- 푸터 부분 인클루드 -->
+    	
+
+
+
+
+<!-- 푸터 내용 기술 -->
+<article class="ft_wrap">
+	<div class="footer-nav-left">
+		<span class="address">경기도 고양시 덕양구 서삼릉 1길, D&O</span>
+		<p class="info"><span>대표이사 박평화</span> <span>사업자등록번호 123-45-67890</span> <span>대표전화 : 02-3333-5555</span></p>
+		<small class="footer-copyright" style="margin-top:20px">Copyright ⓒ 2022 D&O. All Rights Reserved.</small>
+	</div>
+	<div class="footer-nav-right">
+		 <div class="sel_box">
+		    <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+		        <option value="">패밀리 사이트</option>
+		        <option value="https://www.konjiamresort.co.kr/main.dev">곤지암 리조트</option>
+		        <option value="https://www.konjiamgolfclub.co.kr/index.dev">곤지암 골프클럽</option>
+		        <option value="https://baekam.dnocorp.com/pc/main/main.do">LG 생활 연수원</option>
+		        <option value="https://flagone.co.kr/">플래그 원</option>
+		        <option value="https://www.dnocm.co.kr/main/main.do">D&O CM</option>
+		    </select>
+		</div>
+		<script>
+		function sel_link(sel){
+		    location.href = sel.value;
+		}
+		</script>
+	</div>
+</article>
+    </footer>
+</body>
+</html>
