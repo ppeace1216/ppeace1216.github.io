@@ -44,6 +44,12 @@
 	.pageTxt{margin-bottom:100px; border-bottom:3px solid #eee;}
 	.content {margin:50px auto; }
 	#table1 th { border-bottom:1px solid #fff; }
+	.bottom-wrap {clear:both; width: 100%; padding-top: -20px; padding-bottom: 50px;}
+    .bottom-txt {position: relative;padding-top: 25px;font-size: 0;max-width: 650px;height: 155px;margin: 60px auto 0;text-align: center;box-sizing: border-box;}
+    .bottom-txt:after {position: absolute;content: "";top: 25px;left: 156px;height: 105px;width: 1px;background: #d5d5d5;}
+    .bottom-txt dt {display: inline-block;width: 25%;vertical-align: middle;font-size: 18px;line-height: 33px;color: #212222;font-weight: 500;letter-spacing: 1px;text-align: left;}
+    .bottom-txt dd {display: inline-block;vertical-align: middle;padding-left: 20px;font-size: 17px;line-height: 33px;color: #787878;box-sizing: border-box; width: 75%; text-align: left;}
+    .bottom-txt dd span {font-weight: 400;}
 	.footer-nav {	background-color:#f1f1f1; height:150px; box-sizing:border-box; overflow:hidden; }
 	.footer-nav > article { clear:both; width:1400px; margin:0 auto; height:150px; }
 	.footer-nav > article > div { padding:30px 0;}
@@ -116,7 +122,8 @@
 	</div>
 </div>
 </header>
-<div id="container">
+<div class="content" id="content">
+	<div class="row column text-center">
 	<section class="contents" id="P_PC_CS_30000">
 		<header class="contentsHeader">
 			<h2 class="pageTit">찾아오시는 길</h2>
@@ -129,22 +136,23 @@
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.221341398084!2d126.77118336006443!3d37.65877014225814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c854564f84571%3A0xf647d6b684df51b6!2z7J287IKw66y47ZmU6rO17JuQ!5e0!3m2!1sko!2skr!4v1670561799410!5m2!1sko!2skr" width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>						
 				</div>
-				<div class="siteArea">
-					<strong class="siteTit">주소</strong>
-					<p class="alignValueCon">서울특별시 강서구 마곡중앙로 150, D&O 강서사옥</p>
-				</div>
-				<div class="siteArea">
-					<strong class="siteTit">전화</strong>
-					<dl class="alignValueList">
-						<dt class="tit">대표전화</dt>
-						<dd class="txt">02-1111-1111</dd>
-						<dt class="tit">팩스</dt>
-						<dd class="txt">02-1234-1234</dd>
-					</dl>
-				</div>
+				<div class="bottom-wrap">
+                    <dl class="bottom-txt">
+						<div>
+							<dt>주소</dt>
+							<dd>경기도 고양시 덕양구 서삼릉 1길, D&O</dd>
+						</div>
+						<div>
+							<dt>전화</dt>
+							<dd class="last">대표전화 / <span>02-1111-1111</span>,<br class="mo-br"> 팩스 / <span>02-1234-1234</span></dd>
+						</div>
+				    </dl>
+                </div>
 			</div>
 		</article>
-	</section>
+	</section>ㅇ
+	</div>
+</div>
 <footer id="footer" class="footer-nav row expanded collapse">
 <article class="ft_wrap">
 	<div class="footer-nav-left">
