@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,141 +5,116 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>게시판 목록</title>
-	
-
-
-
-
-<!-- <script src="include/jquery.js"></script>
-<script src="include/foundation.js"></script>
-<link href="inculde/foundation.css" rel="stylesheet" /> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/foundation.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation-float.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation-prototype.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation-rtl.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.accordion.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.accordionMenu.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.dropdown.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.dropdownMenu.min.js"></script>
-<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script> -->
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-<link rel="stylesheet" href="resources/css/normalize.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
-<link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
-<script>
-  $(document).ready(function(){
-	  $(document).foundation();
-  });
-</script>
-<style>
-ul { list-style:none; }
-#gnb > ul > li[role="menuitem"] { height:38px; }
-#gnb > ul > li.menu-text[role="menuitem"] { padding-top:0px; padding-bottom:0px; font-size:30px}
-.h1 { padding-top:0.9rem; padding-bottom:0.3rem; }
-.container { clear:both; width:1280px; margin:0 auto; }
-.container::after { content:""; display:block; width:100%; clear:both; }
-
-
-.breadcrumbs { margin:auto 50px; padding-left:30px; line-height: 60px; border-bottom:3px solid #eee;}
-.breadcrumbs li {font-size:15px}
-.pageTxt{margin-bottom:100px; border-bottom:3px solid #eee;}
-
-.content {margin:50px auto; }
-
-#table1 th { border-bottom:1px solid #fff; }
-.footer-nav {	background-color:#f1f1f1; height:150px; box-sizing:border-box; overflow:hidden; }
-.footer-nav > article { clear:both; width:1400px; margin:0 auto; height:150px; }
-.footer-nav > article > div { padding:30px 0;}
-.footer-nav-left { float:left; color:#555; width:50%; line-height:20px; }
-.footer-nav-right {	width:25%; float:right;}
-#footer .footer-nav-left .footer-copyright {line-height:10px;}
-#footer > article > div > ul > li.footer-nav-item { float:left; width:auto; padding:1.8rem;	min-width:40px;}
-#footer > article > div.footer-nav-right > ul > li.footer-nav-item {width:25%; height:25%;}
-</style>
+	<!-- <script src="include/jquery.js"></script>
+	<script src="include/foundation.js"></script>
+	<link href="inculde/foundation.css" rel="stylesheet" /> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/foundation.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation-float.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation-prototype.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation-rtl.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.accordion.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.accordionMenu.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.dropdown.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/plugins/foundation.dropdownMenu.min.js"></script>
+	<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script> -->
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<link rel="stylesheet" href="resources/css/normalize.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$(document).foundation();
+	});
+	</script>
+	<style>
+	ul { list-style:none; }
+	#gnb > ul > li[role="menuitem"] { height:38px; }
+	#gnb > ul > li.menu-text[role="menuitem"] { padding-top:0px; padding-bottom:0px; font-size:30px}
+	.h1 { padding-top:0.9rem; padding-bottom:0.3rem; }
+	.container { clear:both; width:1280px; margin:0 auto; }
+	.container::after { content:""; display:block; width:100%; clear:both; }
+	.breadcrumbs { margin:auto 50px; padding-left:30px; line-height: 60px; border-bottom:3px solid #eee;}
+	.breadcrumbs li {font-size:15px}
+	.pageTxt{margin-bottom:100px; border-bottom:3px solid #eee;}
+	.content {margin:50px auto; }
+	#table1 th { border-bottom:1px solid #fff; }
+	.footer-nav {	background-color:#f1f1f1; height:150px; box-sizing:border-box; overflow:hidden; }
+	.footer-nav > article { clear:both; width:1400px; margin:0 auto; height:150px; }
+	.footer-nav > article > div { padding:30px 0;}
+	.footer-nav-left { float:left; color:#555; width:50%; line-height:20px; }
+	.footer-nav-right {	width:25%; float:right;}
+	#footer .footer-nav-left .footer-copyright {line-height:10px;}
+	#footer > article > div > ul > li.footer-nav-item { float:left; width:auto; padding:1.8rem;	min-width:40px;}
+	#footer > article > div.footer-nav-right > ul > li.footer-nav-item {width:25%; height:25%;}
+	</style>
 </head>
 <body>
 <header id="header">
 	<!-- 헤더 부분 인클루드 -->
- 	
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Insert title here</title>
-</head>
-<body>
 <div class="top-bar">
-  <div class="top-bar-left">
-<ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text"><a href="/">D & O</a></li>
-      <li>
-        <a href="">기업소개</a>
-        <ul class="menu">
-          <li>
-          	<a href="/company/comInfo">회사소개</a>
-          	<ul class="menu">
-              <li><a href="/company/comInfo">회사소개</a></li>
-              <li><a href="/company/ceo">CEO</a></li>
-              <li><a href="/company/vision">비전</a></li>
-              <li><a href="/company/history">연혁</a></li>
-            </ul>
-          </li>
-          <li>
-          	<a href="/company/news">PR</a>
-          	<ul class="menu">
-              <li><a href="/company/news">뉴스</a></li>
-              <li><a href="/company/promote">홍보관</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#Item-2">사업분야</a>
-        <ul class="menu">
-          <li><a href="/business/leisure">레저</a></li>
-          <li><a href="/business/am">AM</a></li>
-        </ul>
-      </li>
-      <li>
-      	<a href="#Item-3">인재채용</a>
-      	<ul class="menu">
-          <li><a href="/recruit/people">인재상</a></li>
-          <li><a href="/recruit/welfare">인사제도</a></li>
-          <li><a href="/recruit/process">채용절차</a></li>
-          <li><a href="/board/list.do">채용공고</a></li>
-      	</ul>
-      </li>
-      <li>
-      	<a href="#Item-4">고객지원</a>
-      	<ul class="menu">
-          <li><a href="/free/list.do">고객문의</a></li>
-          <li><a href="/faq/list.do">FAQ</a></li>
-          <li><a href="/recruit/way">찾아오시는 길</a></li>
-      	</ul>
-      </li>
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="menu">
-      <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
-    </ul>
-  </div>
+	<div class="top-bar-left">
+	<ul class="dropdown menu" data-dropdown-menu>
+		<li class="menu-text"><a href="/">D & O</a></li>
+		<li>
+		<a href="">기업소개</a>
+		<ul class="menu">
+			<li>
+				<a href="info.html">회사소개</a>
+				<ul class="menu">
+				<li><a href="info.html">회사소개</a></li>
+				<li><a href="ceo.html">CEO</a></li>
+				<li><a href="vision.html">비전</a></li>
+				<li><a href="history.html">연혁</a></li>
+			</ul>
+			</li>
+			<li>
+				<a href="news.html">PR</a>
+				<ul class="menu">
+				<li><a href="news.html">뉴스</a></li>
+				<li><a href="promote.html">홍보관</a></li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+		<a href="leisure.html">사업분야</a>
+		<ul class="menu">
+			<li><a href="leisure.html">레저</a></li>
+			<li><a href="am.html">AM</a></li>
+		</ul>
+		</li>
+		<li>
+			<a href="people.html">인재채용</a>
+			<ul class="menu">
+			<li><a href="people.html">인재상</a></li>
+			<li><a href="welfare.html">인사제도</a></li>
+			<li><a href="process.html">채용절차</a></li>
+			<li><a href="board.html">채용공고</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="free.html">고객지원</a>
+			<ul class="menu">
+			<li><a href="free.html">고객문의</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+			<li><a href="way.html">찾아오시는 길</a></li>
+			</ul>
+		</li>
+	</ul>
+	</div>
+	<div class="top-bar-right">
+	<ul class="menu">
+		<li><a href="index.html">로그아웃</a></li>
+		<li><a href="memberList.html">회원목록</a></li> 
+	</ul>
+	</div>
 </div>
-</body>
-</html>
 </header>
 <div id="contentsWrap">
 	<section class="contents" id="P_PC_HR_10000">
