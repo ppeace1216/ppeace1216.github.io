@@ -4,15 +4,16 @@
 
 
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>회원목록</title>
-	<!-- 헤드 부분 인클루드 -->
-    
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>자유게시판 작성</title>
+	
 
 
 
@@ -69,124 +70,114 @@ ul { list-style:none; }
 #footer > article > div > ul > li.footer-nav-item { float:left; width:auto; padding:1.8rem;	min-width:40px;}
 #footer > article > div.footer-nav-right > ul > li.footer-nav-item {width:25%; height:25%;}
 </style>
+	<script type="text/javascript" src="/resources/ckeditor/ckeditor.js"></script>
 </head>
 <body>
-	<header id="header">
-		<!-- 헤더 부분 인클루드 -->
-	 	
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Insert title here</title>
-</head>
-<body>
+<header id="header">
+	<!-- 헤더 부분 인클루드 -->
 <div class="top-bar">
-  <div class="top-bar-left">
-<ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text"><a href="/">D & O</a></li>
-      <li>
-        <a href="">기업소개</a>
-        <ul class="menu">
-          <li>
-          	<a href="/company/comInfo">회사소개</a>
-          	<ul class="menu">
-              <li><a href="/company/comInfo">회사소개</a></li>
-              <li><a href="/company/ceo">CEO</a></li>
-              <li><a href="/company/vision">비전</a></li>
-              <li><a href="/company/history">연혁</a></li>
-            </ul>
-          </li>
-          <li>
-          	<a href="/company/news">PR</a>
-          	<ul class="menu">
-              <li><a href="/company/news">뉴스</a></li>
-              <li><a href="/company/promote">홍보관</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#Item-2">사업분야</a>
-        <ul class="menu">
-          <li><a href="/business/leisure">레저</a></li>
-          <li><a href="/business/am">AM</a></li>
-        </ul>
-      </li>
-      <li>
-      	<a href="#Item-3">인재채용</a>
-      	<ul class="menu">
-          <li><a href="/recruit/people">인재상</a></li>
-          <li><a href="/recruit/welfare">복리후생</a></li>
-          <li><a href="/recruit/process">채용절차</a></li>
-          <li><a href="/board/list.do">채용공고</a></li>
-      	</ul>
-      </li>
-      <li>
-      	<a href="#Item-4">고객지원</a>
-      	<ul class="menu">
-          <li><a href="/free/list.do">고객문의</a></li>
-          <li><a href="/faq/list.do">FAQ</a></li>
-          <li><a href="/recruit/way">찾아오시는 길</a></li>
-      	</ul>
-      </li>
-    </ul>
-  </div>
-  <div class="top-bar-right">
-    <ul class="menu">
-      <li><input type="search" placeholder="Search"></li>
-      <li><button type="button" class="button">Search</button></li>
-    </ul>
-  </div>
+	<div class="top-bar-left">
+	<ul class="dropdown menu" data-dropdown-menu>
+		<li class="menu-text"><a href="/">D & O</a></li>
+		<li>
+		<a href="">기업소개</a>
+		<ul class="menu">
+			<li>
+				<a href="info.html">회사소개</a>
+				<ul class="menu">
+				<li><a href="info.html">회사소개</a></li>
+				<li><a href="ceo.html">CEO</a></li>
+				<li><a href="vision.html">비전</a></li>
+				<li><a href="history.html">연혁</a></li>
+			</ul>
+			</li>
+			<li>
+				<a href="news.html">PR</a>
+				<ul class="menu">
+				<li><a href="news.html">뉴스</a></li>
+				<li><a href="promote.html">홍보관</a></li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li>
+		<a href="leisure.html">사업분야</a>
+		<ul class="menu">
+			<li><a href="leisure.html">레저</a></li>
+			<li><a href="am.html">AM</a></li>
+		</ul>
+		</li>
+		<li>
+			<a href="people.html">인재채용</a>
+			<ul class="menu">
+			<li><a href="people.html">인재상</a></li>
+			<li><a href="welfare.html">복리후생</a></li>
+			<li><a href="process.html">채용절차</a></li>
+			<li><a href="board.html">채용공고</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="free.html">고객지원</a>
+			<ul class="menu">
+			<li><a href="free.html">고객문의</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+			<li><a href="way.html">찾아오시는 길</a></li>
+			</ul>
+		</li>
+	</ul>
+	</div>
+	<div class="top-bar-right">
+	<ul class="menu">
+		<li><a href="index.html">로그아웃</a></li>
+		<li><a href="memberList.html">회원목록</a></li> 
+	</ul>
+	</div>
 </div>
-</body>
-</html>
-    </header>
-
-    <div class="row column text-center">
-      <h2 class="h1">회원 목록</h2>
-      <hr>
-      <table>
-      	<thead>
-      		<tr>
-      			<th width="80">No</th>
-      			<th width="100">ID</th>
-      			<th width="100">NAME</th>
-      			<th>RegDate</th>
-      			<th>Point</th>
-      		</tr>
-      	</thead>
-      	<tbody>
-      	
-      		<tr>
-      			<td>1</td>
-      			<td><a href="/member/getMember.do?id=admin">admin</a></td>
-      			<td>관리자</td>
-      			<td>2022-12-05 10:23:53.0</td>
-      			<td>0</td>
-      		</tr>
-      	
-      		<tr>
-      			<td>2</td>
-      			<td><a href="/member/getMember.do?id=peace">peace</a></td>
-      			<td>박평화</td>
-      			<td>2022-12-09 14:49:45.0</td>
-      			<td>0</td>
-      		</tr>
-      		
-      	</tbody>
-      </table>
-    </div>
+</header>
+<div class="content" id="con">
+	<div class="row column text-center">
+	     <h2>자유게시판 수정</h2>
+	     <hr>
+	     <div class="container">
+	     	<form action="free.html" method="post">
+				<table id="table1">
+					<tbody>
+						<tr>
+							<th>제목</th>
+							<td>
+								<input type="text" name="title" id="title" placeholder="제목 입력" maxlength="98" required>
+							</td>
+						</tr>
+						<tr>
+							<th>내용</th>
+							<td>
+								<textarea name="content" id="content" placeholder="내용 입력" rows="8" cols="100" maxlength=900 required></textarea>
+								<script>
+								CKEDITOR.replace('content', {filebrowserUploadUrl:'/free/imageUpload.do'});
+								</script>
+							</td>
+						</tr>
+						<tr>
+							<th>작성자</th>
+							<td>
+								<input type="text" name="id" id="id" maxlength="20" required>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="submit" class="submit success button" value="글 등록" >
+								<a class="button" href="free.html">글 목록</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+<footer id="footer" class="footer-nav row expanded collapse">
+	<!-- 푸터 부분 인클루드 -->
 	
-    <footer id="footer" class="footer-nav">
-    	<!-- 푸터 부분 인클루드 -->
-    	
 
 
 
@@ -216,6 +207,6 @@ ul { list-style:none; }
 		</script>
 	</div>
 </article>
-    </footer>
+</footer>
 </body>
 </html>
