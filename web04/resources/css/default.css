@@ -1,7 +1,11 @@
 @charset "UTF-8";
 ul { list-style:none; }
 #gnb > ul > li[role="menuitem"] { height:38px; }
-#gnb > ul > li.menu-text[role="menuitem"] { padding-top:0px; padding-bottom:0px; font-size:30px}
+.top-bar {background-color: rgb(211, 235, 244);}
+.top-bar, .top-bar ul {background-color: rgb(211, 235, 244); color: rgb(50, 50, 50);}
+ul.menu > li {font-size: 25px; font-weight: 100;}
+ul.menu > li:hover { background-color: rgb(225, 241, 247); font-weight: 700;}
+.menu-text {margin:0; font-size: 30px; font-weight: 900; }
 .h1 { padding-top:0.9rem; padding-bottom:0.3rem; }
 .container { clear:both; width:1280px; margin:0 auto; }
 .container::after { content:""; display:block; width:100%; clear:both; }
