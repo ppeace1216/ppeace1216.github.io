@@ -130,16 +130,42 @@
     </div>
   </div>
 </article>
-<!-- Hotjar Tracking Code for my site -->
+<!-- 푸터 부분 인클루드 -->
+<footer id="footer" class="footer-nav row expanded collapse">
+  <article class="ft_wrap">
+    <div class="footer-nav-left">
+      <span class="address">경기도 고양시 덕양구 서삼릉 1길, D&O</span>
+      <p class="info"><span>대표이사 박평화</span> <span>사업자등록번호 123-45-67890</span> <span>대표전화 : 02-3333-5555</span></p>
+      <small class="footer-copyright" style="margin-top:20px">Copyright ⓒ 2022 D&O. All Rights Reserved.</small>
+    </div>
+    <div class="footer-nav-right">
+      <div class="sel_box">
+        <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
+            <option value="">패밀리 사이트</option>
+            <option value="https://www.konjiamresort.co.kr/main.dev">곤지암 리조트</option>
+            <option value="https://www.konjiamgolfclub.co.kr/index.dev">곤지암 골프클럽</option>
+            <option value="https://baekam.dnocorp.com/pc/main/main.do">LG 생활 연수원</option>
+            <option value="https://flagone.co.kr/">플래그 원</option>
+            <option value="https://www.dnocm.co.kr/main/main.do">D&O CM</option>
+        </select>
+      </div>
+      <script>
+      function sel_link(sel){
+          location.href = sel.value;
+      }
+      </script>
+    </div>
+  </article>
+</footer>
 <script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3286254,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3286254,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 </body>
 </html>
