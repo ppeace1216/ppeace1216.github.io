@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>티켓예매</title>
+    <!-- 부트스트랩5.1.3ver -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 공통CSS -->
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet">
+    <style>
+    img {border: none; vertical-align: top; margin: 0; padding: 0;}
+    .wrap {height: auto; min-height: 100%;} 
+    .wrap:after {content: ""; display: block; clear: both;}
+
+    .container { clear: both; width: 1200px; margin:20px auto;}
+    .container:after { content:""; display: block; clear: both;}
+    .card {width: 550px; float: left; border: none;}
+    .card-img {position: relative;}
+    .text-white {display: block; font-size: 30px; text-align: center; margin-top: 640px; font-weight: 600;}
+    a:hover {text-decoration: none;}
+    </style>
+</head>
+<body>
+    <div class="container container-fluid">
+        <div class="card bg-transparent">
+            <img src="./img/ticket_left.png" class="card-img" alt="일반예매">
+            <div class="card-img-overlay">
+                <a class="text-white" href="#" role="button">일반예매
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./img/ticket_right.png" class="card-img" alt="매직패스예매">
+            <div class="card-img-overlay">
+                <a class="text-white" href="#" role="button">매직패스예매
+                    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
