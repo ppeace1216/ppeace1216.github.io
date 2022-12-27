@@ -5,3 +5,6 @@ ul, ul li { list-style:none; }
 a { text-decoration: none; }
 button, input { outline:0; background-color: #333; color:#fff; }
 .wrap { width: 100%; clear:both; }
+#nav {padding: 0 5%;}
+.navbar .nav-item .dropdown-menu{ display: none; }
+.navbar .nav-item:hover .dropdown-menu{ display: block; }

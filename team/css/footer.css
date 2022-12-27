@@ -1,0 +1,68 @@
+@charset "UTF-8";
+#footer .container {
+    padding: 0 100px;
+}
+#footer .container .bottom {
+    margin-top: 30px;
+    position: relative;
+}
+#footer .container .bottom .left {
+    float: left;
+}
+#footer .container .bottom .left .logo {
+    float: left;
+}
+
+    #footer .container .bottom .left div {padding-left: 140px;}
+    #footer .container .bottom .left div p span {
+    display: inline-block;
+    position: relative;
+    margin-left: 11px;
+    padding-left: 11px;
+}
+#footer .container .bottom .left div p {
+    font-size: 15px;
+    color: #555;
+    margin-top: 10px;
+}
+#footer .container .bottom .left div p span:first-child {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#footer .container .bottom .left div p span {
+    display: inline-block;
+    position: relative;
+    margin-left: 11px;
+    padding-left: 11px;
+}
+#footer .container .bottom .left div p.copyright {
+    font-size: 13px;
+    color: #777;
+    margin-top: 30px;
+}
+#footer .container .bottom .familySite {
+    float: right;
+    position: relative;
+    width: 210px;
+    height: 46px;
+}
+#footer .container .bottom .familySite > select {
+    width: 210px;
+    padding-left: 20px;
+    height: 45px;
+    padding-right: 35px;
+    border: 1px solid #e0e0e0;
+}
+    #footer .container .bottom .sns {
+    position: absolute;
+    right: 250px;
+    top: 10px;
+}
+#footer .container .bottom .sns a:first-child {
+    margin-left: 0;
+}
+#footer .container .bottom .sns a {
+    float: left;
+    margin-left: 10px;
+}
