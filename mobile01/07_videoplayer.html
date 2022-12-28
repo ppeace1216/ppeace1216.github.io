@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Custom Video Player</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <style>
+    * { 
+        margin: 0;
+        padding: 0;
+    }
+    ul { 
+        list-style: none;
+    }
+    .btn_lst {
+        margin-left: 2rem;
+        padding-left: 2rem;
+    }
+    .btn_lst li {
+        padding-left: 2tem;
+    }    
+    .pp-video-player {
+        float: left;
+        padding: 10px;
+        border: 5px solid #ffffff;
+
+        -moz-border-radius: 5px; /* FF1+ */
+        -ms-border-radius: 5px; /* IE future proofing */
+        -webkit-border-radius: 5px; /* Saf3+, Chrome */
+        border-radius: 5px; /* Opera 10.5, IE 9 */
+
+        background: #ffffff;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff),color-stop(1, #ffffff)); /* Saf4+, Chrome */
+        background-image: -moz-linear-gradient(top, #ebf7ff, #ebf7ff); /* FF3.6 */
+        background-image: linear-gradient(#ebf7ff, #ebf7ff);
+
+        box-shadow: inset 0 15px 35px #ebf7ff;
+    }
+    .pp-video-play {
+        display: block;
+        width: 22px;
+        height: 22px;
+        margin-right: 15px;
+        background: url(../images/play-icon.png) no-repeat;
+
+        opacity: 0.7;
+
+        -webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */
+        -moz-transition: all 0.2s ease-in-out; /* Firefox */
+        -ms-transition: all 0.2s ease-in-out; /* IE future proofing */
+        -o-transition: all 0.2s ease-in-out; /* Opera */
+        transition: all 0.2s ease-in-out;
+    }
+
+    .pp-paused-button {
+        background: url(../images/pause-icon.png) no-repeat;
+    }
+
+    .pp-video-play:hover {
+        opacity: 1;
+    }
+    .pp-video-seek .ui-slider-handle {
+        width: 15px;
+        border: 1px solid #333;
+        top: -4px;
+
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        -ms-border-radius:10px;
+        border-radius:10px;
+
+        background: #e6e6e6;
+        background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e6e6e6),color-stop(1, #d5d5d5));
+        background-image: -moz-linear-gradient(top, #e6e6e6, #d5d5d5);
+        background-image: linear-gradient(#e6e6e6, #d5d5d5);
+
+        box-shadow: inset 0 -3px 3px #d5d5d5;
+    }
+
+    .pp-video-seek .ui-slider-handle.ui-state-hover {
+        background: #fff;
+    }
+
+    .pp-video-seek, .ui-slider-range {
+        -moz-border-radius:15px;
+        -ms-border-radius:15px;
+        -webkit-border-radius:15px;
+        border-radius:15px;
+        background: #4cbae8;
+        background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #4cbae8),color-stop(1, #39a2ce));
+        background-image: -moz-linear-gradient(top, #4cbae8, #39a2ce);
+        background-image: linear-gradient(#4cbae8, #39a2ce);
+
+        box-shadow: inset 0 -3px 3px #39a2ce;
+    }
+    .pp-volume-box {
+        height: 30px;
+
+        -moz-transition: all 0.1s ease-in-out; /* Firefox */
+        -ms-transition: all 0.1s ease-in-out; /* IE future proofing */
+        -o-transition: all 0.2s ease-in-out; /* Opera */
+        -webkit-transition: all 0.1s ease-in-out; /* Safari and Chrome */
+        transition: all 0.1s ease-in-out;
+    }
+
+    .pp-volume-box:hover {
+        height: 135px;
+        padding-top: 5px;
+    }
+
+    .pp-volume-slider {
+        visibility: hidden;
+        opacity: 0;
+
+        -moz-transition: all 0.1s ease-in-out; /* Firefox */
+        -ms-transition: all 0.1s ease-in-out; /* IE future proofing */
+        -o-transition: all 0.1s ease-in-out; /* Opera */
+        -webkit-transition: all 0.1s ease-in-out; /* Safari and Chrome */
+        transition: all 0.1s ease-in-out;
+    }
+
+    .pp-volume-box:hover .pp-volume-slider {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+    }
+    .vdo { 
+        display:block; 
+        width:600px; 
+        height:auto; 
+        margin:0 auto;
+    }
+    .pp-video-timer { color:#fff; }
+    .btn_lst ul li span { cursor:pointer; }
+
+    @media screen and (max-width:767px) {
+        .vdo { width:calc(100vw - 30px); }
+        .pp-video-player { max-width:100vw; box-sizing:border-box; }
+    }
+    </style>
+</head>
+<body>
+
+   <div class="player">
+        <video src="./media/v1.mp4" class="vdo" id="vdo1"></video>
+        <div class="btn_lst" id="btn_lst">
+            <ul>
+                <li><span data-val="./media/v1.mp4">비디오1</span></li>
+                <li><span data-val="./media/v2.mp4">비디오2</span></li>
+                <li><span data-val="./media/v3.mp4">비디오3</span></li>
+            </ul>
+        </div>
+   </div>
+<script src="custom_video_player.js"></script> 
+<script>
+$(document).ready(function(){
+    $('#vdo1').gVideo({"target":"vdo1"});
+    $(".pp-video-seek").slider();
+    $("#btn_lst li span").click(function(){
+        $("#vdo1").attr("src", $(this).attr("data-val"));
+        $("#btn_lst").before($("#vdo1").clone());
+        $(".pp-video-player").remove();
+        $('#vdo1').gVideo({"target":"vdo1"});
+        $(".pp-video-seek").slider();
+    });
+});  
+</script>
+</body>
+</html>

@@ -12,6 +12,7 @@
     <!-- 공통CSS -->
     <link href="/css/styles.css" rel="stylesheet">
     <link href="/css/common.css" rel="stylesheet">
+    <link href="/css/footer.css" rel="stylesheet">
     <style>
     
     </style>
@@ -19,9 +20,9 @@
 <body>
 <!--헤더-->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/index.html">
             <img src="./img/logo_color_small.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,38 +30,192 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              어트랙션
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/at1.html">카트라이더</a></li>
+              <li><a class="dropdown-item" href="/at2.html">월드모노레일</a></li>
+              <li><a class="dropdown-item" href="/at3.html">자이로드롭</a></li>
+              <li><a class="dropdown-item" href="/at4.html">아틀란티스</a></li>
+              <li><a class="dropdown-item" href="/at5.html">혜성특급</a></li>
+              <li><a class="dropdown-item" href="/at6.html">자이로스윙</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              이용요금안내
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/ticketInfo.html">티켓 요금</a></li>
+              <li><a class="dropdown-item" href="/fastInfo.html">패스트트랙 요금</a></li>
+              <li><a class="dropdown-item" href="/yearInfo.html">연간이용권</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              예매/예약하기
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/ticket.html">티켓 예매</a></li>
+              <li><a class="dropdown-item" href="/fasttrack.html">패스트트랙 예약</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              이용가이드
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/service.html">운영</a></li>
+              <li><a class="dropdown-item" href="/location.html">오시는 길</a></li>
+              <li><a class="dropdown-item" href="/guide.html">가이드 맵</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              소통서비스
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/notiList.html">공지사항</a></li>
+              <li><a class="dropdown-item" href="/faqList.html">FAQ</a></li>
+              <li><a class="dropdown-item" href="/freeList.html">이용후기</a></li>
+            </ul>
+          </li>
         </ul>
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a class="nav-link active" href="login.html">로그인</a>
+            <a class="nav-link active" href="/login.html">로그인</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="joinform.html">회원가입</a>
+            <a class="nav-link" href="/joinform.html">회원가입</a>
           </li>
         </div>
     </div>
   </nav>
 </header>
-
+<div class="content container" id="content">
+	<h2 class="title">회원 가입</h2>
+	<form name="frm1" id="frm1" action="<%=request.getContextPath()%>/InsertCustomerCtrl" method="post" onsubmit="return joinCheck(this)">
+		<table class="table">
+			<tbody>
+				<tr>
+					<th>아이디</th>
+					<td>
+            <div class="form-row">
+                <input type="text" name="cusId" id="cusId" placeholder="아이디 입력" class="form-control" autofocus required />
+                <input type="button" class="btn btn-primary" value="아이디 중복 확인" >
+                <input type="hidden" name="idck" id="idck" value="yes">
+            </div>
+            <div>
+              <p id="msg" style="padding-left:0.5rem">아이디 중복 체크를 하지 않으셨습니다.</p>
+            </div>
+					</td>
+				</tr>
+				<tr>
+				    <th>비밀번호</th>
+				    <td>
+				        <input type="password" id="cusPw" name="cusPw" class="form-control" placeholder="비밀번호 입력" maxlength="20" required>
+				    </td>
+				</tr>
+				<tr>
+				    <th>비밀번호 확인</th>
+				    <td><input type="password" id="cusPw2" name="cusPw2" class="form-control" placeholder="비밀번호 확인" required></td>
+				</tr>
+				<tr>
+					<th>이름</th>
+					<td><input type="text" id="cusName" name="cusName" class="form-control" placeholder="이름을(를) 입력" required></td>
+				</tr>
+				<tr>
+					<th>주소</th>
+					<td>
+					<input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" class="form-control">
+					<button id="post_btn" onclick="findAddr()" class="btn btn-primary">우편번호 검색</button>
+					<input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="form-control" required /><br>
+					<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="form-control" required /><br>
+					</td>
+				</tr>
+				<tr>
+					<th>연락처</th>
+					<td><input type="text" id="tel" name="tel" class="form-control" placeholder="000-0000-0000" required></td>
+				</tr>
+			</tbody>
+		</table>
+		<a href="login.html" name="submit-btn" class="btn btn-primary">회원가입</a>
+		<input type="reset" name="reset-btn" class="btn btn-danger" value="취소">
+	</form>	
+	<script>
+	function idCheck(){
+		var cusId = document.frm1.cusId.value;
+		var win = window.open("idCheck.jsp?cusId="+cusId,"id 중복 체크", "width=500, height=200");
+	}
+	function joinCheck(f){
+		if(f.cusPw.value!=f.cusPw2.value){
+			alert("비밀번호와 비밀번호 확인이 서로 다릅니다.");
+			f.cusPw.focus();
+			return false;
+		}
+		if(f.idck.value!="yes"){
+			alert("아이디 중복 체크를 하지 않으셨습니다.");
+			return false;
+		}
+	}
+	</script>
+	<script>
+	function findAddr() {
+		new daum.Postcode({
+			oncomplete: function(data) {
+				console.log(data);
+				var roadAddr = data.roadAddress;
+				var jibunAddr = data.jibunAddress;
+				document.getElementById("postcode").value = data.zonecode;
+				if(roadAddr !== '') {
+					document.getElementById("address1").value = roadAddr;				
+				} else if(jibunAddr !== ''){
+					document.getElementById("address1").value = jibunAddr;
+				}
+				document.getElementById("address2").focus();
+			}
+		}).open();
+	}
+	</script>
+	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+</div>
+<br><hr><br>
+<footer>
+  <div id="footer">
+    <div class="container">
+      <div class="bottom">
+        <div class="left">
+          <p class="logo"><img src="img/logo_color_small.png" alt=""></p>
+          <div>
+            <p><span>서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드</span><span>대표자 : 최홍훈</span></p>
+            <p><span>사업자등록번호 : 219-85-00014</span><span>통신판매업신고번호 : 송파 제5513호</span><span>전화 : 1661-2000</span></p>
+            <p class="copyright">COPYRIGHT 2018 LOTTEWORLD. ALL RIGHTS RESERVED.</p>
+          </div>
+        </div>
+        <div class="familySite">
+          <select name="sel" id="sel" class="sel" onchange="sel_link(this)" title="계열사 관련 사이트 새창열기">
+            <option value="">계열사 관련 사이트</option>
+            <option value="http://www.lotteworld.com/" >롯데월드</option>
+            <option value="http://www.lotteworld.com/waterpark/index.asp" >- 워터파크</option>
+            <option value="http://www.lotteworld.com/aquarium/index.asp" >- 아쿠아리움</option>
+            <option value="http://www.lwt.co.kr/" >롯데월드타워&몰</option>
+          </select>
+        </div>
+        <div class="sns">
+          <a href="https://www.facebook.com/happylotteworld" target="_blank"><img src="/img/sns_btn1.png" alt="롯데월드 페이스북 바로가기" /></a>
+          <a href="http://instagram.com/happylotteworld" target="_blank"><img src="/img/sns_btn2.png" alt="롯데월드 인스타그램 바로가기" /></a>
+          <a href="http://www.youtube.com/user/happylotteworld?blend=21&ob=5" target="_blank"><img src="/img/sns_btn3.png" alt="롯데월드 유튜브 바로가기" /></a>
+        </div>
+      </div>
+    </div>
+  </div><!-- // footer -->
+  <script>
+    function sel_link(sel){
+        location.href = sel.value;
+    }
+  </script>
+</footer>
 </body>
 </html>

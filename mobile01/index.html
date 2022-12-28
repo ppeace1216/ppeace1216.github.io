@@ -8,12 +8,37 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link href="media.css" rel="stylesheet">
     <style>
     .page_tit {font-size:10vw; clear:both; padding-bottom: 2em;}
     </style>
 </head>
 <body class="ui-mobile-viewport ui-overlay-b">
 <div id="page0" data-role="page" class="ui-page ui-page-theme-a ui-page-active">
+    <div class="player">
+        <video src="./media/v1.mp4" class="vdo" id="vdo1"></video>
+        <div class="btn_lst" id="btn_lst">
+            <ul>
+                <li><span data-val="./media/v1.mp4">비디오1</span></li>
+                <li><span data-val="./media/v2.mp4">비디오2</span></li>
+                <li><span data-val="./media/v3.mp4">비디오3</span></li>
+            </ul>
+        </div>
+    </div>
+    <script src="custom_video_player.js"></script> 
+    <script>
+    $(document).ready(function(){
+        $('#vdo1').gVideo({"target":"vdo1"});
+        $(".pp-video-seek").slider();
+        $("#btn_lst li span").click(function(){
+            $("#vdo1").attr("src", $(this).attr("data-val"));
+            $("#btn_lst").before($("#vdo1").clone());
+            $(".pp-video-player").remove();
+            $('#vdo1').gVideo({"target":"vdo1"});
+            $(".pp-video-seek").slider();
+        });
+    });  
+    </script>
     <div data-role="content" class="ui-content">
         <h1 class="page_title">검색하기</h1>
         <input type="search" name="search" id="search-basic" placeholder="지역 또는 견종을 검색하세요">
@@ -460,11 +485,11 @@
                     <li class="ui-field-contain ui-li-static ui-body-inherit">
                         <input type="password" name="pw" id="pw" value="" data-clear-btn="true" placeholder="PW 입력">
                     </li>
-                    <div class="ui-btn-group">
-                        <a href="#page4" class="ui-btn ui-btn-inline">로그인</button>
-                        <a href="#page31" class="ui-btn ui-btn-inline">회원가입</button>
-                    </div>
                 </ul>
+                <div class="ui-btn-group">
+                    <a href="#page4" class="ui-btn ui-btn-inline">로그인</a>
+                    <a href="#page31" class="ui-btn ui-btn-inline">회원가입</a>
+                </div>
             </form>
         </div>
     </div>

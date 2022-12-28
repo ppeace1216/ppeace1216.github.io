@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Custom Video Player</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <style>
+    .kkt-video-player { clear:both; }
+    .kkt-video-player::after { content:""; display:block; clear:both;}
+    .vdo1-dimensions { width:600px; margin: 0; padding: 0; min-width:600px;  min-height:452px; }
+    .vdo1-dimensions::after { content:""; clear:both; display:block; }
+    .video-js .vjs-tech { display:block; width:auto; min-width:600px; min-height:452px;}
+    /* 모바일 */
+    @media screen and (max-width:767px) {
+      body, html { margin: 0; padding: 0; }
+      .kkt-video-player { min-width:320px; margin: 0; padding: 0; width:100vw; }
+      .vdo1-dimensions { min-width:320px; width:100vw; }
+      .video-js .vjs-tech { min-width:320px; width:auto; }
+    }
+    /* 태블릿 */
+    @media screen and (min-width:768px) and (max-width:959px){
+      body, html { margin: 0; padding: 0; }
+      .kkt-video-player { min-width:768px; margin: 0; padding: 0; width:100vw; }
+      .vdo1-dimensions { min-width:768px; width:100vw; }
+      .video-js .vjs-tech { min-width:768px; width:auto; }
+    }
+    /* 데스크탑 */
+    @media screen and (min-width:960px) {
+      body, html { margin: 0; padding: 0; }
+      .kkt-video-player { min-width:960px; margin: 0; padding: 0; max-width:960px;  }
+      .vdo1-dimensions { min-width:960px; max-width:960px;  }
+      .video-js .vjs-tech { min-width:960px; max-width:960px; width:auto; }
+    }
+    </style>
+</head>
+<body>
+
+   <div class="player">
+     <div class="kkt-video-player">
+        <video id="vdo1" class="video-js" controls preload="auto" data-setup="{}">
+            <source src="./media/v1.mp4" type="video/mp4" />
+        </video>
+     </div>
+     <div class="btn_lst" id="btn_lst">
+        <ul>
+            <li><span data-val="./media/v1.mp4">비디오1</span></li>
+            <li><span data-val="./media/v2.mp4">비디오2</span></li>
+            <li><span data-val="./media/v3.mp4">비디오3</span></li>
+        </ul>
+     </div>
+   </div>
+   <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#btn_lst li span").click(function(){
+        $("#vdo1_html5_api").attr("src", $(this).attr("data-val"));
+    });
+  });  
+  </script>
+</body>
+</html>
