@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>댓글 구현</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="data.json"></script>
+    <style>
+    .container { width:1000px; margin:20px auto; overflow-x:hidden; } 
+    #maparea { max-height:400px; overflow:hidden; }   
+    .title { text-align: center; font-size:2.5rem; }
+    .table { width:500px; margin:20px auto; }
+    .table tr td { line-height:2; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+    .table tr td:first-child { min-width:300px; font-weight:600; }
+    .table tr td:last-child { max-width:100px; font-weight:500; color:deepskyblue; }
+    #result_form { width: 600px; margin: 10px auto; }
+    #con, #author { border:1px solid #333; line-height:30px; padding:8px; }
+    #con { width:360px; }
+    #author { width:80px; }
+    #btn1 { padding: 8px; line-height: 30px; border:none; background-color: #333;
+    color:#fff; border-radius:5px; width:80px; }
+    </style>
+</head>
+<body>
+<section class="container">
+    <h2 class="title">Contact</h2>
+    <hr>
+    <div id="maparea">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2108.316927919851!2d126.87438661503931!3d37.651410872367904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9735f97c0f6b%3A0x66a5188c22ed8b30!2z7JuQ7Z2l7Jet!5e0!3m2!1sko!2skr!4v1672305211712!5m2!1sko!2skr" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <hr>
+    <div id="result_area">
+        <table class="table">
+            <tbody id="table_data"></tbody>
+        </table>
+    </div>
+    <div id="result_form">
+        <input type="text" id="con" name="con" placeholder="하고 싶은 말을 남기세요" maxlength="40">
+        <input type="text" name="author" id="author" placeholder="이름">
+        <button type="button" id="btn1">글 작성</button>
+    </div>
+    <script>
+    $(document).ready(function(){
+        const fileName = "data.json";
+        var cont = new Object();
+        $.ajax({
+                type:"get",
+                url:fileName,
+                dataType:"json",
+                success: function(data){
+                    console.log(data);
+                    $.each(data , function(i){
+                        str = "<tr>"; 
+                        str += "<td>"+data[i].con+"</td>";
+                        str += "<td>"+data[i].author+"</td>";
+                        str += "</tr>";
+                        $("#table_data").append(str);
+                    });
+                },
+                error:function(){
+                    console.log("통신에러");
+                }
+            });
+        $("#btn1").click(function(){
+            if($("#con").val()=="" || $("#author").val()==""){
+                alert("입력하지 않은 내용이 있습니다.");
+                return false;
+            }
+
+            ins = "<tr>"; 
+            ins += "<td>"+$("#con").val()+"</td>";
+            ins += "<td>"+$("#author").val()+"</td>";
+            ins += "</tr>";
+            $("#table_data").append(ins);
+            //var co = JSON.stringify(cont, null, "\t");
+
+        });
+    });    
+    function saveToFile_Chrome(oriName, content) {
+        var fileName = "./"+oriName;
+        var blob = new Blob([content], { type: 'text/plain' });
+        objURL = window.URL.createObjectURL(blob);
+                
+        // 이전에 생성된 메모리 해제
+        if (window.__Xr_objURL_forCreatingFile__) {
+            window.URL.revokeObjectURL(window.__Xr_objURL_forCreatingFile__);
+        }
+        window.__Xr_objURL_forCreatingFile__ = objURL;
+        var a = document.createElement('a');
+        a.download = fileName;
+        a.href = objURL;
+        a.click();//D:\kim6\mobile
+    }
+    function saveToFile_IE(oriName, content) {
+        var fileName = "./"+oriName;
+        var blob = new Blob([content], { type: "text/plain", endings: "native" });
+        window.navigator.msSaveBlob(blob, fileName);
+        //window.navigator.msSaveOrOpenBlob(blob, fileName);
+    }
+    function isIE() {
+        return (navigator.appName === 'Netscape' && navigator.userAgent.search('Trident') !== -1) || navigator.userAgent.toLowerCase().indexOf("msie") !== -1;
+    }
+    </script>
+</section>    
+</body>
+</html>
