@@ -26,7 +26,7 @@
     <meta property="og:url" content="https://ppeace1216.github.io/mobile01/">
     <meta property="og:title" content="같이먹개">
     <meta property="og:site_name" content="같이먹개">
-    <meta property="og:image" content="/img/logo.png">
+    <meta property="og:image" content="./img/logo.png">
     <meta property="og:image:width" content="1000">
     <meta property="og:image:height" content="400">
     <meta property="og:locale" content="ko_KR">
@@ -594,6 +594,47 @@
             </ui>
         </nav>
     </footer>
+</div>
+<div id="page31" data-role="page" class="ui-page ui-page-theme-a">
+    <header data-role="header" class="ui-header" data-theme="a">
+        <a href="#page3" data-role="button" data-transition="slide" class="ui-btn ui-btn-left ui-icon-carat-l ui-btn-icon-left" role="button"></a>
+    </header>
+    <div data-role="content" role="sub" class="ui-content">
+        <h2 class="ui-title">회원가입 폼</h2>
+        <div data-role="container">
+            <form>
+                <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                    <li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">
+                        <input type="text" name="id" id="id" placeholder="ID 입력">
+                        <button type="button" class="ui-btn ui-btn-inline">ID 체크</button>
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit">
+                        <input type="password" name="pw" id="pw" placeholder="비밀번호 입력">
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit">
+                        <input type="password" name="pw2" id="pw2" placeholder="비밀번호 확인 입력">
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit">
+                        <input type="tel" name="tel" id="tel" placeholder="전화번호 입력">
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit">
+                        <input type="email" name="email" id="email" placeholder="이메일 입력">
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit">
+                        <label for="birth">생년월일</label>
+                        <input type="date" name="birth" id="birth" placeholder="생일 입력">
+                    </li>
+                    <li class="ui-field-contain ui-li-static ui-body-inherit">
+                        <input type="file" name="filename" accept="image/gif, image/jpeg, image/png" placeholder="사진" />
+                    </li>
+                </ul>
+                <div class="ui-btn-group">
+                    <button type="submit" class="ui-btn ui-btn-inline">회원가입</button>
+                    <button type="reset" class="ui-btn ui-btn-inline">취소</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 <div id="page4" data-role="page" class="ui-page ui-page-theme-a">
     <div data-role="content" role="sub" class="ui-content">
