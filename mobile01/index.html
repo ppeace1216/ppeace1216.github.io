@@ -11,6 +11,7 @@
     <link href="media.css" rel="stylesheet">
     <style>
     .page_tit {font-size:10vw; clear:both; padding-bottom: 2em;}
+    .v_title {margin-left: -30px;}
     </style>
 </head>
 <body class="ui-mobile-viewport ui-overlay-b">
@@ -19,9 +20,10 @@
         <video src="./media/v1.mp4" class="vdo" id="vdo1"></video>
         <div class="btn_lst" id="btn_lst">
             <ul>
-                <li><span data-val="./media/v1.mp4">비디오1</span></li>
-                <li><span data-val="./media/v2.mp4">비디오2</span></li>
-                <li><span data-val="./media/v3.mp4">비디오3</span></li>
+                <h2 class="v_title">다른 영상이 더 궁금하다면?</h2>
+                <li><span data-val="./media/v1.mp4">애견동반 식당 '서울 숲 둡'</span></li>
+                <li><span data-val="./media/v2.mp4">애경동반 카페 '스타벅스 더 북한강R점'</span></li>
+                <li><span data-val="./media/v3.mp4">애견동반 카페 '제주 포레스트 제이'</span></li>
             </ul>
         </div>
     </div>
@@ -39,10 +41,6 @@
         });
     });  
     </script>
-    <div data-role="content" class="ui-content">
-        <h1 class="page_title">검색하기</h1>
-        <input type="search" name="search" id="search-basic" placeholder="지역 또는 견종을 검색하세요">
-    </div>
     <footer data-role="footer" class="ui-footer" data-theme="a" data-position="fixed">
         <nav data-role="navbar" data-grid="c" role="navigation" class="nav-glyphish-example ui-navbar">
             <ui class="ui-grid-c">
