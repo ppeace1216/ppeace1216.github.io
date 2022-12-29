@@ -1,29 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 뷰 포트 및 콘텐츠 타입 -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>같이 먹개 웹 애플리케이션</title>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="refresh" content="600">
+    <meta http-equiv="Page-Enter" content="revealtrans(Duration=1,Transition=12)">
+    <!-- 문서 정보 : 메타포(metaphor) -->
+    <title>같이 먹개!</title>
+    <meta name="application-name" content="같이먹개">
+    <meta name="subject" content="같이먹개">
+    <meta name="keywords" content="반려견동반, 애견동반, 음식점, 카페, 식당, 반려견, 애견">
+    <meta name="description" content="반려견과 함께 산책이나 여행갔을 때 어디서 먹개? 같이 먹개!">
+    <meta name="url" content="https://ppeace1216.github.io/mobile01/">
+    <meta name="author" content="park pyeong hwa">
+    <meta name="email" content="ppeace1216@naver.com">
+    <meta name="robots" content="index, flow">
+
+    <!-- 오픈 그래프 -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ppeace1216.github.io/mobile01/">
+    <meta property="og:title" content="같이먹개">
+    <meta property="og:site_name" content="같이먹개">
+    <meta property="og:image" content="/img/logo.png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="400">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="video">
+    <meta name="twitter:title" content="같이먹개">
+    <meta name="twitter:description" content="반려견과 함께 산책이나 여행갔을 때 어디서 먹개? 같이 먹개!">
+    <meta name="twitter:image" content="/img/logo.png">
+
+    <!-- 해상도 및 브라우저와 기기별 앱 아이콘 및 바로가기 아이콘 설정 -->
+    <link rel="shortcut icon" href="/favicon_logo/fav_logo.ico">
+    <!-- 애플사의 기기 아이콘 설정 -->
+    <meta name="apple-mobile-web-app-title" content="같이먹개">
+    <link rel="apple-touch-icon-precomposed" href="/favicon_logo/apple-icon-152x152.png">
+    <!-- iPhone 저사양 및 iPod -->
+    <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-57x57.png" sizes="57x57">
+    <!-- iPad -->
+    <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-76x76.png" sizes="76x76">
+    <!-- iPhone Retina -->
+    <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-120x120.png" sizes="120x120">
+    <!-- iPad Retina -->
+    <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-152x152.png" sizes="152x152">
+    <!-- iPhone 6 이상 -->
+    <link rel="apple-touch-icon" href="/favicon_logo/apple-icon-180x180.png" sizes="180x180">
+    <!-- 애플사 기기의 앱에 시작화면 -->
+    <link rel="apple-touch-startup-image" href="/img/logo.png">
+    <!-- 애플사 기기의 URL바나 UI바 보이게 -->
+    <meta name="apple-mobile-web-app-capable" href="yes">
+    <!-- 상태바의 색상 설정 -->
+    <meta name="apple-mobile-web-app-status-bar-style" href="black-translucent">
+    <!-- MS 사의 기기에 대한 아이콘 설정-->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="favicon-144.png">
+    <!-- 기기의 지원 해상도별 아이콘 설정 -->
+    <link rel="icon" href="/favicon_logo/fav_logo.ico">
+    <link rel="icon" href="/favicon_logo/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" href="/favicon_logo/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="/favicon_logo/favicon-48x48.png" sizes="48x48">
+    <link rel="icon" href="/favicon_logo/favicon-64x64.png" sizes="64x64">
+    <link rel="icon" href="/favicon_logo/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" href="/favicon_logo/favicon-128x128.png" sizes="128x128">
+
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link href="media.css" rel="stylesheet">
     <style>
+    .ui-title {font-size: 6.5vw; text-align: center; margin-top: 1em; color: rgb(110, 180, 251); font-weight: 900;}
     .page_tit {font-size:10vw; clear:both; padding-bottom: 2em;}
-    .v_title {margin-left: -30px;}
+    .v_title {margin: 1em 0; margin-left: -3em; padding-left: 1em; background-color: palegoldenrod; color: rgb(47, 89, 143);}
+    .v_sel {margin-left: -1em; font-size: 4vw;}
+    .v_sel:hover {font-weight: 700; color: darkorange;}
     </style>
 </head>
 <body class="ui-mobile-viewport ui-overlay-b">
 <div id="page0" data-role="page" class="ui-page ui-page-theme-a ui-page-active">
+    <h2 class="ui-title">어디서 먹개?&nbsp;&nbsp;<img src="/favicon_logo/fav_logo.ico" alt="로고">&nbsp;&nbsp;같이 먹개!</h2>
     <div class="player">
         <video src="./media/v1.mp4" class="vdo" id="vdo1"></video>
         <div class="btn_lst" id="btn_lst">
             <ul>
-                <h2 class="v_title">다른 영상이 더 궁금하다면?</h2>
-                <li><span data-val="./media/v1.mp4">애견동반 식당 '서울 숲 둡'</span></li>
-                <li><span data-val="./media/v2.mp4">애경동반 카페 '스타벅스 더 북한강R점'</span></li>
-                <li><span data-val="./media/v3.mp4">애견동반 카페 '제주 포레스트 제이'</span></li>
+                <h2 class="v_title">다른 영상이 더 궁금하다면?&nbsp;&nbsp;<img src="/img/video.svg" alt=""></h2>
+                <li><span class="v_sel" data-val="./media/v1.mp4">
+                    <img src="/img/twitter.svg" alt="">
+                    반려견 동반 식당 '서울 숲 둡'</span></li><br>
+                <li><span class="v_sel" data-val="./media/v2.mp4">
+                    <img src="/img/coffee.svg" alt="">
+                    반려견 동반 카페 '스타벅스 더 북한강R점'</span></li><br>
+                <li><span class="v_sel" data-val="./media/v3.mp4">
+                    <img src="/img/feather.svg" alt="">
+                    반려견 동반 카페 '제주 포레스트 제이'</span></li>
             </ul>
         </div>
     </div>

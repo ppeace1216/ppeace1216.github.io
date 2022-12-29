@@ -27,7 +27,7 @@ $.fn.gVideo = function(options) {
         var $pp_volume = $('.pp-volume-slider', $video_container);
         var $pp_volume_btn = $('.pp-volume-button', $video_container);
         var seeksliding = false;
-        //$video_controls.hide(); // 컨트롤은 숨겨둡니다
+        $video_controls.hide(); // 컨트롤은 숨겨둡니다
         var gPlay = function() {
             if(vdo.paused == false) {
                 $gVideo[0].pause();
