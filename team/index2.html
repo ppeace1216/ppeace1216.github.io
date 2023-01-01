@@ -10,12 +10,12 @@
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- 공통CSS -->
-    <link href="/css/styles.css" rel="stylesheet">
-    <link href="/css/common.css" rel="stylesheet">
-    <link href="/css/footer.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
     <style>
     .time_tit {text-align: center;}
-    #page1 {padding: 5% 0; background: url(/img/mainCon1_bg.jpg) no-repeat 50% 50%; background-size: cover;}
+    #page1 {padding: 5% 0; background: url(./img/mainCon1_bg.jpg) no-repeat 50% 50%; background-size: cover;}
     #at_tit {text-align: center;}
     .sub_com {padding: 1em; text-align: center; font-size: 25px;}
     .card-header {font-size: 24px; font-weight: 800;}
@@ -27,8 +27,8 @@
 <header>
   <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index2.html">
-          <img src="img/logo_color_small.png" alt="">
+      <a class="navbar-brand" href="./index.html">
+          <img src="./img/logo_color_small.png" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -40,12 +40,12 @@
             어트랙션
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="at1.html">카트라이더</a></li>
-            <li><a class="dropdown-item" href="at2.html">월드모노레일</a></li>
-            <li><a class="dropdown-item" href="at3.html">자이로드롭</a></li>
-            <li><a class="dropdown-item" href="at4.html">아틀란티스</a></li>
-            <li><a class="dropdown-item" href="at5.html">혜성특급</a></li>
-            <li><a class="dropdown-item" href="at6.html">자이로스윙</a></li>
+            <li><a class="dropdown-item" href="./at1.html">카트라이더</a></li>
+            <li><a class="dropdown-item" href="./at2.html">월드모노레일</a></li>
+            <li><a class="dropdown-item" href="./at3.html">자이로드롭</a></li>
+            <li><a class="dropdown-item" href="./at4.html">아틀란티스</a></li>
+            <li><a class="dropdown-item" href="./at5.html">혜성특급</a></li>
+            <li><a class="dropdown-item" href="./at6.html">자이로스윙</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -53,9 +53,9 @@
             이용요금안내
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="ticketInfo.html">티켓 요금</a></li>
-            <li><a class="dropdown-item" href="fastInfo.html">패스트트랙 요금</a></li>
-            <li><a class="dropdown-item" href="yearInfo.html">연간이용권</a></li>
+            <li><a class="dropdown-item" href="./ticketInfo.html">티켓 요금</a></li>
+            <li><a class="dropdown-item" href="./fastInfo.html">패스트트랙 요금</a></li>
+            <li><a class="dropdown-item" href="./yearInfo.html">연간이용권</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -63,8 +63,8 @@
             예매/예약하기
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="ticket.html">티켓 예매</a></li>
-            <li><a class="dropdown-item" href="fasttrack.html">패스트트랙 예약</a></li>
+            <li><a class="dropdown-item" href="./ticket.html">티켓 예매</a></li>
+            <li><a class="dropdown-item" href="./fasttrack.html">패스트트랙 예약</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -72,9 +72,9 @@
             이용가이드
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="service.html">운영</a></li>
-            <li><a class="dropdown-item" href="location.html">오시는 길</a></li>
-            <li><a class="dropdown-item" href="guide.html">가이드 맵</a></li>
+            <li><a class="dropdown-item" href="./service.html">운영</a></li>
+            <li><a class="dropdown-item" href="./location.html">오시는 길</a></li>
+            <li><a class="dropdown-item" href="./guide.html">가이드 맵</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -82,22 +82,21 @@
             소통서비스
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="notiList.html">공지사항</a></li>
-            <li><a class="dropdown-item" href="faqList.html">FAQ</a></li>
-            <li><a class="dropdown-item" href="freeList.html">이용후기</a></li>
+            <li><a class="dropdown-item" href="./notiList.html">공지사항</a></li>
+            <li><a class="dropdown-item" href="./faqList.html">FAQ</a></li>
+            <li><a class="dropdown-item" href="./freeList.html">이용후기</a></li>
           </ul>
         </li>
       </ul>
-      
       <ul class="nav justify-content-end">
         <li class="nav-item">
-        <span class="nav-link"><%=sname %>님</span>
+            <span class="nav-link">사용자 님</span>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="<%=request.getContextPath() %>/GetCustomInfoCtrl">마이페이지</a>
+            <a type=button class="btn btn-outline-info" href="./mypage.html" style="margin: 0 1em;">마이페이지</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link active" href="<%=request.getContextPath() %>/LogOutCtrl">로그아웃</a>
+            <a type=button class="btn btn-outline-danger" href="./index.html">로그아웃</a>
         </li>
       </ul>
     </div>
@@ -112,13 +111,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/main1.jpg" class="d-block w-100" alt="main1">
+        <img src="./img/main1.jpg" class="d-block w-100" alt="main1">
       </div>
       <div class="carousel-item">
-        <img src="img/main2.jpg" class="d-block w-100" alt="main">
+        <img src="./img/main2.jpg" class="d-block w-100" alt="main">
       </div>
       <div class="carousel-item">
-        <img src="img/main3.jpg" class="d-block w-100" alt="...">
+        <img src="./img/main3.jpg" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -134,8 +133,8 @@
 <br><hr><br>
 <div>
   <h3 class="time_tit">
-  <a href="service.html">
-    <img src="img/clock.svg" alt="clock">&nbsp;&nbsp;<strong>오늘의 파크 운영시간 10:00 - 21:00</strong>
+  <a href="./service.html">
+    <img src="./img/clock.svg" alt="clock">&nbsp;&nbsp;<strong>오늘의 파크 운영시간 10:00 - 21:00</strong>
   </a>
   </h3>
 </div>
@@ -148,7 +147,7 @@
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card h-100 card text-center">
-            <img src="img/main_at1.jpg" class="card-img-top" alt="월드모노레일">
+            <img src="./img/main_at1.jpg" class="card-img-top" alt="월드모노레일">
             <div class="card-body">
               <h5 class="card-title">월드모노레일</h5>
               <p class="card-text">깜찍한 로티, 로리로 변신한 열차는 물론<br> 
@@ -159,7 +158,7 @@
         </div>
         <div class="col">
           <div class="card h-100 card text-center">
-            <img src="img/main_at2.jpg" class="card-img-top" alt="자이로드롭">
+            <img src="./img/main_at2.jpg" class="card-img-top" alt="자이로드롭">
             <div class="card-body">
               <h5 class="card-title">자이로드롭</h5>
               <p class="card-text">구름이 맞닿을 듯한 높이까지 올라갔다<br>
@@ -169,7 +168,7 @@
         </div>
         <div class="col">
           <div class="card h-100 card text-center">
-            <img src="img/main_at3.jpg" class="card-img-top" alt="혜성특급">
+            <img src="./img/main_at3.jpg" class="card-img-top" alt="혜성특급">
             <div class="card-body">
               <h5 class="card-title">혜성특급</h5>
               <p class="card-text">좌우로 회전하는 롤러코스터를 타고 떠나는 어둠 속 스펙터클 우주여행</p>
@@ -192,23 +191,23 @@
         <div class="card" style="width: 35rem;">
           <h5 class="card-header">미라클월드 소식</h5>
           <div class="card-body">
-            <a href="notiDetail.html" class="card-title">미라클월드 신규 공연 <마법 성냥과 꿈꾸는 밤></a><br>
-            <a href="notiDetail.html" class="card-title">패스트패스 프리미엄 운영 변경 안내</a><br>
-            <a href="notiDetail.html" class="card-title">개인정보처리방침 변경 안내</a><br>
-            <a href="notiDetail.html" class="card-title">내 카드 제휴 할인 조회 서비스 OPEN</a><br><br>
-            <a href="notiList.html" class="btn btn-primary">더 보러가기</a>
+            <a href="./notiDetail.html" class="card-title">미라클월드 신규 공연 <마법 성냥과 꿈꾸는 밤></a><br>
+            <a href="./notiDetail.html" class="card-title">패스트패스 프리미엄 운영 변경 안내</a><br>
+            <a href="./notiDetail.html" class="card-title">개인정보처리방침 변경 안내</a><br>
+            <a href="./notiDetail.html" class="card-title">내 카드 제휴 할인 조회 서비스 OPEN</a><br><br>
+            <a href="./notiList.html" class="btn btn-primary">더 보러가기</a>
           </div>
         </div>
         <div class="card mb-3" style="width: 22rem; padding-top: 20px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="img/ticket_left.png" class="img-fluid rounded-start" alt="...">
+              <img src="./img/ticket_left.png" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
                 <h5 class="ticket-card-title">티켓 예매</h5>
                 <p class="card-text">온라인으로<br>미리 예매하고<br>빠르게 입장하자!</p>
-                <a href="ticket.html" class="btn btn-outline-warning">예매하러 가기</a>
+                <a href="./ticket.html" class="btn btn-outline-warning">예매하러 가기</a>
               </div>
             </div>
           </div>
@@ -216,13 +215,13 @@
         <div class="card mb-3" style="width: 22rem; padding-top: 20px;">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="img/ticket_right.png" class="img-fluid rounded-start" alt="...">
+              <img src="./img/ticket_right.png" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
                 <h5 class="ticket-card-title">패스트트랙</h5>
                 <p class="card-text">패스트트랙으로<br>더 빠르고 편리하게<br>어트랙션을 즐기자!</p>
-                <a href="fasttrack.html" class="btn btn-outline-warning">예약하러 가기</a>
+                <a href="./fasttrack.html" class="btn btn-outline-warning">예약하러 가기</a>
               </div>
             </div>
           </div>
@@ -238,7 +237,7 @@
     <div class="container">
       <div class="bottom">
         <div class="left">
-          <p class="logo"><img src="img/logo_color_small.png" alt=""></p>
+          <p class="logo"><img src="./img/logo_color_small.png" alt=""></p>
           <div>
             <p><span>서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드</span><span>대표자 : 최홍훈</span></p>
             <p><span>사업자등록번호 : 219-85-00014</span><span>통신판매업신고번호 : 송파 제5513호</span><span>전화 : 1661-2000</span></p>
@@ -255,9 +254,9 @@
           </select>
         </div>
         <div class="sns">
-          <a href="https://www.facebook.com/happylotteworld" target="_blank"><img src="/img/sns_btn1.png" alt="롯데월드 페이스북 바로가기" /></a>
-          <a href="http://instagram.com/happylotteworld" target="_blank"><img src="/img/sns_btn2.png" alt="롯데월드 인스타그램 바로가기" /></a>
-          <a href="http://www.youtube.com/user/happylotteworld?blend=21&ob=5" target="_blank"><img src="/img/sns_btn3.png" alt="롯데월드 유튜브 바로가기" /></a>
+          <a href="https://www.facebook.com/happylotteworld" target="_blank"><img src="./img/sns_btn1.png" alt="롯데월드 페이스북 바로가기" /></a>
+          <a href="http://instagram.com/happylotteworld" target="_blank"><img src="./img/sns_btn2.png" alt="롯데월드 인스타그램 바로가기" /></a>
+          <a href="http://www.youtube.com/user/happylotteworld?blend=21&ob=5" target="_blank"><img src="./img/sns_btn3.png" alt="롯데월드 유튜브 바로가기" /></a>
         </div>
       </div>
     </div>

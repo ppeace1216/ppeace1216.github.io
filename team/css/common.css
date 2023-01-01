@@ -8,3 +8,10 @@ button, input { outline:0; background-color: #333; color:#fff; }
 #nav {padding: 0 5%;}
 .navbar .nav-item .dropdown-menu{ display: none; }
 .navbar .nav-item:hover .dropdown-menu{ display: block; }
+
+body, html { font-family: 'Noto Sans KR', sans-serif; font-size: 16px; color: #555;  line-height: 1; letter-spacing: -0.6px;margin: 0; padding: 0;}
+h2{font-size: 50px; color: #000;    text-align: center; padding-top: 40px;}
+
+
+/*브래드 크럼*/
+.breadcrumb {line-height: 1; margin: 0; padding: 0; float: left;}
