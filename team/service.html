@@ -175,5 +175,42 @@
       </div>
     </div>
   </section>
+  <br><hr><br>
+<!--footer-->
+<footer>
+  <div id="footer">
+    <div class="container">
+      <div class="bottom">
+        <div class="left">
+          <p class="logo"><img src="./img/logo_color_small.png" alt=""></p>
+          <div>
+            <p><span>서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드</span><span>대표자 : 최홍훈</span></p>
+            <p><span>사업자등록번호 : 219-85-00014</span><span>통신판매업신고번호 : 송파 제5513호</span><span>전화 : 1661-2000</span></p>
+            <p class="copyright">COPYRIGHT 2018 LOTTEWORLD. ALL RIGHTS RESERVED.</p>
+          </div>
+        </div>
+        <div class="familySite">
+          <select name="sel" id="sel" class="sel" onchange="sel_link(this)" title="계열사 관련 사이트 새창열기">
+            <option value="">계열사 관련 사이트</option>
+            <option value="http://www.lotteworld.com/" >롯데월드</option>
+            <option value="http://www.lotteworld.com/waterpark/index.asp" >- 워터파크</option>
+            <option value="http://www.lotteworld.com/aquarium/index.asp" >- 아쿠아리움</option>
+            <option value="http://www.lwt.co.kr/" >롯데월드타워&몰</option>
+          </select>
+        </div>
+        <div class="sns">
+          <a href="https://www.facebook.com/happylotteworld" target="_blank"><img src="./img/sns_btn1.png" alt="롯데월드 페이스북 바로가기" /></a>
+          <a href="http://instagram.com/happylotteworld" target="_blank"><img src="./img/sns_btn2.png" alt="롯데월드 인스타그램 바로가기" /></a>
+          <a href="http://www.youtube.com/user/happylotteworld?blend=21&ob=5" target="_blank"><img src="./img/sns_btn3.png" alt="롯데월드 유튜브 바로가기" /></a>
+        </div>
+      </div>
+    </div>
+  </div><!-- // footer -->
+  <script>
+    function sel_link(sel){
+        location.href = sel.value;
+    }
+  </script>
+</footer>
 </body>
 </html>
