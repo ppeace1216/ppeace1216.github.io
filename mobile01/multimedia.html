@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>멀티미디어 구현</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link href="media.css" rel="stylesheet">
+</head>
+<body class="ui-mobile-viewport ui-overlay-b">
+    <div id="page0" data-role="page" class="ui-page ui-page-theme-a ui-page-active">
+        <h2 class="ui-title">어디서 먹개?&nbsp;&nbsp;<img src="./favicon_logo/fav_logo.ico" alt="로고">&nbsp;&nbsp;같이 먹개!</h2>
+        <div class="player">
+            <video src="./media/v1.mp4" class="vdo" id="vdo1"></video>
+            <div class="btn_lst" id="btn_lst">
+                <ul>
+                    <h2 class="v_title">다른 영상이 더 궁금하다면?&nbsp;&nbsp;<img src="./img/video.svg" alt=""></h2>
+                    <li><span class="v_sel" data-val="./media/v1.mp4">
+                        <img src="./img/twitter.svg" alt="">
+                        반려견 동반 식당 '서울 숲 둡'</span></li><br>
+                    <li><span class="v_sel" data-val="./media/v2.mp4">
+                        <img src="./img/coffee.svg" alt="">
+                        반려견 동반 카페 '스타벅스 더 북한강R점'</span></li><br>
+                    <li><span class="v_sel" data-val="./media/v3.mp4">
+                        <img src="./img/feather.svg" alt="">
+                        반려견 동반 카페 '제주 포레스트 제이'</span></li>
+                </ul>
+            </div>
+        </div>
+        <script src="custom_video_player.js"></script> 
+        <script>
+        $(document).ready(function(){
+            $('#vdo1').gVideo({"target":"vdo1"});
+            $(".pp-video-seek").slider();
+            $("#btn_lst li span").click(function(){
+                $("#vdo1").attr("src", $(this).attr("data-val"));
+                $("#btn_lst").before($("#vdo1").clone());
+                $(".pp-video-player").remove();
+                $('#vdo1').gVideo({"target":"vdo1"});
+                $(".pp-video-seek").slider();
+            });
+        });  
+        </script>
+    </div>
+</body>
+</html>

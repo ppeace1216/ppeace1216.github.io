@@ -3,39 +3,29 @@
     "short_name": "Eat",
     "icons": [
         {
-            "src": "icon-128x128.png",
+            "src": "favicon-128x128.png",
             "sizes": "128x128",
             "type": "image/png"
         },
         {
-            "src": "icon-144x144.png",
+            "src": "apple-icon-144x144.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "icon-152x152.png",
+            "src": "apple-icon-152x152.png",
             "sizes": "152x152",
             "type": "image/png"
         },
         {
-            "src": "icon-192x192.png",
+            "src": "android-icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any maskable"
-        },
-        {
-            "src": "icon-256x256.png",
-            "sizes": "256x256",
-            "type": "image/png"
-        },
-        {
-            "src": "icon-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
         }
     ],
     "start_url": "/",
     "display": "standalone",
-    "background_color": "#121212",
-    "theme_color": "#f1718c"
+    "background_color": "#ffffff",
+    "theme_color": "#cbe5f2"
 }
