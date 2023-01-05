@@ -4,14 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>박평화 포트폴리오</title>
     <!--메타포 선언-->
+    <meta name="application-name" content="포트폴리오">
+    <meta name="subject" content="박평화">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="url" content="https://ppeace1216.github.io/portfolio/">
+    <meta name="author" content="park pyeong hwa">
+    <meta name="email" content="ppeace1216@naver.com">
+    <meta name="robots" content="index, flow">
     <!--파비콘-->
+
     <!--오픈그래프-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ppeace1216.github.io/portfolio/">
+    <meta property="og:title" content="포트폴리오">
+    <meta property="og:site_name" content="박평화포트폴리오">
+    <meta property="og:image" content="">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="400">
+    <meta property="og:locale" content="ko_KR">
     <!--필수 플러그인-->
+    <script src="./jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/headhesive.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" type='text/css'>
     <!-- jquery 플러그인 스크롤링, jquery 페럴렉스 스크롤링 -->
 </head>
-<body>
-    
+<body id="top">
+    <div class="pageNation">
+        <button class="btn" data-val="0"></button>
+        <button class="btn" data-val="1"></button>
+        <button class="btn" data-val="2"></button>
+        <button class="btn" data-val="3"></button>
+    </div>
+    <header class="banner">
+        <nav class="container">
+            <h1 class="logo">Portfolio</h1>
+            <ul class="nav">
+                <li class="nav__item"><a href="https://twitter.com/markgdyr">@markgdyr</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="page" id="page1">
+        <img src="computer.jpg" alt="" class="visual">
+    </div>
+    <div class="page" id="page2">
+        <img src="developer.jpg" alt="" class="visual">
+    </div>
+    <div class="page" id="page3">
+        <img src="student.jpg" alt="" class="visual">
+    </div>
+<footer>
+    <div class="container">
+        <p>Copyright (c) 2015 <a href="http://markgoodyear.com">Mark Goodyear</a><span class="top"><a href="#top">#top</a></span></p>
+    </div>
+</footer>
+<script type="text/javascript" src="./dist/headhesive.js"></script>
+    <script>
+
+        // Set options
+        var options = {
+            offset: '#showHere',
+            offsetSide: 'top',
+            classes: {
+                clone:   'banner--clone',
+                stick:   'banner--stick',
+                unstick: 'banner--unstick'
+            }
+        };
+
+        // Initialise with options
+        var banner = new Headhesive('.banner', options);
+
+        // Headhesive destroy
+        // banner.destroy();
+    </script>
 </body>
 </html>
