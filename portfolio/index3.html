@@ -32,49 +32,30 @@
     <link rel="stylesheet" href="css/headhesive.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" type='text/css'>
     <!-- jquery 플러그인 스크롤링, jquery 페럴렉스 스크롤링 -->
+    <style>
+    /*common*/
+    *{margin:0; padding:0;}
+    a{text-decoration:none;}
+    body, html{ width: 100%; overflow-x: hidden;}
+    /* 스크롤바 안보이게 - Chrome, Safari, Opera */
+    ::-webkit-scrollbar { display:none; } 
+    body, html{-ms-overflow-style:none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */ }
+    
+    #hd {position: fixed; background-color: rgba(33,33,33,0.5); width: 100vw; height: 90px; top: 0; left: 0; z-index: 999;}
+    .page {clear: both; width: 100vw; height: 100vh; overflow-x: hidden;}
+    .page_wrap {clear: both; width: 1200px; margin: 0 auto;}
+    .page_tit {text-align: center; line-height: 2.4em; }
+    </style>
 </head>
-<body id="top">
-    <header class="banner">
-        <nav class="container">
-            <h1 class="logo">Portfolio</h1>
-            <ul class="nav">
-                <li class="nav__item"><a href="https://twitter.com/markgdyr">@markgdyr</a></li>
-            </ul>
-        </nav>
+<body>
+    <header id="hd">
+
     </header>
     <div class="page" id="page1">
-        <img src="computer.jpg" alt="" class="visual">
+        <div class="page_wrap">
+            <h2 class="page_tit">index</h2>
+        </div>
     </div>
-    <div class="page" id="page2">
-        <img src="developer.jpg" alt="" class="visual">
-    </div>
-    <div class="page" id="page3">
-        <img src="student.jpg" alt="" class="visual">
-    </div>
-<footer>
-    <div class="container">
-        <p>Copyright (c) 2015 <a href="http://markgoodyear.com">Mark Goodyear</a><span class="top"><a href="#top">#top</a></span></p>
-    </div>
-</footer>
-<script type="text/javascript" src="./dist/headhesive.js"></script>
-    <script>
-
-        // Set options
-        var options = {
-            offset: '#showHere',
-            offsetSide: 'top',
-            classes: {
-                clone:   'banner--clone',
-                stick:   'banner--stick',
-                unstick: 'banner--unstick'
-            }
-        };
-
-        // Initialise with options
-        var banner = new Headhesive('.banner', options);
-
-        // Headhesive destroy
-        // banner.destroy();
-    </script>
 </body>
 </html>
