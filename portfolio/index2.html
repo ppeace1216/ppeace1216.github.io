@@ -28,10 +28,7 @@
     <!--필수 플러그인-->
     <script src="./jquery-1.12.4.js"></script>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/headhesive.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" type='text/css'>
-    <!-- jquery 플러그인 스크롤링, jquery 페럴렉스 스크롤링 -->
     <style>
     /*common*/
     *{margin:0; padding:0;}
@@ -81,6 +78,12 @@
     background:rgba(0, 0, 0, 0.8); cursor:pointer; cursor:pointer;}
     .btn.on { background:rgba(0, 123, 200, 0.8); 
     border:2px solid #fff; }
+    /* 인트로페이지 */
+    .page_wrap { clear:both; width: 1200px; margin: 0 auto; }    
+    .page_tit { text-align: center; line-height: 2.4;  padding-top: 2rem; }
+    .pic_frame { width: 140px; height: 140px; border-radius:80px; 
+    overflow: hidden; margin:0 auto; }
+    .pic1 { display:block; width: 140px; height:auto;}
     </style>
     <script>
         //한 페이지씩 스크롤
@@ -225,24 +228,29 @@
             </ul>
         </nav>
     </header>
-    <div class="page">
+    <div class="page" id="page0">
+        <section class="page_wrap content-wrapper">
+            <h2 class="page_tit">Intro</h2>
+            <div class="pic_frame">
+                <img src="./images/pyeonghwa.jpg" class="pic1" alt="박평화사진">
+            </div>
+        </section>
+    </div>
+    <div class="page" id="page1">
         <article class="page" id="slider">
             <div id="banner1">
-                <a class="img1"><img src="caaaat.png" alt="비주얼01"/></a>
-                <a class="img1"><img src="computer.jpg" alt="비주얼02"/></a>
-                <a class="img1"><img src="developer.jpg" alt="비주얼03"/></a>
-                <a class="img1"><img src="student.jpg" alt="비주얼04"/></a>
+                <a class="img1"><img src="./images/student.jpg" alt="비주얼01"/></a>
+                <a class="img1"><img src="./images/computer.jpg" alt="비주얼02"/></a>
+                <a class="img1"><img src="./images/developer.jpg" alt="비주얼03"/></a>
+                <a class="img1"><img src="./images/student.jpg" alt="비주얼04"/></a>
             </div>
         </article>
     </div>
-    <div class="page" id="page1">
-        <img src="computer.jpg" alt="" class="visual">
-    </div>
     <div class="page" id="page2">
-        <img src="developer.jpg" alt="" class="visual">
+        <img src="./images/developer.jpg" alt="" class="visual">
     </div>
     <div class="page" id="page3">
-        <img src="student.jpg" alt="" class="visual">
+        <img src="./images/student.jpg" alt="" class="visual">
     </div>
     <div class="page" id="content">
         <h2 class="title">Lorem Ipsum</h2>
